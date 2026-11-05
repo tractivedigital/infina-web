@@ -11,6 +11,13 @@ const routes = [
   '/esop-financing',
   '/esop-calculators',
   '/corporate-real-estate',
+  '/blogs',
+  '/blogs/corporate-real-estate-finance-explained-a-complete-guide-for-developers-70092',
+  '/blogs/what-is-esop-financing-and-why-do-employees-need-it-99f6f',
+  '/blogs/how-loan-against-property-works-in-india-process-interest-rates-eligibility-benefits',
+  '/blogs/loan-against-property-vs-personal-loan---which-is-better',
+  '/blogs/what-is-loan-against-securities-and-how-it-works-in-india-a-complete-guide',
+  '/blogs/loan-against-shares-vs-loan-against-mutual-funds-which-is-right-for-you',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

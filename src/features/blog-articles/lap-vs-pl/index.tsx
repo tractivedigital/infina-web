@@ -1,0 +1,20 @@
+import '@/styles/pages/blog-lap-vs-pl.css';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { PageShell } from '@/components/layout/PageShell';
+import { ArticleBehavior } from '@/components/behaviors/article';
+import { structuredData } from './structured-data';
+import { Article } from './sections/Article';
+import { More } from '@/components/sections/More';
+import { Next } from '@/components/sections/Next';
+
+export function BlogLapVsPlPage() {
+  return (
+    <PageShell page="blog-lap-vs-pl" review main={{ id: 'top', className: 'home' }}>
+      <JsonLd data={structuredData} />
+      <Article />
+      <More />
+      <Next />
+      <ArticleBehavior />
+    </PageShell>
+  );
+}

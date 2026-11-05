@@ -1,0 +1,7311 @@
+:where([data-page='blog-las-vs-lamf']):not(.__root) {
+  --white: #ffffff;
+  --paper: #f7f9fc;
+  --surface: #f2f3f7;
+  --blue-050: #deebf6;
+  --line: #e4e9f1;
+  --border: #a0a3bd;
+  --text: #6e7191;
+  --navy-600: #003368;
+  --navy-700: #002f67;
+  --navy-800: #052657;
+  --navy-900: #001f4d;
+  --red-600: #c8121a;
+  --red-500: #ee1b24;
+  --red-400: #ff3037;
+  --focus: #034ccd;
+  --font: var(--font-inter), 'Inter', sans-serif;
+  --shadow-float: 0 12px 32px rgba(0, 31, 77, 0.12);
+}
+
+:where([data-page='blog-las-vs-lamf']) * {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+div:where([data-page='blog-las-vs-lamf']) {
+  font-family: var(--font);
+  background: var(--paper);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+}
+
+:where([data-page='blog-las-vs-lamf']) button,
+:where([data-page='blog-las-vs-lamf']) a {
+  font: inherit;
+  color: inherit;
+}
+
+:where([data-page='blog-las-vs-lamf']) a {
+  text-decoration: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+:where([data-page='blog-las-vs-lamf']) .site {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+}
+
+:where([data-page='blog-las-vs-lamf']) .bar {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .logo {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  margin-right: auto;
+  border-radius: 4px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .logo img {
+  display: block;
+  width: 106px;
+  height: auto;
+}
+
+:where([data-page='blog-las-vs-lamf']) .nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .nav-item {
+  position: relative;
+}
+
+:where([data-page='blog-las-vs-lamf']) .nl {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 12px;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 500;
+  color: var(--navy-600);
+  border-radius: 9px;
+  position: relative;
+  transition: color 0.2s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .nl:hover,
+:where([data-page='blog-las-vs-lamf']) .nl.is-hover,
+:where([data-page='blog-las-vs-lamf']) .nl[aria-expanded='true'] {
+  color: var(--red-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .nl[aria-current='page']::after {
+  content: '';
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: calc(50% - 10px - 10px);
+  height: 2px;
+  background: var(--red-600);
+  border-radius: 2px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .nl[aria-current='page']:has(.chev)::after {
+  right: 34px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .chev {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  transition: transform 0.2s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .nl[aria-expanded='true'] .chev {
+  transform: rotate(180deg);
+}
+
+:where([data-page='blog-las-vs-lamf']) .actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 16px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .login {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 12px;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 500;
+  color: var(--navy-600);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+  transition:
+    color 0.2s,
+    text-decoration-color 0.2s;
+  border-radius: 9px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .login:hover,
+:where([data-page='blog-las-vs-lamf']) .login.is-hover {
+  color: var(--red-600);
+  text-decoration-color: var(--red-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 24px;
+  border-radius: 9999px;
+  background: var(--red-600);
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .btn:hover,
+:where([data-page='blog-las-vs-lamf']) .btn.is-hover {
+  background: var(--red-500);
+  transform: translateY(-1px);
+}
+
+:where([data-page='blog-las-vs-lamf']) .btn svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .btn:hover svg,
+:where([data-page='blog-las-vs-lamf']) .btn.is-hover svg {
+  transform: translateX(3px);
+}
+
+:where([data-page='blog-las-vs-lamf']) :where(a, button):focus-visible,
+:where([data-page='blog-las-vs-lamf']) .is-focus {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .panel {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  min-width: 300px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: var(--shadow-float);
+  padding: 8px;
+  display: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .nav-item.open .panel {
+  display: block;
+  animation: rise 0.2s ease-out;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .panel a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 9px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  color: var(--navy-600);
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .panel a svg {
+  width: 16px;
+  height: 16px;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: 0.2s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .panel a:hover,
+:where([data-page='blog-las-vs-lamf']) .panel a.is-hover,
+:where([data-page='blog-las-vs-lamf']) .panel a:focus-visible {
+  background: var(--navy-800);
+  color: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .panel a:hover svg,
+:where([data-page='blog-las-vs-lamf']) .panel a.is-hover svg,
+:where([data-page='blog-las-vs-lamf']) .panel a:focus-visible svg {
+  opacity: 1;
+  transform: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .panel a:focus-visible {
+  outline-offset: -2px;
+  outline-color: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .panel a {
+  white-space: nowrap;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ph-note {
+  display: block;
+  padding: 8px 16px 4px;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--text);
+}
+
+:where([data-page='blog-las-vs-lamf']) .bar {
+  position: relative;
+  z-index: 1;
+  transition: height 0.2s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .site.scrolled .bar {
+  height: 64px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .scrim {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 81px;
+  bottom: 0;
+  background: rgba(0, 31, 77, 0.28);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .site:has(.nav-item.open) .scrim {
+  opacity: 1;
+}
+
+:where([data-page='blog-las-vs-lamf']) .site.scrolled .scrim {
+  top: 65px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .panel {
+  z-index: 2;
+}
+
+:where([data-page='blog-las-vs-lamf']) .panel.wide {
+  min-width: 440px;
+  padding: 12px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .panel.wide .ph-note {
+  padding: 12px 12px 4px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .panel .mi {
+  min-height: 72px;
+  padding: 12px;
+  gap: 16px;
+  justify-content: flex-start;
+}
+
+:where([data-page='blog-las-vs-lamf']) .mi .disc {
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--red-600);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  transition: background 0.2s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .mi .disc svg,
+:where([data-page='blog-las-vs-lamf']) .panel a:hover .disc svg {
+  width: 24px;
+  height: 24px;
+  opacity: 1;
+  transform: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .mi .mt {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .mi .mt b {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+  color: inherit;
+}
+
+:where([data-page='blog-las-vs-lamf']) .mi .mt small {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--text);
+  white-space: normal;
+  transition: color 0.2s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .mi .go {
+  margin-left: auto;
+  flex: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .panel a.mi:hover .disc,
+:where([data-page='blog-las-vs-lamf']) .panel a.mi.is-hover .disc,
+:where([data-page='blog-las-vs-lamf']) .panel a.mi:focus-visible .disc {
+  background: var(--red-400);
+}
+
+:where([data-page='blog-las-vs-lamf']) .panel a.mi:hover small,
+:where([data-page='blog-las-vs-lamf']) .panel a.mi.is-hover small,
+:where([data-page='blog-las-vs-lamf']) .panel a.mi:focus-visible small {
+  color: var(--blue-050);
+}
+
+:where([data-page='blog-las-vs-lamf']) .notice {
+  background: var(--navy-800);
+  color: var(--blue-050);
+  font-size: 14px;
+  line-height: 20px;
+  padding: 8px 16px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+:where([data-page='blog-las-vs-lamf']) .notice svg {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  color: var(--red-400);
+}
+
+:where([data-page='blog-las-vs-lamf']) .site.b {
+  background: transparent;
+  border-bottom: 0;
+  padding: 12px 24px 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .site.b .bar {
+  background: var(--blue-050);
+  border-radius: 20px;
+  height: 72px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .site.b.scrolled .bar {
+  height: 64px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .site.b .scrim {
+  top: 96px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .site.b .panel {
+  border-color: var(--line);
+}
+
+:where([data-page='blog-las-vs-lamf']) .site.c {
+  background: var(--navy-900);
+  border-bottom: 1px solid rgba(222, 235, 246, 0.16);
+}
+
+:where([data-page='blog-las-vs-lamf']) .site.c .nl,
+:where([data-page='blog-las-vs-lamf']) .site.c .login {
+  color: var(--blue-050);
+}
+
+:where([data-page='blog-las-vs-lamf']) .site.c .nl:hover,
+:where([data-page='blog-las-vs-lamf']) .site.c .nl.is-hover,
+:where([data-page='blog-las-vs-lamf']) .site.c .nl[aria-expanded='true'],
+:where([data-page='blog-las-vs-lamf']) .site.c .login:hover {
+  color: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .site.c .nl[aria-current='page']::after {
+  background: var(--red-400);
+}
+
+:where([data-page='blog-las-vs-lamf']) .site.c .login:hover {
+  text-decoration-color: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .site.c :where(a, button):focus-visible {
+  outline-color: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .site.c .menu-btn {
+  color: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .site.c .scrim {
+  top: 81px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .menu-btn {
+  display: none;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .menu-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .menu-btn .x {
+  display: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .menu-btn[aria-expanded='true'] .x {
+  display: block;
+}
+
+:where([data-page='blog-las-vs-lamf']) .menu-btn[aria-expanded='true'] .ham {
+  display: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .drawer {
+  display: none;
+}
+
+div:where([data-page='blog-las-vs-lamf']):has(.site.d) {
+  background: linear-gradient(180deg, var(--blue-050) 0, var(--paper) 560px) no-repeat var(--paper);
+}
+
+:where([data-page='blog-las-vs-lamf']) .site.d .bar {
+  background: var(--white);
+}
+
+:where([data-page='blog-las-vs-lamf']) .site.d.scrolled {
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+  padding: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .site.d.scrolled .bar {
+  border-radius: 0;
+  background: transparent;
+  height: 64px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .site.d.scrolled .scrim {
+  top: 65px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .site.d.dn .bar {
+  background: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .site.d.dn .nl,
+:where([data-page='blog-las-vs-lamf']) .site.d.dn .login {
+  color: var(--blue-050);
+}
+
+:where([data-page='blog-las-vs-lamf']) .site.d.dn .nl:hover,
+:where([data-page='blog-las-vs-lamf']) .site.d.dn .nl.is-hover,
+:where([data-page='blog-las-vs-lamf']) .site.d.dn .nl[aria-expanded='true'],
+:where([data-page='blog-las-vs-lamf']) .site.d.dn .login:hover {
+  color: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .site.d.dn .menu-btn {
+  color: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .site.d.dn :where(a, button):focus-visible {
+  outline-color: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .site.d.dn.scrolled {
+  background: var(--navy-600);
+  border-bottom: 0;
+}
+
+@media (min-width: 960px) and (max-width: 1119px) {
+  :where([data-page='blog-las-vs-lamf']) .nl,
+  :where([data-page='blog-las-vs-lamf']) .login {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .bar {
+    gap: 20px;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1023px) {
+  :where([data-page='blog-las-vs-lamf']) .nl,
+  :where([data-page='blog-las-vs-lamf']) .login {
+    padding: 0 6px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .bar {
+    gap: 12px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .btn {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 959px) {
+  :where([data-page='blog-las-vs-lamf']) .site.b {
+    padding: 8px 16px 0;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .site.b .bar {
+    height: 56px;
+    padding: 0 8px 0 16px;
+    border-radius: 16px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .site.b .drawer.open {
+    top: 72px;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    border-radius: 20px;
+    border: 1px solid var(--line);
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .bar {
+    height: 64px;
+    padding: 0 16px;
+    gap: 16px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .logo img {
+    width: 92px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .nav,
+  :where([data-page='blog-las-vs-lamf']) .actions {
+    display: none;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .menu-btn {
+    display: inline-flex;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .drawer.open {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 64px;
+    bottom: 0;
+    background: var(--white);
+    flex-direction: column;
+    padding: 8px 16px 24px;
+    overflow-y: auto;
+    animation: rise 0.2s ease-out;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .drawer .acc > button,
+  :where([data-page='blog-las-vs-lamf']) .drawer .plain {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 56px;
+    padding: 0;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 600;
+    color: var(--navy-600);
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .drawer .acc > button:hover,
+  :where([data-page='blog-las-vs-lamf']) .drawer .plain:hover {
+    color: var(--red-600);
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .drawer .acc .chev {
+    width: 20px;
+    height: 20px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .drawer .acc > button[aria-expanded='true'] .chev {
+    transform: rotate(180deg);
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .drawer .sub {
+    display: none;
+    padding: 4px 0 8px 12px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .drawer .acc.open .sub {
+    display: block;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .drawer .sub a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    color: var(--navy-600);
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .drawer .sub a:hover {
+    color: var(--red-600);
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .drawer .foot {
+    margin-top: auto;
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .drawer .foot .login {
+    justify-content: center;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .drawer .foot .btn {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where([data-page='blog-las-vs-lamf']) * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft {
+  background: var(--navy-900);
+  color: var(--blue-050);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft .wrap {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 56px 24px 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft-top {
+  display: grid;
+  grid-template-columns: 260px repeat(5, minmax(0, 1fr));
+  gap: 32px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft-plate {
+  display: inline-flex;
+  align-items: center;
+  background: var(--white);
+  border-radius: 12px;
+  padding: 12px 16px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft-plate img {
+  display: block;
+  width: 106px;
+  height: auto;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--blue-050);
+  margin-top: 24px;
+  max-width: 240px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft .ch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-align: left;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--red-400);
+  margin: 0 0 8px;
+  padding: 0;
+  cursor: default;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft .ch svg {
+  display: none;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft .col ul {
+  list-style: none;
+  padding: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft .col a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 10px 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--blue-050);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+  transition:
+    color 0.2s,
+    text-decoration-color 0.2s;
+  border-radius: 4px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft .col a:hover {
+  color: #fff;
+  text-decoration-color: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft :where(a, button):focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .reg {
+  margin-top: 56px;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+:where([data-page='blog-las-vs-lamf']) .reg .warn {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+:where([data-page='blog-las-vs-lamf']) .reg .disc {
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--red-600);
+  color: #fff;
+  display: grid;
+  place-items: center;
+}
+
+:where([data-page='blog-las-vs-lamf']) .reg .disc svg {
+  width: 24px;
+  height: 24px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .reg h4 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--navy-600);
+  margin-bottom: 4px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .reg p,
+:where([data-page='blog-las-vs-lamf']) .reg dd,
+:where([data-page='blog-las-vs-lamf']) .reg dt {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .reg dl {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .reg dd + dt {
+  margin-top: 12px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .reg dt {
+  font-weight: 600;
+}
+
+:where([data-page='blog-las-vs-lamf']) .reg dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft-bot {
+  margin-top: 40px;
+  border-top: 1px solid rgba(222, 235, 246, 0.16);
+  padding: 24px 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft-bot p {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--border);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft-bot p a {
+  color: var(--blue-050);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft-bot p a:hover {
+  color: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .follow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .follow span {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--blue-050);
+}
+
+:where([data-page='blog-las-vs-lamf']) .soc {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .soc svg {
+  width: 20px;
+  height: 20px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .soc:hover {
+  background: var(--red-600);
+  border-color: var(--red-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft .wrap {
+  padding: 40px 24px 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft-top {
+  grid-template-columns: 240px 0.6fr 1.1fr 1.2fr 1.1fr 1fr;
+  gap: 24px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft .ch {
+  margin: 0 0 4px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft .col a {
+  min-height: 36px;
+  padding: 6px 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft address {
+  margin-top: 16px;
+  max-width: 230px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft-logo {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 4px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft-logo img {
+  display: block;
+  width: 112px;
+  height: auto;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft.plate .ft-logo {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 8px 12px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft.plate .ft-logo img {
+  width: 96px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .reg {
+  margin-top: 32px;
+  padding: 16px 20px;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 24px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .reg .warn {
+  gap: 12px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .reg .wi {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  color: var(--red-600);
+  margin-top: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .reg .ids p {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .reg .ids b {
+  font-weight: 600;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft-bot {
+  margin-top: 24px;
+  padding: 16px 0 24px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft.light {
+  background: var(--white);
+  color: var(--navy-600);
+  border-top: 1px solid var(--line);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft.light address,
+:where([data-page='blog-las-vs-lamf']) .ft.light .col a {
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft.light .ch {
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft.light .col a:hover {
+  color: var(--red-600);
+  text-decoration-color: var(--red-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft.light .reg {
+  background: var(--paper);
+  border-color: var(--line);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft.light .ft-bot {
+  border-top-color: var(--line);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft.light .ft-bot p {
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft.light .ft-bot p a {
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft.light .follow span {
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft.light .soc {
+  color: var(--navy-600);
+  border-color: var(--line);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ft.light .soc:hover {
+  color: #fff;
+  border-color: var(--navy-600);
+  background: var(--navy-600);
+}
+
+@media (max-width: 959px) {
+  :where([data-page='blog-las-vs-lamf']) .ft .wrap {
+    padding: 48px 16px 0;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ft-top {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ft .brand {
+    margin-bottom: 32px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ft .col {
+    border-top: 1px solid rgba(222, 235, 246, 0.16);
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ft .col:last-of-type {
+    border-bottom: 1px solid rgba(222, 235, 246, 0.16);
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ft .ch {
+    min-height: 56px;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ft .ch svg {
+    display: block;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ft .ch[aria-expanded='true'] svg {
+    transform: rotate(180deg);
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ft .col ul {
+    display: none;
+    padding-bottom: 8px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ft .col.open ul {
+    display: block;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .reg {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 40px;
+    padding: 20px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ft-bot {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ft .wrap {
+    padding: 40px 16px 0;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ft-top {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ft .brand {
+    margin-bottom: 24px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ft .col a {
+    min-height: 44px;
+    padding: 10px 0;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .reg {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 32px;
+    padding: 16px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ft-bot {
+    gap: 16px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ft.light .col {
+    border-top-color: var(--line);
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ft.light .col:last-of-type {
+    border-bottom-color: var(--line);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where([data-page='blog-las-vs-lamf']) * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']):not(.__root) {
+  --font: 'Inter', sans-serif;
+  --hero-gradient: linear-gradient(102deg, #052657 0%, #003368 100%);
+  --radius-lg: 20px;
+  --radius-md: 12px;
+  --radius-input: 9px;
+}
+
+div:where([data-page='blog-las-vs-lamf']) {
+  scroll-behavior: smooth;
+}
+
+div:where([data-page='blog-las-vs-lamf']) {
+  font-family: var(--font);
+}
+
+:where([data-page='blog-las-vs-lamf']) .wrapx {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+:where([data-page='blog-las-vs-lamf']) main.home {
+  display: block;
+}
+
+:where([data-page='blog-las-vs-lamf']) section.sec {
+  padding: 56px 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) section.sec.tight-top {
+  padding-top: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) section.band {
+  background: var(--paper);
+  padding: 56px 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ov {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--red-600);
+  margin-bottom: 12px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .on-navy .ov {
+  color: var(--red-400);
+}
+
+:where([data-page='blog-las-vs-lamf']) h1,
+:where([data-page='blog-las-vs-lamf']) h2,
+:where([data-page='blog-las-vs-lamf']) h3,
+:where([data-page='blog-las-vs-lamf']) h4 {
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .h2 {
+  font-size: 48px;
+  line-height: 50px;
+  font-weight: 600;
+  letter-spacing: -0.6px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .h2 em,
+:where([data-page='blog-las-vs-lamf']) .h3 em,
+:where([data-page='blog-las-vs-lamf']) .st em {
+  font-style: normal;
+  color: var(--red-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .on-navy .h2 em,
+:where([data-page='blog-las-vs-lamf']) .on-navy .h3 em {
+  color: var(--red-400);
+}
+
+:where([data-page='blog-las-vs-lamf']) .h3 {
+  font-size: 34px;
+  line-height: 38px;
+  font-weight: 600;
+}
+
+:where([data-page='blog-las-vs-lamf']) .body {
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--text);
+  max-width: 78ch;
+}
+
+:where([data-page='blog-las-vs-lamf']) .body + .body {
+  margin-top: 16px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ph {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--navy-600);
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: 6px;
+  padding: 2px 8px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .last {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--text);
+  margin-top: 16px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .btn.out {
+  background: #fff;
+  color: var(--navy-600);
+  box-shadow: inset 0 0 0 1px var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .btn.out:hover {
+  background: var(--red-600);
+  color: #fff;
+  box-shadow: inset 0 0 0 1px var(--red-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .btn.out-w {
+  background: transparent;
+  color: #fff;
+  box-shadow: inset 0 0 0 1px #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .btn.out-w:hover {
+  background: var(--red-600);
+  box-shadow: inset 0 0 0 1px var(--red-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .btn-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hero {
+  background: var(--hero-gradient);
+  border-radius: var(--radius-lg);
+  padding: 96px 56px;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  margin-top: 8px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: center;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hero h1 {
+  font-size: 42px;
+  line-height: 50px;
+  letter-spacing: -1.2px;
+  font-weight: 700;
+  color: #fff;
+  max-width: 14ch;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hero .sub {
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--blue-050);
+  margin-top: 20px;
+  max-width: 46ch;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hero-art {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  mix-blend-mode: luminosity;
+  opacity: 0.5;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(270deg, #000 25%, transparent 75%);
+  mask-image: linear-gradient(270deg, #000 25%, transparent 75%);
+}
+
+:where([data-page='blog-las-vs-lamf']) .hero-art svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+:where([data-page='blog-las-vs-lamf']) .elig {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 32px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .elig h2 {
+  font-size: 26px;
+  line-height: 36px;
+  font-weight: 600;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .elig p.s {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text);
+  margin-top: 4px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .elig label {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--navy-600);
+  margin: 24px 0 8px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .field {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-input);
+  background: #fff;
+  padding: 0 16px;
+  gap: 8px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .field:focus-within {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .field span {
+  color: var(--navy-600);
+  font-weight: 600;
+}
+
+:where([data-page='blog-las-vs-lamf']) .field input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  font-size: 16px;
+  color: var(--navy-600);
+  background: transparent;
+  height: 100%;
+}
+
+:where([data-page='blog-las-vs-lamf']) .res {
+  margin-top: 16px;
+  background: var(--paper);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .res small {
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .res b {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: var(--navy-600);
+  margin-top: 4px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .elig .btn {
+  width: 100%;
+  margin-top: 16px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .trust {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid var(--line);
+  border-top: 1px solid var(--line);
+  margin-top: 32px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .trust div {
+  padding: 20px 24px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: var(--navy-600);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .trust div + div {
+  border-left: 1px solid var(--line);
+}
+
+:where([data-page='blog-las-vs-lamf']) .trust svg {
+  width: 20px;
+  height: 20px;
+  color: var(--red-600);
+  flex: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .trust .ph {
+  font-weight: 400;
+}
+
+:where([data-page='blog-las-vs-lamf']) .split {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 56px;
+  align-items: start;
+}
+
+:where([data-page='blog-las-vs-lamf']) .split .btn {
+  margin-top: 32px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .tiles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .card {
+  background: var(--paper);
+  border-radius: var(--radius-lg);
+  transition:
+    background 0.2s,
+    color 0.2s;
+  position: relative;
+}
+
+:where([data-page='blog-las-vs-lamf']) .card:hover,
+:where([data-page='blog-las-vs-lamf']) .card:focus-within {
+  background: var(--navy-800);
+}
+
+:where([data-page='blog-las-vs-lamf']) .card h3,
+:where([data-page='blog-las-vs-lamf']) .card h4 {
+  transition: color 0.2s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .card:hover h3,
+:where([data-page='blog-las-vs-lamf']) .card:hover h4,
+:where([data-page='blog-las-vs-lamf']) .card:focus-within h3,
+:where([data-page='blog-las-vs-lamf']) .card:focus-within h4 {
+  color: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .card:hover p,
+:where([data-page='blog-las-vs-lamf']) .card:focus-within p {
+  color: var(--blue-050);
+}
+
+:where([data-page='blog-las-vs-lamf']) .band .card {
+  background: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .band .card:hover {
+  background: var(--navy-800);
+}
+
+:where([data-page='blog-las-vs-lamf']) .disc {
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--red-600);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  transition: background 0.2s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .disc.navy {
+  background: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .disc svg {
+  width: 24px;
+  height: 24px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .card:hover .disc,
+:where([data-page='blog-las-vs-lamf']) .card:focus-within .disc {
+  background: var(--red-400);
+}
+
+:where([data-page='blog-las-vs-lamf']) .tile {
+  padding: 24px;
+  min-height: 164px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .tile h3 {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+}
+
+:where([data-page='blog-las-vs-lamf']) .tile p {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--navy-600);
+  transition: color 0.2s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .more {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--red-600);
+  transition: color 0.2s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .more svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .card:hover .more,
+:where([data-page='blog-las-vs-lamf']) .card:focus-within .more {
+  color: var(--red-400);
+}
+
+:where([data-page='blog-las-vs-lamf']) .card:hover .more svg {
+  transform: translateX(4px);
+}
+
+:where([data-page='blog-las-vs-lamf']) .tile a.stretch::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+}
+
+:where([data-page='blog-las-vs-lamf']) .tile a.stretch:focus-visible {
+  outline: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .tile:focus-within {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .sec-head {
+  max-width: 760px;
+  margin-bottom: 48px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .sec-head .body {
+  margin-top: 16px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+}
+
+:where([data-page='blog-las-vs-lamf']) .steps::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 27px;
+  border-top: 1px dashed var(--border);
+}
+
+:where([data-page='blog-las-vs-lamf']) .step {
+  position: relative;
+}
+
+:where([data-page='blog-las-vs-lamf']) .step .n {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--red-600);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  display: grid;
+  place-items: center;
+  position: relative;
+  box-shadow: 0 0 0 8px var(--paper);
+}
+
+:where([data-page='blog-las-vs-lamf']) .step h3 {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .step p {
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 8px;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .stmts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .stmt {
+  padding: 48px 32px 40px;
+  overflow: hidden;
+}
+
+:where([data-page='blog-las-vs-lamf']) .stmt::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 8px;
+  background: var(--navy-600);
+  transition: background 0.2s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .stmt.r::before {
+  background: var(--red-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .card.stmt:hover::before {
+  background: var(--red-400);
+}
+
+:where([data-page='blog-las-vs-lamf']) .stmt .st {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+  color: var(--navy-600);
+  margin-top: 4px;
+  transition: color 0.2s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .card.stmt:hover .st {
+  color: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .card.stmt:hover .st em {
+  color: var(--red-400);
+}
+
+:where([data-page='blog-las-vs-lamf']) .stmt p.d {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--navy-600);
+  margin-top: 16px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .who {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .who .card {
+  padding: 24px;
+  min-height: 232px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .who h3 {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+}
+
+:where([data-page='blog-las-vs-lamf']) .who p {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .hub {
+  display: grid;
+  grid-template-columns: 520px 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+:where([data-page='blog-las-vs-lamf']) .stage {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  aspect-ratio: 1/1;
+  margin: 0 auto;
+}
+
+:where([data-page='blog-las-vs-lamf']) .stage svg.lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+:where([data-page='blog-las-vs-lamf']) .core {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 31%;
+  aspect-ratio: 1/1;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 0 1px var(--line);
+}
+
+:where([data-page='blog-las-vs-lamf']) .core img {
+  width: 62%;
+  height: auto;
+}
+
+:where([data-page='blog-las-vs-lamf']) .node {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: -32px 0 0 -32px;
+  border-radius: 50%;
+  background: var(--red-600);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .node svg {
+  width: 28px;
+  height: 28px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .node:hover {
+  background: var(--red-500);
+}
+
+:where([data-page='blog-las-vs-lamf']) .node[aria-selected='true'] {
+  background: var(--navy-800);
+  transform: scale(1.18);
+}
+
+:where([data-page='blog-las-vs-lamf']) .nl-lab {
+  position: absolute;
+  width: 132px;
+  margin-left: -66px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+  color: var(--navy-600);
+  pointer-events: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .panel-d {
+  background: var(--paper);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  min-height: 340px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .panel-d .disc {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 20px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .panel-d .disc svg {
+  width: 28px;
+  height: 28px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .panel-d h3 {
+  font-size: 34px;
+  line-height: 38px;
+  font-weight: 600;
+}
+
+:where([data-page='blog-las-vs-lamf']) .panel-d p {
+  font-size: 18px;
+  line-height: 28px;
+  margin-top: 12px;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .rail {
+  display: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .about {
+  background: var(--paper);
+  border-radius: var(--radius-lg);
+  padding: 56px 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+:where([data-page='blog-las-vs-lamf']) .about .st {
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .about .st em {
+  font-style: normal;
+  color: var(--red-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .about .body {
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .about .btn {
+  margin-top: 24px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .strip {
+  background: var(--hero-gradient);
+  border-radius: var(--radius-lg);
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+:where([data-page='blog-las-vs-lamf']) .strip p {
+  color: #fff;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+:where([data-page='blog-las-vs-lamf']) .faq {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+:where([data-page='blog-las-vs-lamf']) .q {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+:where([data-page='blog-las-vs-lamf']) .q button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  text-align: left;
+  min-height: 64px;
+  padding: 12px 20px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .q button svg {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  transition: transform 0.2s;
+  color: var(--red-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .q button[aria-expanded='true'] svg {
+  transform: rotate(180deg);
+}
+
+:where([data-page='blog-las-vs-lamf']) .q .a {
+  display: none;
+  padding: 0 20px 20px;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .q.open .a {
+  display: block;
+}
+
+:where([data-page='blog-las-vs-lamf']) .q:hover {
+  border-color: var(--navy-600);
+}
+
+@media (max-width: 1119px) {
+  :where([data-page='blog-las-vs-lamf']) .who {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .stmts {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 959px) {
+  :where([data-page='blog-las-vs-lamf']) .wrapx {
+    padding: 0 16px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) section.sec,
+  :where([data-page='blog-las-vs-lamf']) section.band {
+    padding: 48px 0;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .h2 {
+    font-size: 30px;
+    line-height: 34px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .h3 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .body {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hero {
+    padding: 56px 20px;
+    margin-top: 4px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hero-grid,
+  :where([data-page='blog-las-vs-lamf']) .split,
+  :where([data-page='blog-las-vs-lamf']) .hub,
+  :where([data-page='blog-las-vs-lamf']) .about,
+  :where([data-page='blog-las-vs-lamf']) .faq {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+    max-width: none;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hero-art {
+    -webkit-mask-image: linear-gradient(180deg, #000 0, transparent 55%);
+    mask-image: linear-gradient(180deg, #000 0, transparent 55%);
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .btn-row .btn {
+    width: 100%;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .trust {
+    grid-template-columns: 1fr;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .trust div + div {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .tiles {
+    grid-template-columns: 1fr;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .steps {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .steps::before {
+    left: 27px;
+    right: auto;
+    top: 0;
+    bottom: 0;
+    border-top: 0;
+    border-left: 1px dashed var(--border);
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .step {
+    padding-left: 76px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .step .n {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .step h3 {
+    margin-top: 0;
+    padding-top: 14px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .who {
+    grid-template-columns: 1fr;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .who .card {
+    min-height: 0;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .stage {
+    display: none;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .rail {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 4px 2px 16px;
+    margin-bottom: 8px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .rail .node {
+    position: static;
+    margin: 0;
+    flex: none;
+    scroll-snap-align: start;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .panel-d {
+    padding: 24px;
+    min-height: 0;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .panel-d h3 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .about {
+    padding: 32px 20px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .about .st {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .strip {
+    padding: 24px 20px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .strip .btn {
+    width: 100%;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) section.sec,
+:where([data-page='blog-las-vs-lamf']) section#top ~ section.sec {
+  background: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .stage {
+  margin-top: 48px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 959px) {
+  div:where([data-page='blog-las-vs-lamf']),
+  div:where([data-page='blog-las-vs-lamf']) {
+    overflow-x: hidden;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .hero-grid > *,
+:where([data-page='blog-las-vs-lamf']) .split > *,
+:where([data-page='blog-las-vs-lamf']) .hub > *,
+:where([data-page='blog-las-vs-lamf']) .about > *,
+:where([data-page='blog-las-vs-lamf']) .faq > * {
+  min-width: 0;
+}
+
+@media (max-width: 959px) {
+  :where([data-page='blog-las-vs-lamf']) .hero-grid,
+  :where([data-page='blog-las-vs-lamf']) .split,
+  :where([data-page='blog-las-vs-lamf']) .hub,
+  :where([data-page='blog-las-vs-lamf']) .about,
+  :where([data-page='blog-las-vs-lamf']) .faq {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hero h1,
+  :where([data-page='blog-las-vs-lamf']) .hero .sub {
+    overflow-wrap: break-word;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .btn {
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .trustband {
+  background: #fff;
+  box-shadow: 0 0 0 100vmax #fff;
+  clip-path: inset(0 -100vmax);
+  padding: 32px 0 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .trustband .trust {
+  margin-top: 0;
+}
+
+@media (max-width: 959px) {
+  :where([data-page='blog-las-vs-lamf']) .trustband {
+    padding: 24px 0 0;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .hero {
+  height: 500px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(102deg, #052657 0%, #052a5e 36%, #012f62 70%, #003368 100%);
+}
+
+:where([data-page='blog-las-vs-lamf']) .hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .art-stage {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1600px;
+  height: 600px;
+  transform-origin: top right;
+  transform: scale(0.745);
+}
+
+:where([data-page='blog-las-vs-lamf']) .hero-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    94deg,
+    rgba(5, 38, 87, 0.99) 0%,
+    rgba(5, 38, 87, 0.97) 28%,
+    rgba(4, 44, 92, 0.66) 40%,
+    rgba(0, 51, 104, 0.1) 54%,
+    rgba(0, 51, 104, 0) 66%
+  );
+}
+
+:where([data-page='blog-las-vs-lamf']) .hero-copy {
+  position: relative;
+  z-index: 2;
+  padding: 0 56px;
+  max-width: 600px;
+  animation: upB 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hero h1 {
+  max-width: 11em;
+  text-wrap: pretty;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hero .sub {
+  color: rgba(202, 222, 247, 0.86);
+  max-width: 22em;
+}
+
+@keyframes driftB {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-30px, 0, 0);
+  }
+}
+
+@keyframes drawB {
+  from {
+    stroke-dashoffset: 2600;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes upB {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes pulseB {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.95;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where([data-page='blog-las-vs-lamf']) .art-stage *,
+  :where([data-page='blog-las-vs-lamf']) .hero-copy {
+    animation: none !important;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .art-stage g[style*='opacity: 0'] {
+    opacity: 1 !important;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .elig-bar {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1.1fr auto;
+  gap: 24px;
+  align-items: end;
+  padding: 32px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .elig-bar h2 {
+  font-size: 26px;
+  line-height: 36px;
+  font-weight: 600;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .elig-bar .s {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--navy-600);
+  margin-top: 4px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .elig-bar label {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--navy-600);
+  margin-bottom: 8px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .elig-bar .res {
+  margin-top: 0;
+  background: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .elig-bar > * {
+  min-width: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .elig-bar:hover {
+  background: var(--paper);
+}
+
+:where([data-page='blog-las-vs-lamf']) .elig-bar:hover h2 {
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .elig-bar:hover p {
+  color: var(--navy-600);
+}
+
+@media (max-width: 1119px) {
+  :where([data-page='blog-las-vs-lamf']) .elig-bar {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .elig-bar .btn {
+    justify-self: start;
+  }
+}
+
+@media (max-width: 959px) {
+  :where([data-page='blog-las-vs-lamf']) .hero {
+    height: auto;
+    min-height: 640px;
+    align-items: flex-start;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hero-copy {
+    padding: 48px 20px 0;
+    max-width: none;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hero h1 {
+    max-width: none;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hero-scrim {
+    background: linear-gradient(
+      180deg,
+      rgba(5, 38, 87, 0.98) 0%,
+      rgba(5, 38, 87, 0.94) 52%,
+      rgba(5, 38, 87, 0.3) 78%,
+      rgba(5, 38, 87, 0) 100%
+    );
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .elig-bar {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 24px 20px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .elig-bar .btn {
+    width: 100%;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .hero {
+  flex-direction: column;
+  align-items: stretch;
+  height: 560px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hero-copy {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: none;
+  padding: 0 56px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hero-copy > * {
+  max-width: 600px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hero-trust {
+  position: relative;
+  z-index: 2;
+  flex: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(222, 235, 246, 0.16);
+  background: linear-gradient(0deg, rgba(4, 30, 68, 0.7), rgba(4, 30, 68, 0));
+}
+
+:where([data-page='blog-las-vs-lamf']) .hero-trust div {
+  padding: 20px 56px 20px 24px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hero-trust div:first-child {
+  padding-left: 56px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hero-trust div + div {
+  border-left: 1px solid rgba(222, 235, 246, 0.16);
+}
+
+:where([data-page='blog-las-vs-lamf']) .hero-trust svg {
+  width: 20px;
+  height: 20px;
+  color: var(--red-400);
+  flex: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hero-trust .ph {
+  font-weight: 400;
+  color: var(--blue-050);
+  background: rgba(222, 235, 246, 0.1);
+  border-color: rgba(222, 235, 246, 0.4);
+}
+
+@media (max-width: 959px) {
+  :where([data-page='blog-las-vs-lamf']) .hero {
+    height: auto;
+    min-height: 680px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hero-copy {
+    flex: none;
+    justify-content: flex-start;
+    padding: 48px 20px 0;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hero-copy > * {
+    max-width: none;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hero-trust {
+    margin-top: auto;
+    grid-template-columns: 1fr;
+    background: linear-gradient(0deg, rgba(4, 30, 68, 0.9), rgba(4, 30, 68, 0.5));
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hero-trust div,
+  :where([data-page='blog-las-vs-lamf']) .hero-trust div:first-child {
+    padding: 14px 20px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hero-trust div + div {
+    border-left: 0;
+    border-top: 1px solid rgba(222, 235, 246, 0.16);
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1119px) {
+  :where([data-page='blog-las-vs-lamf']) .hero-trust div,
+  :where([data-page='blog-las-vs-lamf']) .hero-trust div:first-child {
+    padding: 20px 16px 20px 20px;
+    font-size: 14px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hero-trust .ph {
+    display: block;
+    margin-top: 4px;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .svc-head {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: end;
+  margin-bottom: 48px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .svc-head .btn {
+  margin-top: 24px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .svc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .svc {
+  padding: 28px 28px 24px;
+  min-height: 372px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+:where([data-page='blog-las-vs-lamf']) .svc::after {
+  content: '';
+  position: absolute;
+  right: -70px;
+  bottom: -70px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 51, 104, 0.05);
+  box-shadow:
+    0 0 0 28px rgba(0, 51, 104, 0.025),
+    0 0 0 56px rgba(0, 51, 104, 0.012);
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s,
+    transform 0.4s;
+  z-index: -1;
+}
+
+:where([data-page='blog-las-vs-lamf']) .svc:hover::after,
+:where([data-page='blog-las-vs-lamf']) .svc:focus-within::after {
+  border-color: rgba(222, 235, 246, 0.16);
+  box-shadow:
+    0 0 0 28px rgba(222, 235, 246, 0.05),
+    0 0 0 56px rgba(222, 235, 246, 0.03);
+  transform: scale(1.12);
+}
+
+:where([data-page='blog-las-vs-lamf']) .svc-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+:where([data-page='blog-las-vs-lamf']) .svc-ic {
+  position: relative;
+  width: 104px;
+  height: 104px;
+  border-radius: 26px;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  color: var(--navy-600);
+  box-shadow: inset 0 0 0 1px var(--line);
+  transition:
+    background 0.25s,
+    color 0.25s,
+    box-shadow 0.25s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .svc-ic .pic {
+  width: 68px;
+  height: 68px;
+  display: block;
+}
+
+:where([data-page='blog-las-vs-lamf']) .svc-ic .dot {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--red-600);
+  transition: background 0.25s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .svc:hover .svc-ic,
+:where([data-page='blog-las-vs-lamf']) .svc:focus-within .svc-ic {
+  background: rgba(222, 235, 246, 0.1);
+  color: #fff;
+  box-shadow: inset 0 0 0 1px rgba(222, 235, 246, 0.22);
+}
+
+:where([data-page='blog-las-vs-lamf']) .svc:hover .svc-ic .dot,
+:where([data-page='blog-las-vs-lamf']) .svc:focus-within .svc-ic .dot {
+  background: var(--red-400);
+}
+
+:where([data-page='blog-las-vs-lamf']) .svc-n {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--border);
+  transition: color 0.25s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .svc:hover .svc-n {
+  color: var(--blue-050);
+}
+
+:where([data-page='blog-las-vs-lamf']) .svc-body {
+  margin-top: auto;
+  padding-top: 40px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .svc-body h3 {
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .svc-body p {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--navy-600);
+  margin-top: 12px;
+  max-width: 30ch;
+  transition: color 0.25s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .svc .more {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+  transition:
+    color 0.25s,
+    border-color 0.25s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .svc:hover .more,
+:where([data-page='blog-las-vs-lamf']) .svc:focus-within .more {
+  border-color: rgba(222, 235, 246, 0.2);
+}
+
+@media (max-width: 1119px) {
+  :where([data-page='blog-las-vs-lamf']) .svc-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .svc {
+    min-height: 340px;
+  }
+}
+
+@media (max-width: 959px) {
+  :where([data-page='blog-las-vs-lamf']) .svc-head {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .svc-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .svc {
+    min-height: 0;
+    padding: 24px 20px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .svc-body {
+    padding-top: 28px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .svc-ic {
+    width: 88px;
+    height: 88px;
+    border-radius: 22px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .svc-ic .pic {
+    width: 58px;
+    height: 58px;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob {
+  display: grid;
+  grid-template-columns: 420px minmax(0, 1fr);
+  gap: 20px;
+  align-items: stretch;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-list {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-tab {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr) 36px;
+  align-items: center;
+  gap: 16px;
+  min-height: 96px;
+  padding: 12px 20px;
+  border-radius: 20px;
+  background: var(--paper);
+  text-align: left;
+  transition: background 0.25s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-tab .ic {
+  width: 52px;
+  height: 52px;
+  color: var(--navy-600);
+  transition: color 0.25s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-tab .ic .pic {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-tab .t {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+  color: var(--navy-600);
+  transition: color 0.25s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-tab .obgo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  box-shadow: inset 0 0 0 1px rgba(222, 235, 246, 0.3);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: 0.25s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-tab .obgo svg {
+  width: 16px;
+  height: 16px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-tab:hover {
+  background: var(--blue-050);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-tab[aria-selected='true'] {
+  background: var(--navy-800);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-tab[aria-selected='true'] .t,
+:where([data-page='blog-las-vs-lamf']) .ob-tab[aria-selected='true'] .ic {
+  color: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-tab[aria-selected='true'] .obgo {
+  opacity: 1;
+  transform: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-panel {
+  position: relative;
+  overflow: hidden;
+  background: var(--hero-gradient);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  min-height: 456px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-panel .wm {
+  position: absolute;
+  right: -24px;
+  top: -16px;
+  width: 300px;
+  height: 300px;
+  color: rgba(255, 255, 255, 0.07);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-tile {
+  position: absolute;
+  left: 48px;
+  top: 48px;
+  width: 112px;
+  height: 112px;
+  border-radius: 28px;
+  background: rgba(222, 235, 246, 0.1);
+  color: #fff;
+  box-shadow: inset 0 0 0 1px rgba(222, 235, 246, 0.22);
+  display: grid;
+  place-items: center;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-tile .pic {
+  width: 66%;
+  height: 66%;
+  display: block;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-tile .dot {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--red-400);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-panel h3 {
+  position: relative;
+  max-width: 420px;
+  font-size: 40px;
+  line-height: 44px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-panel p {
+  position: relative;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--blue-050);
+  margin: 16px 0 28px;
+  max-width: 36ch;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-panel .btn {
+  position: relative;
+  align-self: flex-start;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-panel > * {
+  animation: obfade 0.35s both;
+}
+
+@keyframes obfade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1119px) {
+  :where([data-page='blog-las-vs-lamf']) .ob {
+    grid-template-columns: 340px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 959px) {
+  :where([data-page='blog-las-vs-lamf']) .ob {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ob-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ob-tab {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: start;
+    gap: 8px;
+    min-height: 0;
+    padding: 16px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ob-tab .ic {
+    width: 40px;
+    height: 40px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ob-tab .t {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ob-tab .obgo {
+    display: none;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ob-panel {
+    padding: 24px 20px;
+    min-height: 380px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ob-tile {
+    left: 20px;
+    top: 20px;
+    width: 88px;
+    height: 88px;
+    border-radius: 22px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ob-panel h3 {
+    font-size: 30px;
+    line-height: 34px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ob-panel .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where([data-page='blog-las-vs-lamf']) .ob-panel > * {
+    animation: none !important;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .svc-head {
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 24px !important;
+  align-items: start !important;
+  margin-bottom: 40px !important;
+}
+
+:where([data-page='blog-las-vs-lamf']) .svc-head .body {
+  max-width: 60ch;
+}
+
+:where([data-page='blog-las-vs-lamf']) .svc-head .btn {
+  margin-top: 24px;
+}
+
+@media (min-width: 960px) {
+  :where([data-page='blog-las-vs-lamf']) .ob-panel {
+    min-height: 500px;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-bgs {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+  mix-blend-mode: luminosity;
+  -webkit-mask-image: linear-gradient(270deg, #000 0%, rgba(0, 0, 0, 0.85) 30%, transparent 78%);
+  mask-image: linear-gradient(270deg, #000 0%, rgba(0, 0, 0, 0.85) 30%, transparent 78%);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-bg.on {
+  opacity: 0.55;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-panel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(0deg, rgba(5, 38, 87, 0.92) 0%, rgba(5, 38, 87, 0.55) 38%, rgba(5, 38, 87, 0) 70%);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-fg {
+  display: contents;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-fg > * {
+  position: relative;
+  z-index: 1;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-fg > .ob-tile {
+  position: absolute;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-panel > * {
+  animation: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-fg > * {
+  animation: obfade 0.35s both;
+}
+
+@media (max-width: 959px) {
+  :where([data-page='blog-las-vs-lamf']) .ob-bg {
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.7) 35%, transparent 80%);
+    mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.7) 35%, transparent 80%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where([data-page='blog-las-vs-lamf']) .ob-fg > * {
+    animation: none !important;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ob-bg {
+    transition: none;
+  }
+}
+
+@media (min-width: 960px) {
+  :where([data-page='blog-las-vs-lamf']) .ob-bg {
+    left: 14%;
+    background-position: right center;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-bg {
+  left: auto;
+  bottom: auto;
+  right: 28px;
+  top: 50%;
+  width: 71%;
+  aspect-ratio: 3/2;
+  transform: translateY(-50%);
+  border-radius: 18px;
+  background-size: cover;
+  background-position: center;
+  -webkit-mask-image:
+    linear-gradient(270deg, #000 0%, #000 50%, transparent 100%),
+    linear-gradient(180deg, transparent 0, #000 16%, #000 84%, transparent 100%);
+  mask-image:
+    linear-gradient(270deg, #000 0%, #000 50%, transparent 100%),
+    linear-gradient(180deg, transparent 0, #000 16%, #000 84%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-bg.on {
+  opacity: 0.7;
+}
+
+@media (max-width: 959px) {
+  :where([data-page='blog-las-vs-lamf']) .ob-bg {
+    right: 0;
+    left: auto;
+    top: 0;
+    bottom: auto;
+    width: 100%;
+    transform: none;
+    border-radius: 0;
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.6) 40%, transparent 85%);
+    mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.6) 40%, transparent 85%);
+    -webkit-mask-composite: source-over;
+    mask-composite: add;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .steps {
+  gap: 20px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .steps::before {
+  display: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .step {
+  background: #fff;
+  border-radius: 20px;
+  padding: 28px 28px 32px;
+  box-shadow: inset 0 0 0 1px var(--line);
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .step:hover {
+  transform: translateY(-4px);
+  box-shadow: inset 0 0 0 1px var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .step .stn {
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: inset 0 0 0 2px var(--red-600);
+  margin-bottom: 28px;
+  position: relative;
+  color: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 56px;
+  right: -20px;
+  top: 38px;
+  border-top: 2px dashed var(--border);
+  opacity: 0.7;
+}
+
+:where([data-page='blog-las-vs-lamf']) .step h3 {
+  margin-top: 0;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .step p {
+  margin-top: 8px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .step.final {
+  background: var(--hero-gradient);
+  box-shadow: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .step.final h3 {
+  color: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .step.final p {
+  color: var(--blue-050);
+}
+
+:where([data-page='blog-las-vs-lamf']) .step.final .stn {
+  width: 26px;
+  height: 26px;
+  margin: -3px 0 25px;
+  background: var(--red-600);
+  box-shadow: 0 0 0 5px rgba(200, 18, 26, 0.25);
+}
+
+:where([data-page='blog-las-vs-lamf']) .step.final .stn svg {
+  width: 14px;
+  height: 14px;
+}
+
+@media (max-width: 959px) {
+  :where([data-page='blog-las-vs-lamf']) .steps {
+    gap: 0;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .step,
+  :where([data-page='blog-las-vs-lamf']) .step:hover {
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    transform: none;
+    padding: 0 0 28px 52px;
+    min-height: 48px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .step .stn {
+    position: absolute;
+    left: 19px;
+    top: 4px;
+    margin: 0;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .step:not(:last-child)::after {
+    left: 28px;
+    right: auto;
+    top: 30px;
+    bottom: 4px;
+    border-top: 0;
+    border-left: 2px dashed var(--border);
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .step h3 {
+    padding-top: 0;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .step p {
+    margin-top: 4px;
+    color: var(--navy-600);
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .step.final,
+  :where([data-page='blog-las-vs-lamf']) .step.final:hover {
+    background: var(--hero-gradient);
+    border-radius: 16px;
+    padding: 20px 20px 22px 52px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .step.final .stn {
+    left: 16px;
+    top: 21px;
+    margin: 0;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .step.final p {
+    color: var(--blue-050);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where([data-page='blog-las-vs-lamf']) .step {
+    transition: none !important;
+  }
+}
+
+@media (max-width: 959px) {
+  :where([data-page='blog-las-vs-lamf']) .step .stn,
+  :where([data-page='blog-las-vs-lamf']) .step h3 {
+    transition:
+      background 0.2s,
+      box-shadow 0.2s,
+      color 0.2s;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .step:not(.final):hover .stn,
+  :where([data-page='blog-las-vs-lamf']) .step:not(.final):active .stn {
+    background: var(--red-600);
+    box-shadow: 0 0 0 5px rgba(200, 18, 26, 0.2);
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .step:not(.final):hover h3,
+  :where([data-page='blog-las-vs-lamf']) .step:not(.final):active h3 {
+    color: var(--red-600);
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .step.final:hover {
+    background: var(--navy-900);
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .step.final:hover .stn,
+  :where([data-page='blog-las-vs-lamf']) .step.final:active .stn {
+    box-shadow: 0 0 0 8px rgba(200, 18, 26, 0.3);
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']):not(.__root) {
+  --fs-h1: 44px;
+  --lh-h1: 52px;
+  --fs-h2: 36px;
+  --lh-h2: 44px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hero h1 {
+  font-size: var(--fs-h1);
+  line-height: var(--lh-h1);
+}
+
+:where([data-page='blog-las-vs-lamf']) .h2 {
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+  letter-spacing: -0.4px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .h3,
+:where([data-page='blog-las-vs-lamf']) .panel-d h3,
+:where([data-page='blog-las-vs-lamf']) .about .st,
+:where([data-page='blog-las-vs-lamf']) .stmt .st,
+:where([data-page='blog-las-vs-lamf']) .elig h2,
+:where([data-page='blog-las-vs-lamf']) .elig-bar h2 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  margin: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-panel h3 {
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.3px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .tile h3,
+:where([data-page='blog-las-vs-lamf']) .who h3,
+:where([data-page='blog-las-vs-lamf']) .step h3,
+:where([data-page='blog-las-vs-lamf']) .svc-body h3 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .q h3 {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .q button {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+}
+
+:where([data-page='blog-las-vs-lamf']) .tile p,
+:where([data-page='blog-las-vs-lamf']) .who p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .strip p {
+  font-weight: 400;
+}
+
+@media (max-width: 959px) {
+  :where([data-page='blog-las-vs-lamf']):not(.__root) {
+    --fs-h1: 30px;
+    --lh-h1: 38px;
+    --fs-h2: 26px;
+    --lh-h2: 34px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .h3,
+  :where([data-page='blog-las-vs-lamf']) .panel-d h3,
+  :where([data-page='blog-las-vs-lamf']) .about .st,
+  :where([data-page='blog-las-vs-lamf']) .stmt .st,
+  :where([data-page='blog-las-vs-lamf']) .elig h2,
+  :where([data-page='blog-las-vs-lamf']) .elig-bar h2 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ob-panel h3 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .tile h3,
+  :where([data-page='blog-las-vs-lamf']) .who h3,
+  :where([data-page='blog-las-vs-lamf']) .step h3,
+  :where([data-page='blog-las-vs-lamf']) .svc-body h3,
+  :where([data-page='blog-las-vs-lamf']) .q button {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) p.last {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@media (max-width: 959px) {
+  :where([data-page='blog-las-vs-lamf']) .rail {
+    padding: 12px 12px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .rail .node[aria-selected='true'] {
+    transform: scale(1.1);
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .wy {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+  margin-top: 28px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .wy-c {
+  background: var(--paper);
+  border-radius: 20px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  column-gap: 16px;
+  align-content: start;
+  transition: background 0.25s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .wy-t {
+  grid-row: span 2;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px var(--line);
+  display: grid;
+  place-items: center;
+  color: var(--navy-600);
+  transition:
+    background 0.25s,
+    color 0.25s,
+    box-shadow 0.25s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .wy-t svg {
+  width: 38px;
+  height: 38px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .wy-c h3 {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+  transition: color 0.25s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .wy-c p {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--navy-600);
+  margin-top: 6px;
+  transition: color 0.25s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .wy-c:hover {
+  background: var(--navy-800);
+}
+
+:where([data-page='blog-las-vs-lamf']) .wy-c:hover h3 {
+  color: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .wy-c:hover p {
+  color: var(--blue-050);
+}
+
+:where([data-page='blog-las-vs-lamf']) .wy-c:hover .wy-t {
+  background: rgba(222, 235, 246, 0.1);
+  color: #fff;
+  box-shadow: inset 0 0 0 1px rgba(222, 235, 246, 0.22);
+}
+
+@media (min-width: 960px) {
+  :where([data-page='blog-las-vs-lamf']) .wy {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .wy-c {
+    display: block;
+    padding: 28px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .wy-t {
+    width: 72px;
+    height: 72px;
+    border-radius: 20px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .wy-t svg {
+    width: 48px;
+    height: 48px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .wy-c h3 {
+    margin-top: 24px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .wy-c p {
+    margin-top: 8px;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .wy-c {
+  background: #fff;
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+
+:where([data-page='blog-las-vs-lamf']) .wy-t {
+  background: var(--paper);
+  box-shadow: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .wy-c:hover {
+  box-shadow: inset 0 0 0 1px var(--navy-800);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-tab {
+  background: #fff;
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-tab:hover {
+  background: var(--blue-050);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ob-tab[aria-selected='true'] {
+  background: var(--navy-800);
+  box-shadow: inset 0 0 0 1px var(--navy-800);
+}
+
+:where([data-page='blog-las-vs-lamf']) .who .card {
+  background: #fff;
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+:where([data-page='blog-las-vs-lamf']) .who .card:hover,
+:where([data-page='blog-las-vs-lamf']) .who .card:focus-within {
+  box-shadow: inset 0 0 0 1px var(--navy-800);
+}
+
+@media (min-width: 960px) {
+  :where([data-page='blog-las-vs-lamf']) .ob-panel {
+    min-height: 0;
+    padding: 40px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ob-tile {
+    left: 40px;
+    top: 40px;
+    width: 88px;
+    height: 88px;
+    border-radius: 24px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ob-panel p {
+    margin: 12px 0 24px;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .wg {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .wg-c {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: inset 0 0 0 1px var(--line);
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  column-gap: 16px;
+  align-content: start;
+  transition:
+    background 0.25s,
+    box-shadow 0.25s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .wg-c .disc {
+  grid-row: span 2;
+}
+
+:where([data-page='blog-las-vs-lamf']) .wg-c h3 {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+  transition: color 0.25s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .wg-c p {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--navy-600);
+  margin-top: 6px;
+  transition: color 0.25s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .wg-c:hover,
+:where([data-page='blog-las-vs-lamf']) .wg-c:focus-within {
+  background: var(--navy-800);
+  box-shadow: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .wg-c:hover h3,
+:where([data-page='blog-las-vs-lamf']) .wg-c:focus-within h3 {
+  color: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .wg-c:hover p,
+:where([data-page='blog-las-vs-lamf']) .wg-c:focus-within p {
+  color: var(--blue-050);
+}
+
+:where([data-page='blog-las-vs-lamf']) .wg-c:hover .disc {
+  background: var(--red-400);
+}
+
+@media (min-width: 960px) {
+  :where([data-page='blog-las-vs-lamf']) .wg {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .wg-c {
+    grid-column: span 2;
+    display: block;
+    padding: 28px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .wg-c:nth-child(n + 4) {
+    grid-column: span 3;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .wg-c h3 {
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .wg-c p {
+    margin-top: 8px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .wg-c:nth-child(n + 4) p {
+    max-width: 46ch;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .wg-c {
+  position: relative;
+  overflow: hidden;
+}
+
+:where([data-page='blog-las-vs-lamf']) .wg-c > :not(.wg-bg) {
+  position: relative;
+  z-index: 1;
+}
+
+:where([data-page='blog-las-vs-lamf']) .wg-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.18;
+  transition: opacity 0.35s;
+  -webkit-mask-image: linear-gradient(90deg, transparent 15%, #000 100%);
+  mask-image: linear-gradient(90deg, transparent 15%, #000 100%);
+}
+
+:where([data-page='blog-las-vs-lamf']) .wg-c:hover .wg-bg,
+:where([data-page='blog-las-vs-lamf']) .wg-c:focus-within .wg-bg {
+  opacity: 0.32;
+  mix-blend-mode: luminosity;
+}
+
+@media (min-width: 960px) {
+  :where([data-page='blog-las-vs-lamf']) .wg-bg {
+    -webkit-mask-image: linear-gradient(120deg, transparent 35%, #000 100%);
+    mask-image: linear-gradient(120deg, transparent 35%, #000 100%);
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .wg-c {
+  grid-template-columns: 56px 1fr;
+}
+
+:where([data-page='blog-las-vs-lamf']) .wg-c .wg-t {
+  grid-row: span 2;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: var(--paper);
+  display: grid;
+  place-items: center;
+  color: var(--navy-600);
+  transition:
+    background 0.25s,
+    color 0.25s,
+    box-shadow 0.25s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .wg-c .wg-t svg {
+  width: 38px;
+  height: 38px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .wg-c:hover .wg-t,
+:where([data-page='blog-las-vs-lamf']) .wg-c:focus-within .wg-t {
+  background: rgba(222, 235, 246, 0.1);
+  color: #fff;
+  box-shadow: inset 0 0 0 1px rgba(222, 235, 246, 0.22);
+}
+
+@media (min-width: 960px) {
+  :where([data-page='blog-las-vs-lamf']) .wg-c .wg-t {
+    width: 72px;
+    height: 72px;
+    border-radius: 20px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .wg-c .wg-t svg {
+    width: 48px;
+    height: 48px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .wg-c h3 {
+    margin-top: 24px;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .sec-head {
+  margin-bottom: 24px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .wy {
+  margin-top: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) section#about {
+  padding-top: 48px;
+}
+
+@media (min-width: 960px) {
+  :where([data-page='blog-las-vs-lamf']) .sec-head {
+    margin-bottom: 32px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) section#about {
+    padding-top: 56px;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) section#services {
+  padding-bottom: 24px;
+}
+
+:where([data-page='blog-las-vs-lamf']) section#how,
+:where([data-page='blog-las-vs-lamf']) section#why,
+:where([data-page='blog-las-vs-lamf']) section#who {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+:where([data-page='blog-las-vs-lamf']) section#about {
+  padding-top: 24px;
+}
+
+@media (min-width: 960px) {
+  :where([data-page='blog-las-vs-lamf']) section#services {
+    padding-bottom: 28px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) section#how,
+  :where([data-page='blog-las-vs-lamf']) section#why,
+  :where([data-page='blog-las-vs-lamf']) section#who {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) section#about {
+    padding-top: 28px;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) section[id] {
+  scroll-margin-top: 96px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ab {
+  display: grid;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px var(--border);
+  background: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ab-img {
+  position: relative;
+  min-height: 220px;
+  background: var(--navy-800);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ab-img i {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  mix-blend-mode: luminosity;
+  opacity: 0.85;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ab-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5, 38, 87, 0.15), rgba(5, 38, 87, 0.5));
+}
+
+:where([data-page='blog-las-vs-lamf']) .ab-tx {
+  padding: 28px 20px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ab-tx .body {
+  margin-top: 12px;
+  color: var(--navy-600);
+  max-width: none;
+}
+
+@media (min-width: 960px) {
+  :where([data-page='blog-las-vs-lamf']) .ab {
+    grid-template-columns: 5fr 7fr;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ab-img {
+    min-height: 380px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ab-img::after {
+    background: linear-gradient(90deg, rgba(5, 38, 87, 0.15), rgba(5, 38, 87, 0.35));
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ab-tx {
+    padding: 48px;
+    align-self: center;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ab-tx .body {
+    margin-top: 16px;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .fq-g {
+  display: grid;
+  gap: 12px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .fq-c {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: inset 0 0 0 1px var(--border);
+  padding: 20px;
+  transition: box-shadow 0.2s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .fq-c:hover {
+  box-shadow: inset 0 0 0 1px var(--navy-800);
+}
+
+:where([data-page='blog-las-vs-lamf']) .fq-c h3 {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .fq-c p {
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text);
+}
+
+@media (min-width: 960px) {
+  :where([data-page='blog-las-vs-lamf']) .fq-g {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .fq-c {
+    padding: 28px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .fq-c h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .hero-stats {
+  display: none;
+}
+
+@media (max-width: 959px) {
+  :where([data-page='blog-las-vs-lamf']) .hero {
+    min-height: 620px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    margin: 28px 0 0;
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid rgba(222, 235, 246, 0.2);
+    border-bottom: 1px solid rgba(222, 235, 246, 0.2);
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hero-stats div {
+    padding: 14px 10px 14px 0;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hero-stats div + div {
+    padding-left: 12px;
+    border-left: 1px solid rgba(222, 235, 246, 0.2);
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hero-stats dt {
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--blue-050);
+    opacity: 0.85;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hero-stats dd {
+    margin: 4px 0 0;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hero-scrim {
+    background: linear-gradient(
+      180deg,
+      rgba(5, 38, 87, 0.98) 0%,
+      rgba(5, 38, 87, 0.9) 40%,
+      rgba(5, 38, 87, 0.35) 62%,
+      rgba(5, 38, 87, 0) 80%
+    );
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) section#lead {
+  padding-top: 24px;
+  padding-bottom: 56px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld {
+  display: grid;
+  gap: 24px;
+  border-radius: 20px;
+  background: var(--hero-gradient);
+  padding: 28px 20px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld .h2 {
+  color: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld .h2 em {
+  color: var(--red-400);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld .body {
+  color: var(--blue-050);
+  margin-top: 12px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld-pts {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  display: grid;
+  gap: 12px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld-pts li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld-pts svg {
+  width: 20px;
+  height: 20px;
+  color: var(--red-400);
+  flex: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld-f {
+  display: grid;
+  gap: 16px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld-fl label:not(.ld-ck) {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--navy-600);
+  margin-bottom: 6px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld-fl input[type='text'],
+:where([data-page='blog-las-vs-lamf']) .ld-fl input[type='tel'],
+:where([data-page='blog-las-vs-lamf']) .ld-fl select {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px var(--border);
+  font: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld-fl input:focus-visible,
+:where([data-page='blog-las-vs-lamf']) .ld-fl select:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 1px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld-fl [aria-invalid='true'] {
+  box-shadow: inset 0 0 0 2px var(--red-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld-mob {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  border-radius: 9px;
+  box-shadow: inset 0 0 0 1px var(--border);
+  background: #fff;
+  padding-left: 14px;
+  gap: 10px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld-mob:focus-within {
+  box-shadow: inset 0 0 0 2px var(--focus);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld-mob b {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld-mob input {
+  flex: 1;
+  min-width: 0;
+  box-shadow: none !important;
+  padding-left: 0 !important;
+  height: 46px !important;
+  outline: 0 !important;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld-ck {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--navy-600);
+  min-height: 24px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld-ck input {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  flex: none;
+  accent-color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld-err {
+  min-height: 0;
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  color: var(--red-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld-err:empty {
+  display: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld-f .btn {
+  width: 100%;
+  margin-top: 4px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld-fine {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--text);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld-fine a {
+  color: var(--navy-600);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld-ok {
+  padding: 24px 4px;
+  text-align: center;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld-ok h3 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld-ok p {
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text);
+}
+
+@media (min-width: 960px) {
+  :where([data-page='blog-las-vs-lamf']) section#lead {
+    padding-top: 28px;
+    padding-bottom: 56px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ld {
+    grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+    gap: 56px;
+    padding: 56px 48px;
+    align-items: center;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ld-card {
+    padding: 32px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ld-f .btn {
+    width: auto;
+    justify-self: start;
+    padding: 0 32px;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld-f[hidden],
+:where([data-page='blog-las-vs-lamf']) .ld-ok[hidden] {
+  display: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld-mob input {
+  width: auto !important;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld-fine a {
+  display: inline-block;
+  padding: 12px 4px;
+  margin: -12px -4px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld,
+:where([data-page='blog-las-vs-lamf']) .ld-f {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld > *,
+:where([data-page='blog-las-vs-lamf']) .ld-f > * {
+  min-width: 0;
+}
+
+@media (min-width: 960px) {
+  :where([data-page='blog-las-vs-lamf']) .ld {
+    grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .ld-mob input {
+  background: transparent !important;
+  border-radius: 0 !important;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hv {
+  height: auto !important;
+  min-height: 0 !important;
+  display: block !important;
+  padding: 0;
+  border-radius: 20px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hv .hv-wrap {
+  position: relative;
+  z-index: 2;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hv-copy h1 {
+  max-width: 11em;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hv-copy .sub {
+  max-width: 24em;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hv-wrap {
+  padding: 40px 20px 84px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hv-pts {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  display: grid;
+  gap: 10px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hv-pts li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hv-pts svg {
+  width: 20px;
+  height: 20px;
+  color: var(--red-400);
+  flex: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hv3 {
+  position: relative;
+  margin-top: 8px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hv3 .hero {
+  margin-top: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hv-bar {
+  position: relative;
+  z-index: 5;
+  margin: -64px 16px 0;
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 14px;
+  box-shadow:
+    0 16px 40px rgba(0, 20, 60, 0.25),
+    inset 0 0 0 1px var(--line);
+}
+
+:where([data-page='blog-las-vs-lamf']) .hv-bar[hidden] {
+  display: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hv-bar > * {
+  min-width: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hv-bar .btn {
+  width: 100%;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hv-bt {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .hv-ck2 {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hv-bar .ld-fl label:not(.ld-ck) {
+  margin-bottom: 6px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hv-fine {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--text);
+}
+
+:where([data-page='blog-las-vs-lamf']) .hv-done h3 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .hv-done p {
+  margin-top: 6px;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text);
+}
+
+@media (min-width: 960px) {
+  :where([data-page='blog-las-vs-lamf']) .hv-wrap {
+    padding: 72px 56px 128px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hv-copy h1 {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hv-pts {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 32px;
+    margin-top: 28px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hv-bar {
+    margin: -72px 56px 0;
+    padding: 20px 24px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: 16px;
+    align-items: end;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hv-bar .btn {
+    grid-column: 3;
+    grid-row: 2;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hv-ck2 {
+    grid-column: 1/3;
+    grid-row: 2;
+    align-self: center;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hv-fine {
+    grid-column: 1/-1;
+    grid-row: 3;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hv-bt {
+    display: none;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hv-done {
+    display: block;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .hv-bar[hidden],
+:where([data-page='blog-las-vs-lamf']) .hv-done[hidden] {
+  display: none !important;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-cp.cx-full > .cx-res {
+  align-self: stretch;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 48px;
+  padding: 0 24px;
+  border-radius: 99px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  background: var(--red-600);
+  color: #fff;
+  transition: 0.2s;
+  width: 100%;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-btn:hover {
+  background: var(--red-400);
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-lnk {
+  display: block;
+  text-align: center;
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--blue-050);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding: 0 0 16px;
+  scroll-padding: 0 16px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-tabs button {
+  flex: none;
+  height: 44px;
+  padding: 0 18px;
+  border-radius: 99px;
+  border: 0;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px var(--border);
+  color: var(--navy-600);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-tabs button:hover {
+  box-shadow: inset 0 0 0 1px var(--navy-800);
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-tabs button[aria-selected='true'] {
+  background: var(--navy-600);
+  color: #fff;
+  box-shadow: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-ins {
+  display: grid;
+  gap: 20px;
+  align-content: start;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-fl-h {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-fl > label {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-fl-h label {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-inp {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 44px;
+  min-width: 0;
+  width: 150px;
+  flex: none;
+  padding: 0 12px;
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-inp:focus-within {
+  box-shadow: inset 0 0 0 2px var(--focus);
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-inp b {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-inp input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  text-align: right;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-sel {
+  display: block;
+  width: 100%;
+  height: 44px;
+  margin-top: 8px;
+  padding: 0 12px;
+  border-radius: 9px;
+  border: 0;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px var(--border);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-rg {
+  width: 100%;
+  margin: 8px 0 0;
+  accent-color: var(--navy-600);
+  height: 32px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-rm {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--text);
+  margin-top: 2px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-wd {
+  text-align: right;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-top: 4px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-hint {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--text);
+  margin-top: 6px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-ltv,
+:where([data-page='blog-las-vs-lamf']) .cx-kd {
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--paper);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-kd-t {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--navy-600);
+  margin: 0 0 8px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-kd dl + .cx-kd-t {
+  margin-top: 16px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-ltv dl div,
+:where([data-page='blog-las-vs-lamf']) .cx-kd dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 6px 0;
+  font-size: 14px;
+  line-height: 20px;
+  border-bottom: 1px dashed var(--line);
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-ltv dl div:last-child,
+:where([data-page='blog-las-vs-lamf']) .cx-kd dl div:last-child {
+  border-bottom: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-ltv dt,
+:where([data-page='blog-las-vs-lamf']) .cx-kd dt {
+  color: var(--text);
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-ltv dd,
+:where([data-page='blog-las-vs-lamf']) .cx-kd dd {
+  font-weight: 600;
+  color: var(--navy-600);
+  text-align: right;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-kd summary {
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--navy-600);
+  min-height: 24px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-kd summary::-webkit-details-marker {
+  display: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-kd summary::after {
+  content: '+';
+  font-size: 20px;
+  line-height: 20px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-kd[open] summary::after {
+  content: '\2212';
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-kd[open] summary {
+  margin-bottom: 12px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-note {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--text);
+  margin-top: 16px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-res {
+  background: var(--hero-gradient);
+  color: #fff;
+  border-radius: 16px;
+  padding: 24px 20px;
+  align-self: start;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-r-l {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--blue-050);
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-r-n {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-top: 4px;
+  word-break: break-word;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-r-rows {
+  margin: 16px 0 20px;
+  border-top: 1px solid rgba(222, 235, 246, 0.25);
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-r-rows div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(222, 235, 246, 0.25);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-r-rows dt {
+  color: var(--blue-050);
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-r-rows dd {
+  font-weight: 600;
+  text-align: right;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-cB {
+  max-width: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-cB .cx-cp.cx-full {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-cB .cx-res {
+  order: -1;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-cB .cx-ins {
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: inset 0 0 0 1px var(--border);
+  background: #fff;
+}
+
+@media (min-width: 960px) {
+  :where([data-page='blog-las-vs-lamf']) .cx-inp {
+    width: 170px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .cx-r-n {
+    font-size: 44px;
+    line-height: 52px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .cx-res {
+    padding: 32px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .cx-cB .cx-cp.cx-full {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .cx-cB .cx-ins {
+    padding: 28px;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 32px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .cx-cB .cx-ltv,
+  :where([data-page='blog-las-vs-lamf']) .cx-cB .cx-kd {
+    grid-column: 1/-1;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .cx-cB .cx-res {
+    padding: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    align-items: center;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .cx-cB .cx-r-l,
+  :where([data-page='blog-las-vs-lamf']) .cx-cB .cx-r-n {
+    grid-column: 1;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .cx-cB .cx-r-rows {
+    grid-column: 2;
+    grid-row: 1/4;
+    margin: 0;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .cx-cB .cx-btn {
+    grid-column: 1;
+    width: auto;
+    justify-self: start;
+    margin-top: 20px;
+    padding: 0 32px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .cx-cB .cx-lnk {
+    grid-column: 1;
+    text-align: left;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-lnk {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-cB .cx-lnk {
+  justify-content: flex-start;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-rg {
+  height: 32px;
+  margin-top: 8px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-tabs button[aria-selected='false'] {
+  background: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-cp[hidden] {
+  display: none !important;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-tabs button:focus-visible,
+:where([data-page='blog-las-vs-lamf']) .cx-btn:focus-visible,
+:where([data-page='blog-las-vs-lamf']) .cx-lnk:focus-visible,
+:where([data-page='blog-las-vs-lamf']) .cx-inp input:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-inp input:focus-visible {
+  outline: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-btn,
+:where([data-page='blog-las-vs-lamf']) .cx-btn:hover {
+  color: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) section#estimate {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+@media (min-width: 960px) {
+  :where([data-page='blog-las-vs-lamf']) section#estimate {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .sr {
+  position: absolute;
+  left: -9999px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cf {
+  display: none;
+}
+
+div:where([data-page='blog-las-vs-lamf']).review .cf {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 1px 8px;
+  border-radius: 99px;
+  box-shadow: inset 0 0 0 1px var(--red-600);
+  color: var(--red-600);
+  font-size: 11px;
+  line-height: 18px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+  background: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .chips li {
+  padding: 4px 12px;
+  border-radius: 99px;
+  background: var(--blue-050, #deebf6);
+  color: var(--navy-600);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+:where([data-page='blog-las-vs-lamf']) .pa {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  margin-inline: -16px;
+  padding: 0 16px 4px;
+  scrollbar-width: none;
+  scroll-padding-inline: 16px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .pa::-webkit-scrollbar {
+  display: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .pa:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .pa-c {
+  flex: 0 0 82%;
+  scroll-snap-align: start;
+}
+
+:where([data-page='blog-las-vs-lamf']) .pa-ctl {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .pa-dots {
+  display: flex;
+  gap: 8px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .pa-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+}
+
+:where([data-page='blog-las-vs-lamf']) .pa-dots span.on {
+  background: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .pa-ar {
+  display: flex;
+  gap: 8px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .pa-ar button {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 0;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px var(--border);
+  color: var(--red-600);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+:where([data-page='blog-las-vs-lamf']) .pa-ar svg {
+  width: 20px;
+  height: 20px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .pa-c {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px var(--line);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .pa-c img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  display: block;
+}
+
+:where([data-page='blog-las-vs-lamf']) .pa-b {
+  padding: 20px 20px 24px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .pa-b h3 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .pa-b p {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--navy-600);
+  margin-top: 8px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .rb {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+:where([data-page='blog-las-vs-lamf']) .rb-c {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 1px var(--line);
+  padding: 24px 0 4px;
+  min-width: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .rb-k {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--red-600);
+  padding: 0 20px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .rb-t,
+:where([data-page='blog-las-vs-lamf']) .rb-t tbody,
+:where([data-page='blog-las-vs-lamf']) .rb-t tr,
+:where([data-page='blog-las-vs-lamf']) .rb-t th,
+:where([data-page='blog-las-vs-lamf']) .rb-t td {
+  display: block;
+  width: 100%;
+}
+
+:where([data-page='blog-las-vs-lamf']) .rb-t caption {
+  display: block;
+  text-align: left;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: var(--navy-600);
+  padding: 4px 20px 12px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .rb-t tr {
+  padding: 16px 20px;
+  border-top: 1px solid var(--line);
+}
+
+:where([data-page='blog-las-vs-lamf']) .rb-t th {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: var(--navy-600);
+  text-align: left;
+}
+
+:where([data-page='blog-las-vs-lamf']) .rb-t th small {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--text);
+  margin-top: 2px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .rb-t td {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: var(--navy-600);
+  margin-top: 4px;
+}
+
+:where([data-page='blog-las-vs-lamf']) section#estimate {
+  padding-bottom: 24px;
+}
+
+:where([data-page='blog-las-vs-lamf']) section#pledge,
+:where([data-page='blog-las-vs-lamf']) section#trust,
+:where([data-page='blog-las-vs-lamf']) section#why,
+:where([data-page='blog-las-vs-lamf']) section#how,
+:where([data-page='blog-las-vs-lamf']) section#rates,
+:where([data-page='blog-las-vs-lamf']) section#eligibility {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+:where([data-page='blog-las-vs-lamf']) section#next {
+  padding-top: 24px;
+  padding-bottom: 48px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hv-tag {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 12px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hv-tag + .sub {
+  margin-top: 8px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hv-pts svg {
+  color: var(--red-400);
+}
+
+:where([data-page='blog-las-vs-lamf']) .fq-l {
+  display: grid;
+  gap: 28px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .fq-grp {
+  display: grid;
+  gap: 12px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .fq-gl {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--red-600);
+  letter-spacing: 0.02em;
+}
+
+:where([data-page='blog-las-vs-lamf']) .fq-d {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: inset 0 0 0 1px var(--border);
+  transition: box-shadow 0.2s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .fq-d:hover,
+:where([data-page='blog-las-vs-lamf']) .fq-d[open] {
+  box-shadow: inset 0 0 0 1px var(--navy-800);
+}
+
+:where([data-page='blog-las-vs-lamf']) .fq-d summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  min-height: 56px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .fq-d summary::-webkit-details-marker {
+  display: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .fq-d summary:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 12px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .fq-d h3 {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 600;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .fq-ch {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+:where([data-page='blog-las-vs-lamf']) .fq-ch:before,
+:where([data-page='blog-las-vs-lamf']) .fq-ch:after {
+  content: '';
+  position: absolute;
+  left: 3px;
+  right: 3px;
+  top: 9px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--red-600);
+  transition: transform 0.2s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .fq-ch:after {
+  transform: rotate(90deg);
+}
+
+:where([data-page='blog-las-vs-lamf']) .fq-d[open] .fq-ch:after {
+  transform: rotate(0);
+}
+
+:where([data-page='blog-las-vs-lamf']) .fq-d p {
+  padding: 0 20px 20px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(5, 38, 87, 0.85);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where([data-page='blog-las-vs-lamf']) .fq-ch:before,
+  :where([data-page='blog-las-vs-lamf']) .fq-ch:after {
+    transition: none;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) #heroform {
+  scroll-margin-top: 96px;
+}
+
+:where([data-page='blog-las-vs-lamf']) #hero {
+  padding-bottom: 104px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hero-photo {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  object-position: 62% 60%;
+  display: block;
+  opacity: 0.8;
+  -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 55%);
+  mask-image: linear-gradient(180deg, transparent 0, #000 55%);
+}
+
+:where([data-page='blog-las-vs-lamf']) section#terms {
+  padding-top: 48px;
+  padding-bottom: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) section#faqs {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+:where([data-page='blog-las-vs-lamf']) section#estimate {
+  padding-top: 48px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-cp.cx-full > .cx-res {
+  align-self: stretch;
+}
+
+:where([data-page='blog-las-vs-lamf']) .tm {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px var(--line);
+  margin: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .tm > div {
+  background: #fff;
+  padding: 16px;
+  min-width: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .tm > div:last-child {
+  grid-column: 1/-1;
+}
+
+:where([data-page='blog-las-vs-lamf']) .tm dt {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text);
+}
+
+:where([data-page='blog-las-vs-lamf']) .tm dd {
+  margin: 4px 0 0;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .tm small {
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--text);
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .pl-note {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text);
+}
+
+:where([data-page='blog-las-vs-lamf']) .pl-note a {
+  color: var(--navy-600);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  padding: 12px 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .rt-dl {
+  color: var(--navy-600);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  display: inline-block;
+  padding: 12px 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .rt-w {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 1px var(--line);
+  overflow: hidden;
+}
+
+:where([data-page='blog-las-vs-lamf']) .rt {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+:where([data-page='blog-las-vs-lamf']) .rt thead {
+  position: absolute;
+  left: -9999px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .rt,
+:where([data-page='blog-las-vs-lamf']) .rt tbody,
+:where([data-page='blog-las-vs-lamf']) .rt tr,
+:where([data-page='blog-las-vs-lamf']) .rt td,
+:where([data-page='blog-las-vs-lamf']) .rt th {
+  display: block;
+}
+
+:where([data-page='blog-las-vs-lamf']) .rt tr {
+  padding: 16px 20px;
+  border-top: 1px solid var(--line);
+}
+
+:where([data-page='blog-las-vs-lamf']) .rt tr:first-child {
+  border-top: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .rt th[scope='row'] {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--text);
+  text-align: left;
+}
+
+:where([data-page='blog-las-vs-lamf']) .rt td {
+  margin-top: 4px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .rt td small {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--text);
+  margin-top: 2px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .rt-meta {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text);
+}
+
+:where([data-page='blog-las-vs-lamf']) .dc {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 32px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .el {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  display: grid;
+  gap: 12px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .el li,
+:where([data-page='blog-las-vs-lamf']) .dl li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .el svg,
+:where([data-page='blog-las-vs-lamf']) .dl svg {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  color: var(--red-600);
+  margin-top: 2px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .dp {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: inset 0 0 0 1px var(--line);
+  min-width: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .dp-sel label {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--navy-600);
+  margin-bottom: 6px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .dp-sel select {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 9px;
+  box-shadow: inset 0 0 0 1px var(--border);
+  font: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--navy-600);
+  background: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .dp-sel select:focus-visible,
+:where([data-page='blog-las-vs-lamf']) .dt-tabs button:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .dt-tabs {
+  display: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .dl {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  display: grid;
+  gap: 12px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .tb {
+  background: var(--hero-gradient);
+  border-radius: 20px;
+  padding: 32px 20px;
+  color: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .tb h2 {
+  color: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .tb ul {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+  display: grid;
+  gap: 16px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .tb li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+:where([data-page='blog-las-vs-lamf']) .tb svg {
+  width: 24px;
+  height: 24px;
+  color: var(--red-400);
+  flex: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cl {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 28px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cl .btn {
+  margin-top: 24px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .rl {
+  display: grid;
+  gap: 12px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .rl a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  min-height: 72px;
+  box-shadow: inset 0 0 0 1px var(--line);
+  color: var(--navy-600);
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: box-shadow 0.2s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .rl a:hover {
+  box-shadow: inset 0 0 0 1px var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .rl small {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--text);
+  margin-top: 2px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .rl svg {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  color: var(--red-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .sb {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 60;
+  background: #fff;
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+  box-shadow: 0 -8px 24px rgba(0, 20, 60, 0.14);
+  transform: translateY(110%);
+  transition: transform 0.25s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .sb.on {
+  transform: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .sb .btn {
+  width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where([data-page='blog-las-vs-lamf']) .sb {
+    transition: none;
+  }
+}
+
+@media (min-width: 640px) {
+  :where([data-page='blog-las-vs-lamf']) .pa-c {
+    flex-basis: 46%;
+  }
+}
+
+@media (min-width: 960px) {
+  :where([data-page='blog-las-vs-lamf']) #hero {
+    padding-bottom: 0;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hero-photo {
+    left: auto;
+    right: 0;
+    top: 0;
+    bottom: auto;
+    width: 64%;
+    height: 100%;
+    object-position: 60% 55%;
+    opacity: 1;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 38%);
+    mask-image: linear-gradient(90deg, transparent 0, #000 38%);
+  }
+
+  :where([data-page='blog-las-vs-lamf']) section#estimate {
+    padding-bottom: 28px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) section#pledge,
+  :where([data-page='blog-las-vs-lamf']) section#trust,
+  :where([data-page='blog-las-vs-lamf']) section#why,
+  :where([data-page='blog-las-vs-lamf']) section#how,
+  :where([data-page='blog-las-vs-lamf']) section#rates,
+  :where([data-page='blog-las-vs-lamf']) section#eligibility {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) section#next {
+    padding-top: 28px;
+    padding-bottom: 56px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .fq-w {
+    display: grid;
+    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+    gap: 56px;
+    align-items: start;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .fq-w .sec-head {
+    position: sticky;
+    top: 112px;
+    margin: 0;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .fq-d h3 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) section#terms {
+    padding-top: 56px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) section#faqs {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) section#estimate {
+    padding-top: 56px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .tm {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .tm > div {
+    padding: 24px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .tm > div:last-child {
+    grid-column: auto;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .tm dd {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .pa {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    overflow: visible;
+    margin-inline: 0;
+    padding: 0;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .pa-c {
+    flex: none;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .pa-ctl {
+    display: none;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .rb {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .rt thead {
+    position: static;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .rt {
+    display: table;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .rt thead {
+    display: table-header-group;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .rt tbody {
+    display: table-row-group;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .rt tr {
+    display: table-row;
+    padding: 0;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .rt th,
+  :where([data-page='blog-las-vs-lamf']) .rt td {
+    display: table-cell;
+    padding: 20px 28px;
+    border-top: 1px solid var(--line);
+    vertical-align: top;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .rt tr:first-child th,
+  :where([data-page='blog-las-vs-lamf']) .rt tr:first-child td {
+    border-top: 0;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .rt thead th {
+    background: var(--paper);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: var(--text);
+    text-align: left;
+    border-top: 0;
+    width: auto;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .rt tbody th[scope='row'] {
+    width: 36%;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--navy-600);
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .rt td {
+    margin: 0;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .dc {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: 56px;
+    align-items: start;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .dp {
+    padding: 28px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .dp-sel {
+    display: none;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .dt-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .dt-tabs button {
+    min-height: 44px;
+    padding: 0 18px;
+    border: 0;
+    border-radius: 99px;
+    background: var(--paper);
+    box-shadow: inset 0 0 0 1px var(--border);
+    font: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--navy-600);
+    cursor: pointer;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .dt-tabs button[aria-selected='true'] {
+    background: var(--navy-600);
+    color: #fff;
+    box-shadow: none;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .dl {
+    margin-top: 24px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .tb {
+    padding: 40px 48px;
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: 48px;
+    align-items: center;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .tb ul {
+    margin: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 24px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .cl {
+    grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+    gap: 56px;
+    align-items: center;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .sb {
+    display: none;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .pp-i {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: var(--blue-050, #deebf6);
+  display: grid;
+  place-items: center;
+  margin-bottom: 16px;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .pp-i svg {
+  width: 38px;
+  height: 38px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-btn {
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-hint {
+  margin: 0;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--slate, #6e7191);
+}
+
+:where([data-page='blog-las-vs-lamf']) .hero.hv {
+  min-height: 0 !important;
+  height: auto !important;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hero.hv .hv-copy {
+  padding-bottom: 96px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hv-cta {
+  margin-top: 24px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .chead {
+  background: linear-gradient(102deg, #052657 0%, #003368 100%);
+  color: #fff;
+  border-radius: 20px;
+  padding: 28px 20px;
+  margin-top: 4px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .chead h1 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 38px;
+  font-weight: 700;
+  letter-spacing: -1.2px;
+  color: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .chead p {
+  margin: 8px 0 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(222, 235, 246, 0.92);
+  max-width: 640px;
+}
+
+:where([data-page='blog-las-vs-lamf']) section#calculator {
+  padding-top: 24px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-lbtn {
+  background: none;
+  border: 0;
+  width: 100%;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+:where([data-page='blog-las-vs-lamf']) .sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (min-width: 960px) {
+  :where([data-page='blog-las-vs-lamf']) .chead {
+    padding: 36px 56px;
+    margin-top: 8px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .chead h1 {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .chead p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) section#calculator {
+    padding-top: 28px;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) section#offer {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+@media (min-width: 960px) {
+  :where([data-page='blog-las-vs-lamf']) section#offer {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .pp {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .hero.hv .hv-copy {
+    padding-bottom: 64px;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .chead {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+:where([data-page='blog-las-vs-lamf']) .chead h1,
+:where([data-page='blog-las-vs-lamf']) .chead p {
+  position: relative;
+  z-index: 1;
+}
+
+:where([data-page='blog-las-vs-lamf']) .chead-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--bp, 50% 50%);
+  opacity: 0.24;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@media (min-width: 960px) {
+  :where([data-page='blog-las-vs-lamf']) .chead-img {
+    left: auto;
+    right: 0;
+    width: 54%;
+    opacity: 1;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 38%);
+    mask-image: linear-gradient(90deg, transparent 0, #000 38%);
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-i-las {
+  background-image: url(/images/blogs/blog-card-las.webp);
+  background-position: 50% 40%;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-i-lap {
+  background-image: url(/images/blogs/blog-card-lap.webp);
+  background-position: 50% 45%;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-i-esop {
+  background-image: url(/images/blogs/blog-card-esop.webp);
+  background-position: 50% 12%;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-i-cre {
+  background-image: url(/images/blogs/blog-card-cre.webp);
+  background-position: 50% 40%;
+}
+
+:where([data-page='blog-las-vs-lamf']) .chead {
+  margin-bottom: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) section#articles {
+  padding-top: 20px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-chips {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 4px 16px 12px;
+  margin: 0 -16px;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-chips::-webkit-scrollbar {
+  display: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-chip {
+  flex: none;
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 22px;
+  border: 1px solid #a0a3bd;
+  background: #fff;
+  color: #003368;
+  font:
+    600 14px/20px Inter,
+    system-ui,
+    sans-serif;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-chip span {
+  font-weight: 500;
+  color: #6e7191;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-chip[aria-pressed='true'] {
+  background: #003368;
+  border-color: #003368;
+  color: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-chip[aria-pressed='true'] span {
+  color: #deebf6;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-chip:focus-visible {
+  outline: 2px solid #034ccd;
+  outline-offset: 2px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-count {
+  margin: 4px 0 16px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6e7191;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-img {
+  aspect-ratio: 16/9;
+  background-size: cover;
+  background-color: #052657;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-feat,
+:where([data-page='blog-las-vs-lamf']) .bl-card {
+  position: relative;
+  border: 1px solid #a0a3bd;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-feat {
+  margin-bottom: 16px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-b {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-tag {
+  margin: 0 0 8px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6e7191;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-cat {
+  margin: 0 0 8px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #c8121a;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-card h3,
+:where([data-page='blog-las-vs-lamf']) .bl-ft {
+  margin: 0;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  color: #052657;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-card h3 a,
+:where([data-page='blog-las-vs-lamf']) .bl-ft a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-card h3 a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-ex {
+  margin: 10px 0 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: #6e7191;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-m {
+  margin: 14px 0 0;
+  display: flex;
+  gap: 12px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6e7191;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-m span + time::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #a0a3bd;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-go {
+  margin-top: auto;
+  padding-top: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: #c8121a;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-go svg {
+  width: 16px;
+  height: 16px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-feat .btn {
+  margin-top: 20px;
+  align-self: flex-start;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+}
+
+@media (hover: hover) {
+  :where([data-page='blog-las-vs-lamf']) .bl-card:hover,
+  :where([data-page='blog-las-vs-lamf']) .bl-feat:hover {
+    border-color: #052657;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-card:focus-within {
+  border-color: #052657;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-card[hidden],
+:where([data-page='blog-las-vs-lamf']) .bl-feat[hidden] {
+  display: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-tl {
+  margin: 16px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-tl a {
+  color: #c8121a;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  min-height: 24px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-ml {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  border: 1px solid #a0a3bd;
+  border-radius: 20px;
+  background: #fff;
+  overflow: hidden;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-ml li + li {
+  border-top: 1px solid #e4e9f1;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-ml a {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 16px 20px;
+  min-height: 56px;
+  color: #052657;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .bl-n {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: #deebf6;
+  color: #003368;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+@media (hover: hover) {
+  :where([data-page='blog-las-vs-lamf']) .bl-ml a:hover {
+    background: #f7f9fc;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) section#topics .pp {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media (min-width: 640px) {
+  :where([data-page='blog-las-vs-lamf']) .bl-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .bl-chips {
+    flex-wrap: wrap;
+    overflow: visible;
+    margin: 0;
+    padding: 4px 0 12px;
+  }
+}
+
+@media (min-width: 960px) {
+  :where([data-page='blog-las-vs-lamf']) .bl-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .bl-feat {
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .bl-feat .bl-img {
+    flex: 0 0 52%;
+    aspect-ratio: auto;
+    min-height: 340px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .bl-feat .bl-b {
+    padding: 36px 40px;
+    justify-content: center;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .bl-ft {
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: -0.8px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .bl-ex {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) section#topics .pp {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .bl-ml {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-bc {
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6e7191;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-bc li + li::before {
+  content: '/';
+  margin-right: 8px;
+  color: #a0a3bd;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-bc a {
+  color: #6e7191;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-hd {
+  padding-top: 20px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-h1 {
+  margin: 8px 0 0;
+  font-size: 30px;
+  line-height: 38px;
+  font-weight: 700;
+  letter-spacing: -1.2px;
+  color: #052657;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-meta {
+  margin: 16px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6e7191;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-meta span + span::before,
+:where([data-page='blog-las-vs-lamf']) .ar-meta span + time::before,
+:where([data-page='blog-las-vs-lamf']) .ar-meta time + span::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #a0a3bd;
+  margin-right: 14px;
+  vertical-align: middle;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-hero {
+  margin: 24px 0 0;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #a0a3bd;
+  aspect-ratio: 16/9;
+  background: #052657;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-hero img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 32px;
+  margin-top: 28px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-toc {
+  border: 1px solid #a0a3bd;
+  border-radius: 16px;
+  padding: 0;
+  background: #f7f9fc;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-toc summary {
+  list-style: none;
+  cursor: pointer;
+  min-height: 48px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #052657;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-toc summary::-webkit-details-marker {
+  display: none;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-toc summary::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #052657;
+  border-bottom: 2px solid #052657;
+  transform: rotate(45deg);
+  margin-top: -4px;
+  transition: transform 0.15s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-toc[open] summary::after {
+  transform: rotate(-135deg);
+  margin-top: 4px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-toc ol {
+  margin: 0;
+  padding: 0 20px 16px 40px;
+  display: grid;
+  gap: 4px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-toc a {
+  color: #003368;
+  text-decoration: none;
+  display: inline-block;
+  padding: 6px 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-toc a:hover {
+  text-decoration: underline;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-b {
+  font-size: 17px;
+  line-height: 28px;
+  color: #132c40;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-b h2 {
+  margin: 36px 0 12px;
+  font-size: 26px;
+  line-height: 34px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  color: #052657;
+  scroll-margin-top: 96px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-b h3 {
+  margin: 24px 0 8px;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #052657;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-b p {
+  margin: 0 0 16px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-b ul,
+:where([data-page='blog-las-vs-lamf']) .ar-b ol {
+  margin: 0 0 16px;
+  padding-left: 24px;
+  display: grid;
+  gap: 8px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-b a {
+  color: #003368;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-co {
+  margin: 24px 0;
+  padding: 20px;
+  border-radius: 16px;
+  background: #deebf6;
+  border-left: 4px solid #003368;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-co p {
+  margin: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-co .ar-cot {
+  margin-bottom: 6px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #003368;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-tw {
+  margin: 20px 0;
+  overflow-x: auto;
+  border: 1px solid #a0a3bd;
+  border-radius: 16px;
+  -webkit-overflow-scrolling: touch;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-t {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-t caption {
+  text-align: left;
+  padding: 14px 16px;
+  font-weight: 600;
+  color: #052657;
+  border-bottom: 1px solid #e4e9f1;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-t th,
+:where([data-page='blog-las-vs-lamf']) .ar-t td {
+  padding: 12px 16px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #e4e9f1;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-t thead th {
+  background: #f7f9fc;
+  color: #052657;
+  font-weight: 600;
+  border-top: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-t tbody th {
+  font-weight: 600;
+  color: #052657;
+  white-space: nowrap;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-b blockquote {
+  margin: 24px 0;
+  padding: 16px 20px;
+  border-radius: 16px;
+  background: #deebf6;
+  border-left: 4px solid #003368;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-b blockquote p {
+  margin: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-tw {
+  margin: 20px 0;
+  overflow-x: auto;
+  border: 1px solid #a0a3bd;
+  border-radius: 16px;
+  -webkit-overflow-scrolling: touch;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-b table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-b caption {
+  text-align: left;
+  padding: 14px 16px;
+  font-weight: 600;
+  color: #052657;
+  border-bottom: 1px solid #e4e9f1;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-b th,
+:where([data-page='blog-las-vs-lamf']) .ar-b td {
+  padding: 12px 16px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #e4e9f1;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-b thead th {
+  background: #f7f9fc;
+  color: #052657;
+  font-weight: 600;
+  border-top: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-b tbody th {
+  font-weight: 600;
+  color: #052657;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-fq {
+  margin-top: 40px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-fq h2 {
+  margin-top: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-sh {
+  margin: 32px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-sh p {
+  margin: 0 8px 0 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #052657;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-sh a,
+:where([data-page='blog-las-vs-lamf']) .ar-sh button {
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 22px;
+  border: 1px solid #a0a3bd;
+  background: #fff;
+  color: #003368;
+  font:
+    600 14px/20px Inter,
+    system-ui,
+    sans-serif;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-au {
+  margin-top: 24px;
+  padding: 20px;
+  border: 1px solid #a0a3bd;
+  border-radius: 20px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-av {
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: #deebf6;
+  color: #003368;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-au p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 22px;
+  color: #6e7191;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-au strong {
+  color: #052657;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-side {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-cta {
+  padding: 24px;
+  border-radius: 20px;
+  background: linear-gradient(102deg, #052657 0%, #003368 100%);
+  color: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-cta h2 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-cta p {
+  margin: 8px 0 18px;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(222, 235, 246, 0.92);
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-cta a.btn {
+  width: 100%;
+  justify-content: center;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-ml {
+  padding: 20px;
+  border: 1px solid #a0a3bd;
+  border-radius: 20px;
+  background: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-ml h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+  color: #052657;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-ml .bl-ml {
+  border: 0;
+  border-radius: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-ml .bl-ml a {
+  padding: 12px 0;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .ar-rel {
+  padding-top: 8px;
+}
+
+@media (min-width: 960px) {
+  :where([data-page='blog-las-vs-lamf']) .ar-hd {
+    padding-top: 28px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ar-h1 {
+    font-size: 44px;
+    line-height: 52px;
+    letter-spacing: -1.6px;
+    max-width: 900px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ar-grid {
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 56px;
+    margin-top: 36px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ar-b {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ar-b h2 {
+    font-size: 32px;
+    line-height: 40px;
+    margin-top: 44px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ar-side {
+    position: sticky;
+    top: 96px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .ar-toc ol {
+    padding: 0 24px 20px 44px;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) section#what,
+:where([data-page='blog-las-vs-lamf']) section#decide,
+:where([data-page='blog-las-vs-lamf']) section#compare,
+:where([data-page='blog-las-vs-lamf']) section#safety {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .wb {
+  margin-top: 24px;
+  border: 1.5px solid var(--border);
+  border-radius: 20px;
+  background: #fff;
+  overflow: hidden;
+}
+
+:where([data-page='blog-las-vs-lamf']) .wb-t {
+  padding: 24px 20px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .wb-f {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  background: var(--paper);
+  border-top: 1.5px solid var(--border);
+}
+
+:where([data-page='blog-las-vs-lamf']) .wb-f li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 20px;
+  border-top: 1.5px solid var(--border);
+  transition: background 0.25s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .wb-f li:first-child {
+  border-top: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .wb-f li:hover {
+  background: var(--blue-050);
+}
+
+:where([data-page='blog-las-vs-lamf']) .wb-i {
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px var(--border);
+  display: grid;
+  place-items: center;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .wb-i svg {
+  width: 30px;
+  height: 30px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .wb-f h3 {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .wb-f p {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--navy-600);
+  margin-top: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where([data-page='blog-las-vs-lamf']) .wb-f li {
+    transition: none;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .wt-b p {
+  font-size: 17px;
+  line-height: 26px;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .wt-b p + p {
+  margin-top: 16px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .dd2 {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+:where([data-page='blog-las-vs-lamf']) .we {
+  background: var(--hero-gradient);
+  border-radius: 20px;
+  padding: 28px 20px;
+  color: #fff;
+  min-width: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .we-k {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--red-400);
+  letter-spacing: 0.02em;
+}
+
+:where([data-page='blog-las-vs-lamf']) .we h3 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 4px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .we-r {
+  margin: 20px 0 0;
+  display: grid;
+}
+
+:where([data-page='blog-las-vs-lamf']) .we-r > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+  font-size: 15px;
+  line-height: 22px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .we-r dt {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+:where([data-page='blog-las-vs-lamf']) .we-r dd {
+  margin: 0;
+  font-weight: 600;
+  text-align: right;
+}
+
+:where([data-page='blog-las-vs-lamf']) .we-b {
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .we-b span {
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+:where([data-page='blog-las-vs-lamf']) .we-b strong {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+:where([data-page='blog-las-vs-lamf']) .we-n {
+  margin-top: 16px;
+  font-size: 13px;
+  line-height: 18px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+:where([data-page='blog-las-vs-lamf']) .cmp {
+  background: #fff;
+  border-radius: 20px;
+  border: 1.5px solid var(--border);
+  overflow: hidden;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cmp-t,
+:where([data-page='blog-las-vs-lamf']) .cmp-t tbody,
+:where([data-page='blog-las-vs-lamf']) .cmp-t tr,
+:where([data-page='blog-las-vs-lamf']) .cmp-t th,
+:where([data-page='blog-las-vs-lamf']) .cmp-t td {
+  display: block;
+  width: 100%;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cmp-t thead {
+  position: absolute;
+  left: -9999px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cmp-t tr {
+  padding: 16px 20px;
+  border-top: 1.5px solid var(--border);
+}
+
+:where([data-page='blog-las-vs-lamf']) .cmp-t tr:first-child {
+  border-top: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cmp-t tbody th {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: var(--navy-600);
+  text-align: left;
+  padding-bottom: 8px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cmp-t td {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--navy-600);
+  padding: 4px 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .cmp-t td:before {
+  content: attr(data-label);
+  display: block;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 600;
+  color: var(--red-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .pp {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+:where([data-page='blog-las-vs-lamf']) .pp-c {
+  background: #fff;
+  border-radius: 20px;
+  padding: 24px 20px;
+  min-width: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) .pp-c h3 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: var(--navy-600);
+}
+
+:where([data-page='blog-las-vs-lamf']) .pp-c p {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--navy-600);
+  margin-top: 8px;
+}
+
+:where([data-page='blog-las-vs-lamf']) .pp-c {
+  box-shadow: none;
+  border: 1.5px solid var(--border);
+  transition:
+    background 0.25s,
+    border-color 0.25s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .pp-c h3,
+:where([data-page='blog-las-vs-lamf']) .pp-c p {
+  transition: color 0.25s;
+}
+
+:where([data-page='blog-las-vs-lamf']) .pp-c:hover {
+  background: var(--navy-800);
+  border-color: var(--navy-800);
+}
+
+:where([data-page='blog-las-vs-lamf']) .pp-c:hover h3 {
+  color: #fff;
+}
+
+:where([data-page='blog-las-vs-lamf']) .pp-c:hover p {
+  color: var(--blue-050);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where([data-page='blog-las-vs-lamf']) .pp-c,
+  :where([data-page='blog-las-vs-lamf']) .pp-c h3,
+  :where([data-page='blog-las-vs-lamf']) .pp-c p {
+    transition: none;
+  }
+}
+
+:where([data-page='blog-las-vs-lamf']) .cx-kd summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+:where([data-page='blog-las-vs-lamf']) .hv-done .hv-dh {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: var(--navy-600);
+  margin-top: 0;
+}
+
+:where([data-page='blog-las-vs-lamf']) #rates .rb-c {
+  box-shadow: none;
+  border: 1.5px solid var(--border);
+  overflow: hidden;
+}
+
+:where([data-page='blog-las-vs-lamf']) #rates .rb-t tr {
+  border-top: 1.5px solid var(--border);
+}
+
+:where([data-page='blog-las-vs-lamf']) #rates .rb-t caption {
+  padding-bottom: 16px;
+}
+
+@media (min-width: 960px) {
+  :where([data-page='blog-las-vs-lamf']) .pp {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .pp-c {
+    padding: 28px 24px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) section#what,
+  :where([data-page='blog-las-vs-lamf']) section#decide,
+  :where([data-page='blog-las-vs-lamf']) section#compare,
+  :where([data-page='blog-las-vs-lamf']) section#safety {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .wb-t {
+    padding: 32px;
+    max-width: 900px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .wb-f {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .wb-f li {
+    border-top: 0;
+    border-left: 1.5px solid var(--border);
+    padding: 24px;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .wb-f li:first-child {
+    border-left: 0;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .wt-b p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .dd2 {
+    grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+    gap: 56px;
+    align-items: start;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .we {
+    padding: 36px 32px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .cmp-t {
+    display: table;
+    border-collapse: collapse;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .cmp-t thead {
+    position: static;
+    display: table-header-group;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .cmp-t tbody {
+    display: table-row-group;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .cmp-t tr {
+    display: table-row;
+    padding: 0;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .cmp-t th,
+  :where([data-page='blog-las-vs-lamf']) .cmp-t td {
+    display: table-cell;
+    padding: 20px 24px;
+    border-top: 1.5px solid var(--border);
+    vertical-align: top;
+    width: auto;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .cmp-t thead th {
+    background: var(--paper);
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 600;
+    color: var(--navy-600);
+    text-align: left;
+    border-top: 0;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .cmp-t thead th:nth-child(2) {
+    color: var(--red-600);
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .cmp-t tbody th {
+    width: 22%;
+    padding-bottom: 20px;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .cmp-t td:before {
+    display: none;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .cmp-t tbody td:nth-child(2) {
+    background: rgba(222, 235, 246, 0.35);
+    font-weight: 600;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .cmp-t tr:first-child td,
+  :where([data-page='blog-las-vs-lamf']) .cmp-t tr:first-child th {
+    border-top: 0;
+  }
+
+  :where([data-page='blog-las-vs-lamf']) .cmp-t tbody tr:first-child th,
+  :where([data-page='blog-las-vs-lamf']) .cmp-t tbody tr:first-child td {
+    border-top: 1.5px solid var(--border);
+  }
+}

@@ -59,7 +59,7 @@ export const companyLinks: NavItem[] = [
   { title: 'About Us', href: '/about' },
   { title: 'Careers', href: '#' },
   { title: 'Channel Partner / DSA', href: '#' },
-  { title: 'Blogs', href: '#' },
+  { title: 'Blogs', href: '/blogs' },
 ];
 
 export const topLevelLinks: NavItem[] = [
@@ -85,7 +85,7 @@ export const footerColumns: { title: string; links: NavItem[] }[] = [
       { title: 'Careers', href: '#' },
       { title: "Our LSP's and DLA's", href: '#' },
       { title: 'Channel Partner / DSA', href: '#' },
-      { title: 'Blogs', href: '#' },
+      { title: 'Blogs', href: '/blogs' },
     ],
   },
   {

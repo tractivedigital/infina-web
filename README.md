@@ -27,6 +27,8 @@ Copy `.env.example` to `.env.local` to override `NEXT_PUBLIC_SITE_URL`.
 | `/esop-financing` | `features/esop-financing` |
 | `/esop-calculators` | `features/esop-calculators` |
 | `/corporate-real-estate` | `features/corporate-real-estate` |
+| `/blogs` | `features/blogs` (topic filter chips) |
+| `/blogs/<article-slug>` (6 articles) | `features/blog-articles/<cre\|esop\|lap-how\|lap-vs-pl\|las-guide\|las-vs-lamf>` |
 | `POST /api/leads` | `app/api/leads/route.ts` |
 
 ## Structure

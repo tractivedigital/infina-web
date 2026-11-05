@@ -67,3 +67,31 @@ public/docs/           PDFs (privacy policy, charges, approved securities, terms
 - Many links are still `#` placeholders, as in the source (Careers, Login, Investor Relations, and so on).
 - The home hero artwork is a captured DOM snapshot (`features/home/sections/Hero.tsx`) and could become an SVG asset.
 - Add unit tests for `lib/calculators` and an e2e smoke test per route.
+
+## Deployment (Azure Pipelines → Azure App Service)
+
+`azure-pipelines.yml` builds, verifies and deploys the site. `next.config.ts` sets `output: 'standalone'`, so the
+pipeline ships a small self-contained server bundle (`node server.js`).
+
+Pipeline stages:
+
+1. **Build**: `npm ci`, `npm run lint`, `npm run typecheck`, `npm run build`, then zips `.next/standalone`
+   (plus `.next/static` and `public/`) and publishes it as the `drop` artifact. Runs on pull requests too.
+2. **Deploy**: only for `main` (not PRs). Deploys the zip to a Linux App Service (Node 22 LTS) in the `production` environment.
+
+One-time Azure DevOps setup:
+
+1. Repos: add the Azure remote and push (`git remote add azure <clone-url>`, `git push -u azure main`).
+2. Create an Azure Resource Manager **service connection** (Project settings → Service connections).
+3. Create a **Linux Web App** (Node 22 LTS) in Azure.
+4. Edit `azureServiceConnection` and `webAppName` in `azure-pipelines.yml`.
+5. Pipelines → New pipeline → Azure Repos Git → *Existing Azure Pipelines YAML file* → `/azure-pipelines.yml`.
+6. Optional: add an approval check on the `production` environment (Pipelines → Environments).
+
+Local check of the production bundle:
+
+```bash
+npm run build
+cp -r .next/static .next/standalone/.next/static && cp -r public .next/standalone/public
+PORT=3000 HOSTNAME=0.0.0.0 node .next/standalone/server.js
+```

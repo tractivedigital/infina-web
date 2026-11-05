@@ -1,0 +1,104 @@
+# Azure Pipelines: build, verify and deploy the Infina Next.js site to Azure App Service (Linux).
+#
+# One-time setup (see README "Deployment"):
+#   1. Pipelines > New pipeline > Azure Repos Git > this repo > "Existing Azure Pipelines YAML file".
+#   2. Create an ARM service connection (Project settings > Service connections) and put its name in
+#      `azureServiceConnection` below.
+#   3. Create a Linux Web App (Node 22 LTS) and put its name in `webAppName` below.
+#   4. (Optional) Create an Environment named "production" with an approval check for manual release approval.
+
+trigger:
+  branches:
+    include:
+      - main
+
+pr:
+  branches:
+    include:
+      - main
+
+variables:
+  nodeVersion: '22.x'
+  azureServiceConnection: 'REPLACE-WITH-SERVICE-CONNECTION-NAME'
+  webAppName: 'REPLACE-WITH-APP-SERVICE-NAME'
+  npm_config_cache: $(Pipeline.Workspace)/.npm
+
+stages:
+  - stage: Build
+    displayName: Build and verify
+    jobs:
+      - job: Build
+        pool:
+          vmImage: ubuntu-latest
+        steps:
+          - task: NodeTool@0
+            displayName: Use Node $(nodeVersion)
+            inputs:
+              versionSpec: $(nodeVersion)
+
+          - task: Cache@2
+            displayName: Cache npm
+            inputs:
+              key: 'npm | "$(Agent.OS)" | package-lock.json'
+              restoreKeys: |
+                npm | "$(Agent.OS)"
+              path: $(npm_config_cache)
+
+          - script: npm ci
+            displayName: Install dependencies
+
+          - script: npm run lint
+            displayName: Lint
+
+          - script: npm run typecheck
+            displayName: Type check
+
+          - script: npm run build
+            displayName: Build (next build, standalone output)
+            env:
+              NEXT_TELEMETRY_DISABLED: '1'
+
+          # The standalone server does not include static assets or /public; copy them next to server.js.
+          - script: |
+              cp -r .next/static .next/standalone/.next/static
+              cp -r public .next/standalone/public
+            displayName: Assemble standalone bundle
+
+          - task: ArchiveFiles@2
+            displayName: Zip deployment package
+            inputs:
+              rootFolderOrFile: .next/standalone
+              includeRootFolder: false
+              archiveType: zip
+              archiveFile: $(Build.ArtifactStagingDirectory)/infina-web.zip
+              replaceExistingArchive: true
+
+          - publish: $(Build.ArtifactStagingDirectory)/infina-web.zip
+            artifact: drop
+            displayName: Publish artifact
+
+  - stage: Deploy
+    displayName: Deploy to Azure App Service
+    dependsOn: Build
+    # Deploy only from main (never from pull-request validation builds).
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'), ne(variables['Build.Reason'], 'PullRequest'))
+    jobs:
+      - deployment: Production
+        pool:
+          vmImage: ubuntu-latest
+        environment: production
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - task: AzureWebApp@1
+                  displayName: Deploy to $(webAppName)
+                  inputs:
+                    azureSubscription: $(azureServiceConnection)
+                    appType: webAppLinux
+                    appName: $(webAppName)
+                    package: $(Pipeline.Workspace)/drop/infina-web.zip
+                    runtimeStack: 'NODE|22-lts'
+                    startUpCommand: 'node server.js'
+                    # Bind to all interfaces; App Service injects PORT automatically.
+                    appSettings: '-HOSTNAME 0.0.0.0 -NEXT_TELEMETRY_DISABLED 1'

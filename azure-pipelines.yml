@@ -1,11 +1,13 @@
-# Azure Pipelines: build, verify and deploy the Infina Next.js site to Azure App Service (Linux).
+# Azure Pipelines for the Infina Next.js site.
 #
-# One-time setup (see README "Deployment"):
-#   1. Pipelines > New pipeline > Azure Repos Git > this repo > "Existing Azure Pipelines YAML file".
-#   2. Create an ARM service connection (Project settings > Service connections) and put its name in
-#      `azureServiceConnection` below.
-#   3. Create a Linux Web App (Node 22 LTS) and put its name in `webAppName` below.
-#   4. (Optional) Create an Environment named "production" with an approval check for manual release approval.
+# By default this pipeline only BUILDS and VERIFIES the code (install, lint, typecheck, build) and publishes the
+# packaged site as a downloadable artifact. No Azure subscription is needed for that.
+#
+# The Deploy stage (Azure App Service) is switched OFF until Infina provides an Azure subscription. To enable it:
+#   1. Create an Azure Resource Manager service connection (Project settings > Service connections).
+#   2. Create a Linux Web App (Node 22 LTS).
+#   3. Set `azureServiceConnection` and `webAppName` below.
+#   4. Set the `deployToAzure` parameter default to true (or tick it when you click "Run pipeline").
 
 trigger:
   branches:
@@ -16,6 +18,12 @@ pr:
   branches:
     include:
       - main
+
+parameters:
+  - name: deployToAzure
+    displayName: Deploy to Azure App Service (needs an Azure subscription and service connection)
+    type: boolean
+    default: false
 
 variables:
   nodeVersion: '22.x'
@@ -77,28 +85,30 @@ stages:
             artifact: drop
             displayName: Publish artifact
 
-  - stage: Deploy
-    displayName: Deploy to Azure App Service
-    dependsOn: Build
-    # Deploy only from main (never from pull-request validation builds).
-    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'), ne(variables['Build.Reason'], 'PullRequest'))
-    jobs:
-      - deployment: Production
-        pool:
-          vmImage: ubuntu-latest
-        environment: production
-        strategy:
-          runOnce:
-            deploy:
-              steps:
-                - task: AzureWebApp@1
-                  displayName: Deploy to $(webAppName)
-                  inputs:
-                    azureSubscription: $(azureServiceConnection)
-                    appType: webAppLinux
-                    appName: $(webAppName)
-                    package: $(Pipeline.Workspace)/drop/infina-web.zip
-                    runtimeStack: 'NODE|22-lts'
-                    startUpCommand: 'node server.js'
-                    # Bind to all interfaces; App Service injects PORT automatically.
-                    appSettings: '-HOSTNAME 0.0.0.0 -NEXT_TELEMETRY_DISABLED 1'
+  # Included only when deployToAzure is true, so the missing service connection is not validated otherwise.
+  - ${{ if eq(parameters.deployToAzure, true) }}:
+      - stage: Deploy
+        displayName: Deploy to Azure App Service
+        dependsOn: Build
+        # Deploy only from main (never from pull-request validation builds).
+        condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'), ne(variables['Build.Reason'], 'PullRequest'))
+        jobs:
+          - deployment: Production
+            pool:
+              vmImage: ubuntu-latest
+            environment: production
+            strategy:
+              runOnce:
+                deploy:
+                  steps:
+                    - task: AzureWebApp@1
+                      displayName: Deploy to $(webAppName)
+                      inputs:
+                        azureSubscription: $(azureServiceConnection)
+                        appType: webAppLinux
+                        appName: $(webAppName)
+                        package: $(Pipeline.Workspace)/drop/infina-web.zip
+                        runtimeStack: 'NODE|22-lts'
+                        startUpCommand: 'node server.js'
+                        # Bind to all interfaces; App Service injects PORT automatically.
+                        appSettings: '-HOSTNAME 0.0.0.0 -NEXT_TELEMETRY_DISABLED 1'

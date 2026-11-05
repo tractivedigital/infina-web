@@ -77,7 +77,7 @@ Pipeline stages:
 
 1. **Build**: `npm ci`, `npm run lint`, `npm run typecheck`, `npm run build`, then zips `.next/standalone`
    (plus `.next/static` and `public/`) and publishes it as the `drop` artifact. Runs on pull requests too.
-2. **Deploy**: only for `main` (not PRs). Deploys the zip to a Linux App Service (Node 22 LTS) in the `production` environment.
+2. **Deploy** (switched off by default, via the `deployToAzure` pipeline parameter, until Infina provides an Azure subscription): only for `main` (not PRs). Deploys the zip to a Linux App Service (Node 22 LTS) in the `production` environment.
 
 One-time Azure DevOps setup:
 

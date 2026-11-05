@@ -1,0 +1,9 @@
+/* Global resets that live outside the page wrapper. Page rules are scoped via [data-page]. */
+:root {
+  --paper: #f7f9fc;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+}

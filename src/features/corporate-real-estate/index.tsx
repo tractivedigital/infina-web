@@ -1,0 +1,45 @@
+import '@/styles/pages/cre.css';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { PageShell } from '@/components/layout/PageShell';
+import { DocumentTabsBehavior } from '@/components/behaviors/document-tabs';
+import { structuredData } from './structured-data';
+import { Hero } from './sections/Hero';
+import { What } from './sections/What';
+import { Offer } from './sections/Offer';
+import { Trust } from '@/components/sections/Trust';
+import { Why } from './sections/Why';
+import { Decide } from './sections/Decide';
+import { How } from './sections/How';
+import { Rates } from './sections/Rates';
+import { Compare } from './sections/Compare';
+import { Eligibility } from './sections/Eligibility';
+import { Safety } from '@/components/sections/Safety';
+import { Faqs } from './sections/Faqs';
+import { Next } from './sections/Next';
+
+export function CrePage() {
+  return (
+    <PageShell
+      page="cre"
+      review
+      main={{ id: 'top', className: 'home' }}
+      stickyCta={{ href: '#heroform', label: 'Check Eligibility' }}
+    >
+      <JsonLd data={structuredData} />
+      <Hero />
+      <What />
+      <Offer />
+      <Trust />
+      <Why />
+      <Decide />
+      <How />
+      <Rates />
+      <Compare />
+      <Eligibility />
+      <Safety />
+      <Faqs />
+      <Next />
+      <DocumentTabsBehavior />
+    </PageShell>
+  );
+}

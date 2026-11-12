@@ -337,7 +337,7 @@ export function Article() {
                 flexibility to adapt as things move forward.
               </p>
               <p>
-                Get in touch with Infina: <a href="https://www.infina.co.in/contact">https://infina.co.in/contact</a>
+                Get in touch with Infina: <Link href="/contact">https://infina.co.in/contact</Link>
               </p>
               <section className="ar-fq" id="faqs" aria-labelledby="faq-h">
                 <h2 id="faq-h">FAQs</h2>

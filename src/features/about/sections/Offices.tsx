@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export function Offices() {
   return (
     <section className="ab-band" id="offices" aria-labelledby="off-h">
@@ -51,9 +53,9 @@ export function Offices() {
         </div>
         <div className="sec-cta is-split">
           <p className="ab-body">Not sure which office suits you? Talk to us before you visit.</p>
-          <a className="inf-btn inf-btn--primary" href="https://www.infina.co.in/contact">
+          <Link className="inf-btn inf-btn--primary" href="/contact">
             Contact us
-          </a>
+          </Link>
         </div>
       </div>
     </section>

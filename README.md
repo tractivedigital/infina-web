@@ -29,7 +29,16 @@ Copy `.env.example` to `.env.local` to override `NEXT_PUBLIC_SITE_URL`.
 | `/corporate-real-estate` | `features/corporate-real-estate` |
 | `/blogs` | `features/blogs` (topic filter chips) |
 | `/blogs/<article-slug>` (6 articles) | `features/blog-articles/<cre\|esop\|lap-how\|lap-vs-pl\|las-guide\|las-vs-lamf>` |
+| `/author/infina` | `features/author` |
+| `/careers` | `features/careers` |
+| `/channel-partner` | `features/channel-partner` (application form) |
+| `/contact` | `features/contact` |
+| `/investor-relations` | `features/investor-relations` (tabs; 100+ documents in `public/docs/investor-relations`) |
+| `/partner` | `features/partner` (LSPs and DLAs) |
+| `/diwali-las-offer` | `features/diwali-las-offer` (campaign landing page) |
+| `/privacy-policy`, `/terms-of-use`, `/cookie-policy`, `/disclaimer-mobile-app`, `/gst-registrations` | `features/<same name>` (legal pages with table of contents) |
 | `POST /api/leads` | `app/api/leads/route.ts` |
+| `POST /api/send-email` | `app/api/send-email/route.ts` (channel partner applications) |
 
 ## Structure
 
@@ -65,8 +74,9 @@ public/docs/           PDFs (privacy policy, charges, approved securities, terms
 
 ## Known follow-ups
 
-- Remaining external links: the loan application portal (`digilas.infina.co.in`), the company LinkedIn page and `/contact` on infina.co.in. Everything else (images, fonts, PDFs, ESOP calculator) is served from this project.
-- Many links are still `#` placeholders, as in the source (Careers, Login, Investor Relations, and so on).
+- Remaining external links: the loan application portal (`digilas.infina.co.in`), social sharing links, the Google Maps embed on `/contact`, and one investor document still hosted on `api.infina.co.in` (the host was unreachable when the PDFs were copied; re-download it into `public/docs/investor-relations/` and update the link). Everything else (images, fonts, PDFs, ESOP calculator) is served from this project.
+- Some links are still `#` placeholders, as in the source (Login, Check Eligibility, social profiles, IFPL list of approved securities, HDFC Life, ICICI Lombard).
+- `POST /api/send-email` (channel partner applications) validates and acknowledges only; connect SMTP or the CRM where its `TODO` is. The Diwali offer form, like the source page, transmits nothing yet.
 - The home hero artwork is a captured DOM snapshot (`features/home/sections/Hero.tsx`) and could become an SVG asset.
 - Add unit tests for `lib/calculators` and an e2e smoke test per route.
 

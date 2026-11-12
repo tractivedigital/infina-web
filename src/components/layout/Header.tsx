@@ -159,9 +159,9 @@ export function Header() {
             );
           })}
           {topLevelLinks.map((l) => (
-            <a key={l.title} className="nl" href={l.href}>
+            <Link key={l.title} className="nl" href={l.href}>
               {l.title}
-            </a>
+            </Link>
           ))}
         </nav>
         <div className="actions">
@@ -202,9 +202,9 @@ export function Header() {
           );
         })}
         {topLevelLinks.map((l) => (
-          <a key={l.title} className="plain" href={l.href}>
+          <Link key={l.title} className="plain" href={l.href} onClick={closeDrawer}>
             {l.title}
-          </a>
+          </Link>
         ))}
         <div className="foot">
           <a className="login" href="#">

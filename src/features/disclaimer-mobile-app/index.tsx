@@ -1,0 +1,16 @@
+import '@/styles/pages/disclaimer.css';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { PageShell } from '@/components/layout/PageShell';
+import { structuredData } from './structured-data';
+import { Intro } from './sections/Intro';
+import { Content } from './sections/Content';
+
+export function DisclaimerPage() {
+  return (
+    <PageShell page="disclaimer" review main={{ id: 'top', className: 'home' }}>
+      <JsonLd data={structuredData} />
+      <Intro />
+      <Content />
+    </PageShell>
+  );
+}

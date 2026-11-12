@@ -326,7 +326,7 @@ export function Article() {
                 Speak with an <Link href="/">Infina</Link> advisor today and unlock your ESOP potential on your terms.
               </p>
               <p>
-                Reach out and take the next step: <a href="https://www.infina.co.in/contact">Contact Infina Finance</a>.
+                Reach out and take the next step: <Link href="/contact">Contact Infina Finance</Link>.
               </p>
               <section className="ar-fq" id="faqs" aria-labelledby="faq-h">
                 <h2 id="faq-h">FAQs</h2>

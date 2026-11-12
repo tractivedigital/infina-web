@@ -72,8 +72,8 @@ export function Faqs() {
             <summary>How do I contact Infina Finance or raise a complaint?</summary>
             <div className="fq-a">
               <p>
-                Call 022-66808304 or use the <a href="https://www.infina.co.in/contact">contact page</a>. For a
-                complaint, write to <a href="mailto:customerservice@infina.in">customerservice@infina.in</a>.
+                Call 022-66808304 or use the <Link href="/contact">contact page</Link>. For a complaint, write to{' '}
+                <a href="mailto:customerservice@infina.in">customerservice@infina.in</a>.
               </p>
             </div>
           </details>

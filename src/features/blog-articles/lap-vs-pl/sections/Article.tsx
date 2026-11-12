@@ -297,7 +297,7 @@ export function Article() {
               </p>
               <p>
                 Reach out to an Infina advisor to take the next step –{' '}
-                <a href="https://www.infina.co.in/contact">Contact Infina Finance</a>.
+                <Link href="/contact">Contact Infina Finance</Link>.
               </p>
               <section className="ar-fq" id="faqs" aria-labelledby="faq-h">
                 <h2 id="faq-h">FAQs</h2>

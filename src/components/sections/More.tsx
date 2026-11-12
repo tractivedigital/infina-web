@@ -6,9 +6,7 @@ export function More() {
       <div className="wrapx">
         <div className="sec-head">
           <h2 className="h2">
-            More
-            {' '}
-            <em>articles</em>
+            More <em>articles</em>
           </h2>
         </div>
         <div className="bl-grid">
@@ -22,7 +20,8 @@ export function More() {
                 </Link>
               </h3>
               <p className="bl-ex">
-                A side-by-side comparison of a loan against shares and a loan against mutual funds, to help you choose the right one for your portfolio.
+                A side-by-side comparison of a loan against shares and a loan against mutual funds, to help you choose
+                the right one for your portfolio.
                 <span className="cf">To confirm</span>
               </p>
               <p className="bl-m">
@@ -30,9 +29,16 @@ export function More() {
                 <time dateTime="2026-07-01">July 1, 2026</time>
               </p>
               <span className="bl-go" aria-hidden="true">
-                Read article
-                {' '}
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                Read article{' '}
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
                   <path d="M5 12h14M13 6l6 6-6 6" />
                 </svg>
               </span>
@@ -48,7 +54,8 @@ export function More() {
                 </Link>
               </h3>
               <p className="bl-ex">
-                How a loan against property works in India, including the process, interest rates, eligibility and benefits.
+                How a loan against property works in India, including the process, interest rates, eligibility and
+                benefits.
                 <span className="cf">To confirm</span>
               </p>
               <p className="bl-m">
@@ -56,9 +63,16 @@ export function More() {
                 <time dateTime="2026-06-26">June 26, 2026</time>
               </p>
               <span className="bl-go" aria-hidden="true">
-                Read article
-                {' '}
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                Read article{' '}
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
                   <path d="M5 12h14M13 6l6 6-6 6" />
                 </svg>
               </span>
@@ -82,20 +96,34 @@ export function More() {
                 <time dateTime="2026-05-13">May 13, 2026</time>
               </p>
               <span className="bl-go" aria-hidden="true">
-                Read article
-                {' '}
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                Read article{' '}
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
                   <path d="M5 12h14M13 6l6 6-6 6" />
                 </svg>
               </span>
             </div>
           </article>
         </div>
-        <p style={{ marginTop: "24px" }}>
+        <p style={{ marginTop: '24px' }}>
           <Link className="btn" href="/blogs">
-            All articles
-            {' '}
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            All articles{' '}
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
               <path d="M5 12h14M13 6l6 6-6 6" />
             </svg>
           </Link>

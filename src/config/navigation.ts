@@ -57,14 +57,14 @@ export const calculatorLinks: NavItem[] = [
 
 export const companyLinks: NavItem[] = [
   { title: 'About Us', href: '/about' },
-  { title: 'Careers', href: '#' },
-  { title: 'Channel Partner / DSA', href: '#' },
+  { title: 'Careers', href: '/careers' },
+  { title: 'Channel Partner / DSA', href: '/channel-partner' },
   { title: 'Blogs', href: '/blogs' },
 ];
 
 export const topLevelLinks: NavItem[] = [
-  { title: 'Investor Relations', href: '#' },
-  { title: 'Contact Us', href: '#' },
+  { title: 'Investor Relations', href: '/investor-relations' },
+  { title: 'Contact Us', href: '/contact' },
 ];
 
 export const footerColumns: { title: string; links: NavItem[] }[] = [
@@ -81,28 +81,28 @@ export const footerColumns: { title: string; links: NavItem[] }[] = [
     title: 'Company',
     links: [
       { title: 'About Us', href: '/about' },
-      { title: 'Contact us', href: '#' },
-      { title: 'Careers', href: '#' },
-      { title: "Our LSP's and DLA's", href: '#' },
-      { title: 'Channel Partner / DSA', href: '#' },
+      { title: 'Contact us', href: '/contact' },
+      { title: 'Careers', href: '/careers' },
+      { title: "Our LSP's and DLA's", href: '/partner' },
+      { title: 'Channel Partner / DSA', href: '/channel-partner' },
       { title: 'Blogs', href: '/blogs' },
     ],
   },
   {
     title: 'Downloads',
     links: [
-      { title: 'Financial Reporting', href: '#' },
-      { title: 'Policies', href: '#' },
+      { title: 'Financial Reporting', href: '/investor-relations#financial-reporting' },
+      { title: 'Policies', href: '/investor-relations#policies' },
       { title: 'IFPL List of approved securities', href: '#' },
     ],
   },
   {
     title: 'Legal',
     links: [
-      { title: 'Disclaimer Mobile App', href: '#' },
-      { title: 'GST Registrations', href: '#' },
-      { title: 'Cookie Policy', href: '#' },
-      { title: 'Terms of Use', href: '#' },
+      { title: 'Disclaimer Mobile App', href: '/disclaimer-mobile-app' },
+      { title: 'GST Registrations', href: '/gst-registrations' },
+      { title: 'Cookie Policy', href: '/cookie-policy' },
+      { title: 'Terms of Use', href: '/terms-of-use' },
     ],
   },
   {

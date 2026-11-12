@@ -18,6 +18,18 @@ const routes = [
   '/blogs/loan-against-property-vs-personal-loan---which-is-better',
   '/blogs/what-is-loan-against-securities-and-how-it-works-in-india-a-complete-guide',
   '/blogs/loan-against-shares-vs-loan-against-mutual-funds-which-is-right-for-you',
+  '/author/infina',
+  '/careers',
+  '/channel-partner',
+  '/contact',
+  '/cookie-policy',
+  '/disclaimer-mobile-app',
+  '/diwali-las-offer',
+  '/gst-registrations',
+  '/investor-relations',
+  '/partner',
+  '/privacy-policy',
+  '/terms-of-use',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -81,7 +81,8 @@ export function Footer() {
         </div>
         <div className="ft-bot">
           <p>
-            © {new Date().getFullYear()} Infina | All Rights Reserved | <a href="#">Privacy Policy</a>
+            © {new Date().getFullYear()} Infina | All Rights Reserved |{' '}
+            <Link href="/privacy-policy">Privacy Policy</Link>
           </p>
           <div className="follow">
             <span>Follow us on</span>{' '}

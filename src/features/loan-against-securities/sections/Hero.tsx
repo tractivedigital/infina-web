@@ -1,3 +1,4 @@
+import { HeroCopyCarousel } from '@/components/hero/HeroCopyCarousel';
 import { HeroLeadForm } from '@/components/forms/HeroLeadForm';
 import Image from 'next/image';
 
@@ -11,7 +12,7 @@ export function Hero() {
           </div>
           <div className="hero-scrim" aria-hidden="true" />
           <div className="hv-wrap">
-            <div className="hv-copy">
+            <HeroCopyCarousel page="las">
               <h1 id="h1">Loan against Stocks and Mutual funds</h1>
               <p className="hv-tag">Get Your Loan Instantly!</p>
               <p className="sub">Avail loans without selling or liquidating your investments.</p>
@@ -45,7 +46,7 @@ export function Hero() {
                   <span>For business or personal needs</span>
                 </li>
               </ul>
-            </div>
+            </HeroCopyCarousel>
           </div>
         </section>
         <HeroLeadForm

@@ -1,7 +1,6 @@
 import '@/styles/pages/lap.css';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { PageShell } from '@/components/layout/PageShell';
-import { BannerCarousel } from '@/components/banners/BannerCarousel';
 import { FaqAccordionBehavior } from '@/components/behaviors/faq';
 import { CalculatorBehavior } from '@/components/behaviors/calculators';
 import { DocumentTabsBehavior } from '@/components/behaviors/document-tabs';
@@ -30,7 +29,6 @@ export function LapPage() {
     >
       <JsonLd data={structuredData} />
       <Hero />
-      <BannerCarousel page="lap" />
       <Estimate />
       <What />
       <Property />

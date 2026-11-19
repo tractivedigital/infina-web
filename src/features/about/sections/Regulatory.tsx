@@ -4,7 +4,16 @@ export function Regulatory() {
       <aside className="inf-reg">
         <strong>Infina Finance Private Limited</strong> <span>CIN: U67120MH1996PTC098584</span>{' '}
         <span>IRDAI Corporate Agent Registration No: CA1079</span>{' '}
-        <span>Insurance Partners: HDFC Life | ICICI Lombard</span>
+        <span>
+          Insurance Partners:{' '}
+          <a href="https://www.hdfclife.com/" target="_blank" rel="noopener noreferrer">
+            HDFC Life
+          </a>{' '}
+          |{' '}
+          <a href="https://www.icicilombard.com/" target="_blank" rel="noopener noreferrer">
+            ICICI Lombard
+          </a>
+        </span>
         <div className="inf-reg-links">
           <a className="inf-link" href="mailto:customerservice@infina.in">
             <svg className="ab-ic ic-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false">

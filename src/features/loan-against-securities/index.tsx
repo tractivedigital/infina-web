@@ -1,7 +1,6 @@
 import '@/styles/pages/las.css';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { PageShell } from '@/components/layout/PageShell';
-import { BannerCarousel } from '@/components/banners/BannerCarousel';
 import { FaqAccordionBehavior } from '@/components/behaviors/faq';
 import { CalculatorBehavior } from '@/components/behaviors/calculators';
 import { PledgeCarouselBehavior } from '@/components/behaviors/pledge-carousel';
@@ -31,7 +30,6 @@ export function LasPage() {
     >
       <JsonLd data={structuredData} />
       <Hero />
-      <BannerCarousel page="las" />
       <Estimate />
       <What />
       <Pledge />

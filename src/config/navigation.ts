@@ -92,13 +92,16 @@ export const footerColumns: { title: string; links: NavItem[] }[] = [
   },
   {
     title: 'Insurance Services',
-    links: [{ title: 'HDFC Life' }, { title: 'ICICI Lombard' }],
+    links: [
+      { title: 'HDFC Life', href: 'https://www.hdfclife.com/' },
+      { title: 'ICICI Lombard', href: 'https://www.icicilombard.com/' },
+    ],
   },
 ];
 
-/** Social profiles. An entry is shown in the footer only when it has a URL. */
+/** Social profiles shown in the footer. */
 export const socialLinks: { label: 'LinkedIn' | 'Instagram' | 'X'; href?: string }[] = [
   { label: 'LinkedIn', href: 'https://www.linkedin.com/company/infina-finance-pvt--ltd-/' },
-  { label: 'Instagram' },
-  { label: 'X' },
+  { label: 'Instagram', href: 'https://www.instagram.com/infina_finance' },
+  { label: 'X', href: 'https://x.com/infina_finance' },
 ];

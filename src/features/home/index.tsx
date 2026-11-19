@@ -1,6 +1,5 @@
 import '@/styles/pages/home.css';
 import { PageShell } from '@/components/layout/PageShell';
-import { BannerCarousel } from '@/components/banners/BannerCarousel';
 import { FaqAccordionBehavior } from '@/components/behaviors/faq';
 import { CalculatorBehavior } from '@/components/behaviors/calculators';
 import { HomeBehavior } from '@/components/behaviors/home';
@@ -17,7 +16,6 @@ export function HomePage() {
   return (
     <PageShell page="home" main={{ id: 'top', className: 'home' }}>
       <Hero />
-      <BannerCarousel page="home" />
       <Services />
       <Estimate />
       <How />

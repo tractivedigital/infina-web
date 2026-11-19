@@ -35,17 +35,6 @@ export function Header() {
 
   const closeDrawer = useCallback(() => setDrawerOpen(false), []);
 
-  /** "Check Eligibility": jump to this page's eligibility form; pages without one open the home page form. */
-  const checkEligibility = useCallback((e: ReactMouseEvent<HTMLAnchorElement>) => {
-    setDrawerOpen(false);
-    const form = document.getElementById('heroform');
-    if (!form) return;
-    e.preventDefault();
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    form.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
-    form.querySelector<HTMLElement>('input, select')?.focus({ preventScroll: true });
-  }, []);
-
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
     onScroll();
@@ -176,9 +165,9 @@ export function Header() {
           <a className="login" href={siteConfig.loginUrl}>
             Login
           </a>
-          <Link className="btn" href="/#heroform" onClick={checkEligibility}>
+          <a className="btn" href={siteConfig.loginUrl}>
             Check Eligibility <ArrowRightIcon />
-          </Link>
+          </a>
         </div>
         <button
           ref={menuButton}
@@ -218,9 +207,9 @@ export function Header() {
           <a className="login" href={siteConfig.loginUrl}>
             Login
           </a>
-          <Link className="btn" href="/#heroform" onClick={checkEligibility}>
+          <a className="btn" href={siteConfig.loginUrl}>
             Check Eligibility <ArrowRightIcon />
-          </Link>
+          </a>
         </div>
       </div>
     </header>

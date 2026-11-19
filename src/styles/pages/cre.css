@@ -1357,7 +1357,8 @@ div:where([data-page='cre']) {
   align-items: center;
 }
 
-:where([data-page='cre']) .hero h1 {
+:where([data-page='cre']) .hero h1,
+:where([data-page='cre']) .hero h2:where(.hs-title) {
   font-size: 42px;
   line-height: 50px;
   letter-spacing: -1.2px;
@@ -2073,7 +2074,8 @@ div:where([data-page='cre']) {
     gap: 32px;
   }
 
-  :where([data-page='cre']) .hero h1 {
+  :where([data-page='cre']) .hero h1,
+  :where([data-page='cre']) .hero h2:where(.hs-title) {
     font-size: 28px;
     line-height: 36px;
     max-width: none;
@@ -2221,7 +2223,8 @@ div:where([data-page='cre']) {
   }
 
   :where([data-page='cre']) .hero h1,
-  :where([data-page='cre']) .hero .sub {
+  :where([data-page='cre']) .hero .sub,
+  :where([data-page='cre']) .hero h2:where(.hs-title) {
     overflow-wrap: break-word;
   }
 
@@ -2297,7 +2300,8 @@ div:where([data-page='cre']) {
   animation: upB 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
-:where([data-page='cre']) .hero h1 {
+:where([data-page='cre']) .hero h1,
+:where([data-page='cre']) .hero h2:where(.hs-title) {
   max-width: 11em;
   text-wrap: pretty;
 }
@@ -2431,7 +2435,8 @@ div:where([data-page='cre']) {
     max-width: none;
   }
 
-  :where([data-page='cre']) .hero h1 {
+  :where([data-page='cre']) .hero h1,
+  :where([data-page='cre']) .hero h2:where(.hs-title) {
     max-width: none;
   }
 
@@ -3328,7 +3333,8 @@ div:where([data-page='cre']) {
   --lh-h2: 44px;
 }
 
-:where([data-page='cre']) .hero h1 {
+:where([data-page='cre']) .hero h1,
+:where([data-page='cre']) .hero h2:where(.hs-title) {
   font-size: var(--fs-h1);
   line-height: var(--lh-h1);
 }
@@ -4264,7 +4270,8 @@ div:where([data-page='cre']) {
   z-index: 2;
 }
 
-:where([data-page='cre']) .hv-copy h1 {
+:where([data-page='cre']) .hv-copy h1,
+:where([data-page='cre']) .hv-copy h2:where(.hs-title) {
   max-width: 11em;
 }
 
@@ -4378,7 +4385,8 @@ div:where([data-page='cre']) {
     padding: 72px 56px 128px;
   }
 
-  :where([data-page='cre']) .hv-copy h1 {
+  :where([data-page='cre']) .hv-copy h1,
+  :where([data-page='cre']) .hv-copy h2:where(.hs-title) {
     font-size: 42px;
     line-height: 50px;
   }

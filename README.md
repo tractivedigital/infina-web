@@ -49,13 +49,13 @@ src/
   components/
     layout/            Header, Footer, PageShell, StickyCta
     forms/             HeroLeadForm
-    banners/           BannerCarousel (auto-advancing banners on home and the four product pages)
+    hero/              HeroCopyCarousel (text slides inside the main hero banner)
     sections/          Sections identical on several pages (Trust, Safety)
     behaviors/         Client-side progressive enhancement for server-rendered markup
     seo/  icons/
   lib/                 calculators (pure, framework-free), validation, lead submission, xlsx-lite
   lib/server/          api-guard (origin, size, rate limit) and delivery (form webhook)
-  config/              site constants, navigation, banners, leadership-links
+  config/              site constants, navigation, hero-slides, leadership-links
   hooks/  styles/
 public/images/         Images extracted from the original pages
 public/docs/           PDFs (privacy policy, charges, approved securities, terms) hosted locally
@@ -78,22 +78,22 @@ public/docs/           PDFs (privacy policy, charges, approved securities, terms
   `lib/server/delivery`: set `FORM_WEBHOOK_URL` (and optionally `FORM_WEBHOOK_SECRET`, an HMAC signature) to the CRM
   or workflow endpoint. **Until it is set, submissions are only written to the server log.**
 - **Content is now maintained in code.** The pages were bootstrapped from the original static HTML, and the
-  generated files have since been edited by hand (no "To confirm" badges, FAQ accordions, banners, navigation).
+  generated files have since been edited by hand (no "To confirm" badges, FAQ accordions, hero slides, navigation).
   Do not re-run the one-time converter over them.
 - **FAQs.** Every FAQ is a native `<details>` list that starts closed; `components/behaviors/faq` closes the other
   answers when one opens. Product, calculator, home and about pages share the same structure and styles.
-- **Banners.** `config/banners.ts` holds the four slides per page; `components/banners` renders them. The carousel
-  advances every 6 s, pauses on hover, focus, hidden tab and a Pause button, supports swipe, and does not auto-play
-  when the visitor prefers reduced motion. Artwork is inline SVG, so it adds no requests.
+- **Hero slides.** The main hero banner on home and the four product pages is a slide show: slide 1 is the page's
+  original hero copy and three more slides follow (`config/hero-slides.ts`, `components/hero`). Only the text column
+  changes; the background and the eligibility form stay. It advances every 6 s, pauses on hover, focus, hidden tab
+  and a Pause button, and the hero height never changes between slides.
 - **Security headers** are set in `next.config.ts` (CSP that only allows this origin, HSTS, `X-Frame-Options`,
   `nosniff`, referrer and permissions policies). Only `/channel-partner` may be framed, and only by infina.co.in.
 
 ## Known follow-ups
 
 - **Set `FORM_WEBHOOK_URL`** in the hosting environment so form submissions reach Infina (see above).
-- **Placeholder destinations still unknown:** Instagram and X profile URLs (the footer hides them until added in
-  `config/navigation.ts`), HDFC Life and ICICI Lombard links (shown as plain text), and the LinkedIn profile of each
-  leader (`config/leadership-links.ts`; the "LinkedIn Profile" link appears once a URL is filled in).
+- **LinkedIn profile of each leader** is still unknown (`config/leadership-links.ts`; the "LinkedIn Profile" link
+  appears on /about once a URL is filled in).
 - One investor document is still linked on `api.infina.co.in` (the host was unreachable when the PDFs were copied);
   download it into `public/docs/investor-relations/` and update the link on `/investor-relations`.
 - Remaining external links are outbound navigation only: the loan application portal (`digilas.infina.co.in`),

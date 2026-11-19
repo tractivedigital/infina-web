@@ -84,8 +84,8 @@ public/docs/           PDFs (privacy policy, charges, approved securities, terms
   answers when one opens. Product, calculator, home and about pages share the same structure and styles.
 - **Hero slides.** The main hero banner on home and the four product pages is a slide show: slide 1 is the page's
   original hero copy and three more slides follow (`config/hero-slides.ts`, `components/hero`). Only the text column
-  changes; the background and the eligibility form stay. It advances every 6 s, pauses on hover, focus, hidden tab
-  and a Pause button, and the hero height never changes between slides.
+  changes; the background and the eligibility form stay. It advances every 6 s, pauses on hover, focus and in a hidden tab
+  (no pause button), and the hero height never changes between slides.
 - **Security headers** are set in `next.config.ts` (CSP that only allows this origin, HSTS, `X-Frame-Options`,
   `nosniff`, referrer and permissions policies). Only `/channel-partner` may be framed, and only by infina.co.in.
 

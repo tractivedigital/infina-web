@@ -11,13 +11,12 @@ const INTERVAL_MS = 6000;
  * The hero's text column as a slide show. Slide 1 is the page's original hero copy (passed as children, so it stays
  * server-rendered and is the only <h1>); three more slides follow it. The background artwork and the eligibility
  * form beside it never change. Slides sit in one grid cell, so the hero keeps a constant height.
- * Auto-advances every 6 s; pauses on hover, focus, hidden tab or off-screen, with a Pause button and dots.
+ * Auto-advances every 6 s (0.6 s cross-fade); pauses while hovered or focused, in a hidden tab or off-screen.
  */
 export function HeroCopyCarousel({ page, children }: { page: HeroPage; children: ReactNode }) {
   const extra = heroSlides[page];
   const count = extra.length + 1;
   const [index, setIndex] = useState(0);
-  const [playing, setPlaying] = useState(true);
   const [held, setHeld] = useState(false);
   const [visible, setVisible] = useState(true);
   const [tabVisible, setTabVisible] = useState(true);
@@ -41,10 +40,10 @@ export function HeroCopyCarousel({ page, children }: { page: HeroPage; children:
   }, []);
 
   useEffect(() => {
-    if (!playing || held || !visible || !tabVisible) return;
+    if (held || !visible || !tabVisible) return;
     const id = window.setInterval(() => setIndex((i) => (i + 1) % count), INTERVAL_MS);
     return () => window.clearInterval(id);
-  }, [playing, held, visible, tabVisible, count, index]);
+  }, [held, visible, tabVisible, count, index]);
 
   return (
     <div
@@ -58,7 +57,7 @@ export function HeroCopyCarousel({ page, children }: { page: HeroPage; children:
       onFocus={() => setHeld(true)}
       onBlur={() => setHeld(false)}
     >
-      <div className="hs-stack" aria-live={playing && !held ? 'off' : 'polite'}>
+      <div className="hs-stack" aria-live={held ? 'polite' : 'off'}>
         <div
           className="hs-slide"
           data-active={index === 0}
@@ -103,23 +102,6 @@ export function HeroCopyCarousel({ page, children }: { page: HeroPage; children:
         ))}
       </div>
       <div className="hs-ctrl">
-        <button
-          type="button"
-          className="hs-btn"
-          onClick={() => setPlaying((p) => !p)}
-          aria-label={playing ? 'Pause automatic slide show' : 'Start automatic slide show'}
-        >
-          {playing ? (
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <rect x="6" y="5" width="4" height="14" rx="1" />
-              <rect x="14" y="5" width="4" height="14" rx="1" />
-            </svg>
-          ) : (
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M8 5l11 7-11 7z" />
-            </svg>
-          )}
-        </button>
         <div className="hs-dots">
           {Array.from({ length: count }, (_, i) => (
             <button

@@ -29,7 +29,10 @@ export function Header() {
   const closeDrawer = useCallback(() => setDrawerOpen(false), []);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 8);
+      setOpenMenu((open) => (open ? null : open)); // scrolling closes any open dropdown
+    };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);

@@ -2,14 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import {
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-  type KeyboardEvent,
-  type MouseEvent as ReactMouseEvent,
-} from 'react';
+import { useCallback, useEffect, useRef, useState, type KeyboardEvent } from 'react';
 import { calculatorLinks, companyLinks, productLinks, topLevelLinks, type LinkItem } from '@/config/navigation';
 import { siteConfig } from '@/config/site';
 import { ArrowRightIcon, ChevronDownIcon, CloseIcon, MenuIcon } from '@/components/icons';

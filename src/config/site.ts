@@ -10,4 +10,7 @@ export const siteConfig = {
   address:
     '7th Floor, Sheil Estate, Dani Corporate Park, 158, C.S.T Road, Kalina, Santacruz (East), Mumbai-400098, India.',
   privacyPolicyUrl: '/docs/privacy-policy.pdf',
+  /** Loan application portal (sign in / apply). */
+  loginUrl: 'https://www.digilas.infina.co.in/signin/otp/',
+  approvedSecuritiesUrl: '/docs/approved-securities-list-august-2026.pdf',
 } as const;

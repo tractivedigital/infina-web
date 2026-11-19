@@ -35,10 +35,7 @@ export function Why() {
               </svg>
             </span>
             <h3>High loan amounts</h3>
-            <p>
-              Loans start from ₹1 lakh and are tailored to your needs.
-              <span className="cf">To confirm</span>
-            </p>
+            <p>Loans start from ₹1 lakh and are tailored to your needs.</p>
           </article>
           <article className="wy-c">
             <span className="wy-t">
@@ -51,10 +48,7 @@ export function Why() {
               </svg>
             </span>
             <h3>Competitive interest rates</h3>
-            <p>
-              Rates depend on your tenure and are listed on this page.
-              <span className="cf">To confirm</span>
-            </p>
+            <p>Rates depend on your tenure and are listed on this page.</p>
           </article>
           <article className="wy-c">
             <span className="wy-t">
@@ -67,10 +61,7 @@ export function Why() {
               </svg>
             </span>
             <h3>Flexible tenures</h3>
-            <p>
-              Choose a repayment period that suits when you plan to sell.
-              <span className="cf">To confirm</span>
-            </p>
+            <p>Choose a repayment period that suits when you plan to sell.</p>
           </article>
           <article className="wy-c">
             <span className="wy-t">

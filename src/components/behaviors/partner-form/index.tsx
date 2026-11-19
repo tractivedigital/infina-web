@@ -43,6 +43,7 @@ export function PartnerFormBehavior() {
           entity: value('entity'),
           product: value('product'),
           consent: (document.getElementById('consent') as HTMLInputElement).checked,
+          website: (form.elements.namedItem('website') as HTMLInputElement | null)?.value ?? '',
         };
         try {
           const response = await fetch('/api/send-email', {

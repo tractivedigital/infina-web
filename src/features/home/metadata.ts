@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Infina Finance | Instant Loan Against Securities',
+    absolute: 'Infina Finance | NBFC Lending Services',
   },
   description:
     'Unlock liquidity from your portfolio without selling a single unit. Infina Finance is an RBI registered NBFC.',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: '/',
-    title: 'Infina Finance | Instant Loan Against Securities',
+    title: 'Infina Finance | NBFC Lending Services',
     description:
       'Unlock liquidity from your portfolio without selling a single unit. Infina Finance is an RBI registered NBFC.',
     siteName: 'Infina Finance',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary',
-    title: 'Infina Finance | Instant Loan Against Securities',
+    title: 'Infina Finance | NBFC Lending Services',
     description:
       'Unlock liquidity from your portfolio without selling a single unit. Infina Finance is an RBI registered NBFC.',
   },

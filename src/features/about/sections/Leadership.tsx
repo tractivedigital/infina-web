@@ -1,3 +1,4 @@
+import { LinkedInLink } from '@/components/about/LinkedInLink';
 import Image from 'next/image';
 
 export function Leadership() {
@@ -244,17 +245,7 @@ export function Leadership() {
                   Former MD & CEO of Kotak Mahindra Bank until December 31, 2023. Over three decades in financial
                   services. Professor of Practice at IIT Bombay.
                 </p>
-                <a className="inf-btn inf-btn--text li-link" href="#" target="_blank" rel="noopener noreferrer">
-                  LinkedIn Profile
-                  <span className="sr-only"> of Dipak Gupta, opens in a new tab</span>{' '}
-                  <svg className="ab-ic ic-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <g className="ic-line">
-                      <path d="M8 12H20.25" />
-                      <path d="M14.75 6.5L20.25 12L14.75 17.5" />
-                    </g>
-                    <circle className="ic-seal" cx="4.0" cy="12.0" r="1.75" />
-                  </svg>
-                </a>
+                <LinkedInLink name="Dipak Gupta" />
               </div>
             </div>
             <div className="r-panel" role="tabpanel" id="rp1" aria-labelledby="rt1" tabIndex={0} hidden>
@@ -274,17 +265,7 @@ export function Leadership() {
                   experience in cotton, agriculture, textiles, and commodity associations. Founding director of IMC
                   International ADR Centre.
                 </p>
-                <a className="inf-btn inf-btn--text li-link" href="#" target="_blank" rel="noopener noreferrer">
-                  LinkedIn Profile
-                  <span className="sr-only"> of Suresh Kotak, opens in a new tab</span>{' '}
-                  <svg className="ab-ic ic-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <g className="ic-line">
-                      <path d="M8 12H20.25" />
-                      <path d="M14.75 6.5L20.25 12L14.75 17.5" />
-                    </g>
-                    <circle className="ic-seal" cx="4.0" cy="12.0" r="1.75" />
-                  </svg>
-                </a>
+                <LinkedInLink name="Suresh Kotak" />
               </div>
             </div>
             <div className="r-panel" role="tabpanel" id="rp2" aria-labelledby="rt2" tabIndex={0} hidden>
@@ -303,17 +284,7 @@ export function Leadership() {
                   Over five decades of experience in finance, capital markets, and commodities. Commerce graduate with a
                   tax management diploma from Jamnalal Bajaj Institute of Management Studies.
                 </p>
-                <a className="inf-btn inf-btn--text li-link" href="#" target="_blank" rel="noopener noreferrer">
-                  LinkedIn Profile
-                  <span className="sr-only"> of Sumanlal Shah, opens in a new tab</span>{' '}
-                  <svg className="ab-ic ic-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <g className="ic-line">
-                      <path d="M8 12H20.25" />
-                      <path d="M14.75 6.5L20.25 12L14.75 17.5" />
-                    </g>
-                    <circle className="ic-seal" cx="4.0" cy="12.0" r="1.75" />
-                  </svg>
-                </a>
+                <LinkedInLink name="Sumanlal Shah" />
               </div>
             </div>
             <div className="r-panel" role="tabpanel" id="rp3" aria-labelledby="rt3" tabIndex={0} hidden>
@@ -332,17 +303,7 @@ export function Leadership() {
                   Chartered Accountant, Company Secretary, and Cost and Works Accountant. Managing Director & CEO of
                   Kotak Mahindra Capital Company. With the Kotak Group since 1995.
                 </p>
-                <a className="inf-btn inf-btn--text li-link" href="#" target="_blank" rel="noopener noreferrer">
-                  LinkedIn Profile
-                  <span className="sr-only"> of S. Ramesh, opens in a new tab</span>{' '}
-                  <svg className="ab-ic ic-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <g className="ic-line">
-                      <path d="M8 12H20.25" />
-                      <path d="M14.75 6.5L20.25 12L14.75 17.5" />
-                    </g>
-                    <circle className="ic-seal" cx="4.0" cy="12.0" r="1.75" />
-                  </svg>
-                </a>
+                <LinkedInLink name="S. Ramesh" />
               </div>
             </div>
             <div className="r-panel" role="tabpanel" id="rp4" aria-labelledby="rt4" tabIndex={0} hidden>
@@ -361,17 +322,7 @@ export function Leadership() {
                   Practising Chartered Accountant with experience in direct and indirect taxation, auditing, and
                   finance.
                 </p>
-                <a className="inf-btn inf-btn--text li-link" href="#" target="_blank" rel="noopener noreferrer">
-                  LinkedIn Profile
-                  <span className="sr-only"> of Rajesh Doshi, opens in a new tab</span>{' '}
-                  <svg className="ab-ic ic-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <g className="ic-line">
-                      <path d="M8 12H20.25" />
-                      <path d="M14.75 6.5L20.25 12L14.75 17.5" />
-                    </g>
-                    <circle className="ic-seal" cx="4.0" cy="12.0" r="1.75" />
-                  </svg>
-                </a>
+                <LinkedInLink name="Rajesh Doshi" />
               </div>
             </div>
             <div className="r-panel" role="tabpanel" id="rp5" aria-labelledby="rt5" tabIndex={0} hidden>
@@ -390,17 +341,7 @@ export function Leadership() {
                   Chartered Accountant and Mumbai University commerce graduate, Harvard Business School alumnus. Spent
                   over 25 years with the Kotak Group, including as MD of Kotak Securities.
                 </p>
-                <a className="inf-btn inf-btn--text li-link" href="#" target="_blank" rel="noopener noreferrer">
-                  LinkedIn Profile
-                  <span className="sr-only"> of Narayan SA, opens in a new tab</span>{' '}
-                  <svg className="ab-ic ic-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <g className="ic-line">
-                      <path d="M8 12H20.25" />
-                      <path d="M14.75 6.5L20.25 12L14.75 17.5" />
-                    </g>
-                    <circle className="ic-seal" cx="4.0" cy="12.0" r="1.75" />
-                  </svg>
-                </a>
+                <LinkedInLink name="Narayan SA" />
               </div>
             </div>
             <div className="r-panel" role="tabpanel" id="rp6" aria-labelledby="rt6" tabIndex={0} hidden>
@@ -419,17 +360,7 @@ export function Leadership() {
                   Finance faculty at Veer Narmad South Gujarat University. Gold Medallist MBA and PhD in corporate
                   restructuring. Over 15 years in finance.
                 </p>
-                <a className="inf-btn inf-btn--text li-link" href="#" target="_blank" rel="noopener noreferrer">
-                  LinkedIn Profile
-                  <span className="sr-only"> of Dr. Janki Mistry, opens in a new tab</span>{' '}
-                  <svg className="ab-ic ic-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <g className="ic-line">
-                      <path d="M8 12H20.25" />
-                      <path d="M14.75 6.5L20.25 12L14.75 17.5" />
-                    </g>
-                    <circle className="ic-seal" cx="4.0" cy="12.0" r="1.75" />
-                  </svg>
-                </a>
+                <LinkedInLink name="Dr. Janki Mistry" />
               </div>
             </div>
             <div className="r-panel" role="tabpanel" id="rp7" aria-labelledby="rt7" tabIndex={0} hidden>
@@ -448,17 +379,7 @@ export function Leadership() {
                   Over 27 years in IT and finance. Chartered Accountant, Company Secretary, and commerce graduate. Past
                   roles include Voltas, Fidelity Mutual Fund, and Kotak entities.
                 </p>
-                <a className="inf-btn inf-btn--text li-link" href="#" target="_blank" rel="noopener noreferrer">
-                  LinkedIn Profile
-                  <span className="sr-only"> of Srikar Baljekar, opens in a new tab</span>{' '}
-                  <svg className="ab-ic ic-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <g className="ic-line">
-                      <path d="M8 12H20.25" />
-                      <path d="M14.75 6.5L20.25 12L14.75 17.5" />
-                    </g>
-                    <circle className="ic-seal" cx="4.0" cy="12.0" r="1.75" />
-                  </svg>
-                </a>
+                <LinkedInLink name="Srikar Baljekar" />
               </div>
             </div>
             <div className="r-panel" role="tabpanel" id="rp8" aria-labelledby="rt8" tabIndex={0} hidden>
@@ -477,17 +398,7 @@ export function Leadership() {
                   Chartered Accountant with over three decades of experience in lending, broking, life insurance, and
                   treasury. With the company since June 2022.
                 </p>
-                <a className="inf-btn inf-btn--text li-link" href="#" target="_blank" rel="noopener noreferrer">
-                  LinkedIn Profile
-                  <span className="sr-only"> of Sudhakar Shanbhag, opens in a new tab</span>{' '}
-                  <svg className="ab-ic ic-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <g className="ic-line">
-                      <path d="M8 12H20.25" />
-                      <path d="M14.75 6.5L20.25 12L14.75 17.5" />
-                    </g>
-                    <circle className="ic-seal" cx="4.0" cy="12.0" r="1.75" />
-                  </svg>
-                </a>
+                <LinkedInLink name="Sudhakar Shanbhag" />
               </div>
             </div>
           </div>

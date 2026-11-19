@@ -26,7 +26,6 @@ export function Offer() {
             <p>
               Lenders look at how much of your monthly income can go to an EMI. Here we use up to 60% after existing
               obligations.
-              <span className="cf">To confirm</span>
             </p>
           </article>
           <article className="pp-c">
@@ -73,13 +72,11 @@ export function Offer() {
             <p>
               The loan is a share of the property&apos;s market value. The share depends on the property type and your
               profile.
-              <span className="cf">To confirm</span>
             </p>
           </article>
         </div>
         <p className="rt-meta">
-          Loans start from ₹20 lakh, with tenures from 36 to 180 months.
-          <span className="cf">To confirm</span> See the{' '}
+          Loans start from ₹20 lakh, with tenures from 36 to 180 months. See the{' '}
           <a href="/docs/lap-charges.pdf" target="_blank" rel="noopener">
             list of charges
           </a>

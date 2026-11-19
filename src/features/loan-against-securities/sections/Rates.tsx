@@ -76,10 +76,7 @@ export function Rates() {
             </table>
           </article>
         </div>
-        <p className="rt-meta">
-          Charges as published in Infina&apos;s list of charges, last reviewed 17 January 2025.
-          <span className="cf">To confirm</span>
-        </p>
+        <p className="rt-meta">Charges as published in Infina&apos;s list of charges, last reviewed 17 January 2025.</p>
         <a className="rt-dl" href="/docs/list-of-charges-las-esop-unsecured.pdf" rel="noopener">
           Download the full list of charges (PDF)
         </a>

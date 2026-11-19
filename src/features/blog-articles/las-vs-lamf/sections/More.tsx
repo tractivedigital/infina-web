@@ -22,7 +22,6 @@ export function More() {
               <p className="bl-ex">
                 How a loan against property works in India, including the process, interest rates, eligibility and
                 benefits.
-                <span className="cf">To confirm</span>
               </p>
               <p className="bl-m">
                 <span>Infina</span>
@@ -55,7 +54,6 @@ export function More() {
               </h3>
               <p className="bl-ex">
                 What ESOP financing is and why employees may need it to exercise their stock options.
-                <span className="cf">To confirm</span>
               </p>
               <p className="bl-m">
                 <span>Infina</span>
@@ -86,10 +84,7 @@ export function More() {
                   What is Loan Against Securities and How It Works in India: A Complete Guide
                 </Link>
               </h3>
-              <p className="bl-ex">
-                A complete guide to how a loan against securities works in India.
-                <span className="cf">To confirm</span>
-              </p>
+              <p className="bl-ex">A complete guide to how a loan against securities works in India.</p>
               <p className="bl-m">
                 <span>Infina</span>
                 <time dateTime="2026-05-13">May 13, 2026</time>

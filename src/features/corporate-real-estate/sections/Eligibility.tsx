@@ -193,10 +193,7 @@ export function Eligibility() {
                   >
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
-                  <span>
-                    Company and promoter KYC
-                    <span className="cf">To confirm</span>
-                  </span>
+                  <span>Company and promoter KYC</span>
                 </li>
                 <li>
                   <svg

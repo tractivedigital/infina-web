@@ -17,17 +17,11 @@ export function Rates() {
               <caption>When you apply</caption>
               <tbody>
                 <tr>
-                  <th scope="row">
-                    Processing fee
-                    <span className="cf">To confirm</span>
-                  </th>
+                  <th scope="row">Processing fee</th>
                   <td>0.25% of funding plus GST</td>
                 </tr>
                 <tr>
-                  <th scope="row">
-                    Documentation charge
-                    <span className="cf">To confirm</span>
-                  </th>
+                  <th scope="row">Documentation charge</th>
                   <td>₹999 plus 18% GST</td>
                 </tr>
                 <tr>
@@ -105,7 +99,6 @@ export function Rates() {
         <p className="rt-meta">
           Charges as listed on Infina&apos;s website. Applicable taxes are charged extra. Actual rates and fees can vary
           from one employer to another.
-          <span className="cf">To confirm</span>
         </p>
       </div>
     </section>

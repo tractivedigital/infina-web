@@ -13,7 +13,7 @@ export function Faqs() {
           <div className="fq-l">
             <div className="fq-grp">
               <p className="fq-gl">Using the calculator</p>
-              <details className="fq-d" open>
+              <details className="fq-d">
                 <summary>
                   <h3>What is a loan against property calculator?</h3>
                   <span className="fq-ch" aria-hidden="true" />
@@ -24,7 +24,7 @@ export function Faqs() {
                   obligations to see an indicative loan amount.
                 </p>
               </details>
-              <details className="fq-d" open>
+              <details className="fq-d">
                 <summary>
                   <h3>How is the EMI on a loan against property calculated?</h3>
                   <span className="fq-ch" aria-hidden="true" />
@@ -35,7 +35,7 @@ export function Faqs() {
                   ₹56,830.
                 </p>
               </details>
-              <details className="fq-d" open>
+              <details className="fq-d">
                 <summary>
                   <h3>Which interest rate does the calculator use?</h3>
                   <span className="fq-ch" aria-hidden="true" />
@@ -71,36 +71,26 @@ export function Faqs() {
               <p className="fq-gl">Eligibility and LTV</p>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    How is loan eligibility calculated?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>How is loan eligibility calculated?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>
                   The eligibility calculator takes your monthly income, subtracts your existing monthly obligations, and
-                  assumes up to 60% of that can go towards the new EMI
-                  <span className="cf">To confirm</span>. It then works out the loan that EMI can repay at your chosen
-                  rate and tenure. With ₹2,00,000 income, ₹30,000 obligations, 11% and 180 months, that is an EMI of
-                  ₹1,02,000 and a loan of about ₹89,74,158.
+                  assumes up to 60% of that can go towards the new EMI. It then works out the loan that EMI can repay at
+                  your chosen rate and tenure. With ₹2,00,000 income, ₹30,000 obligations, 11% and 180 months, that is
+                  an EMI of ₹1,02,000 and a loan of about ₹89,74,158.
                 </p>
               </details>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    What is the minimum loan amount and tenure?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>What is the minimum loan amount and tenure?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>Loans start from ₹20 lakh. You can choose a tenure from 36 to 180 months.</p>
               </details>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    What is the loan to value (LTV) ratio?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>What is the loan to value (LTV) ratio?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>

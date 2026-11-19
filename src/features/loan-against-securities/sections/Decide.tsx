@@ -40,7 +40,6 @@ export function Decide() {
                 <span>
                   The type of security, because the loan to value limit differs for shares, equity funds, debt funds and
                   bonds
-                  <span className="cf">To confirm</span>
                 </span>
               </li>
               <li>

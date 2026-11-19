@@ -1,6 +1,8 @@
 import '@/styles/pages/cre.css';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { PageShell } from '@/components/layout/PageShell';
+import { BannerCarousel } from '@/components/banners/BannerCarousel';
+import { FaqAccordionBehavior } from '@/components/behaviors/faq';
 import { DocumentTabsBehavior } from '@/components/behaviors/document-tabs';
 import { structuredData } from './structured-data';
 import { Hero } from './sections/Hero';
@@ -21,12 +23,12 @@ export function CrePage() {
   return (
     <PageShell
       page="cre"
-      review
       main={{ id: 'top', className: 'home' }}
       stickyCta={{ href: '#heroform', label: 'Check Eligibility' }}
     >
       <JsonLd data={structuredData} />
       <Hero />
+      <BannerCarousel page="cre" />
       <What />
       <Offer />
       <Trust />
@@ -40,6 +42,7 @@ export function CrePage() {
       <Faqs />
       <Next />
       <DocumentTabsBehavior />
+      <FaqAccordionBehavior />
     </PageShell>
   );
 }

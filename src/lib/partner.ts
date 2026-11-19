@@ -1,4 +1,4 @@
-import { MOBILE_PATTERN } from './validation';
+import { EMAIL_PATTERN, MOBILE_PATTERN } from './validation';
 
 /** Channel partner / DSA application, as posted by the form on /channel-partner. */
 export interface PartnerApplication {
@@ -10,8 +10,6 @@ export interface PartnerApplication {
   product: string;
   consent: boolean;
 }
-
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export function validatePartnerApplication(a: PartnerApplication): Partial<Record<keyof PartnerApplication, string>> {
   const errors: Partial<Record<keyof PartnerApplication, string>> = {};

@@ -1,6 +1,8 @@
 import '@/styles/pages/las.css';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { PageShell } from '@/components/layout/PageShell';
+import { BannerCarousel } from '@/components/banners/BannerCarousel';
+import { FaqAccordionBehavior } from '@/components/behaviors/faq';
 import { CalculatorBehavior } from '@/components/behaviors/calculators';
 import { PledgeCarouselBehavior } from '@/components/behaviors/pledge-carousel';
 import { DocumentTabsBehavior } from '@/components/behaviors/document-tabs';
@@ -24,12 +26,12 @@ export function LasPage() {
   return (
     <PageShell
       page="las"
-      review
       main={{ id: 'top', className: 'home' }}
       stickyCta={{ href: '#heroform', label: 'Check Eligibility' }}
     >
       <JsonLd data={structuredData} />
       <Hero />
+      <BannerCarousel page="las" />
       <Estimate />
       <What />
       <Pledge />
@@ -46,6 +48,7 @@ export function LasPage() {
       <CalculatorBehavior />
       <PledgeCarouselBehavior />
       <DocumentTabsBehavior />
+      <FaqAccordionBehavior />
     </PageShell>
   );
 }

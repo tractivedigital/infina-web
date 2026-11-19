@@ -1,6 +1,7 @@
 import '@/styles/pages/about.css';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { PageShell } from '@/components/layout/PageShell';
+import { FaqAccordionBehavior } from '@/components/behaviors/faq';
 import { AboutTabsBehavior } from '@/components/behaviors/about-tabs';
 import { structuredData } from './structured-data';
 import { Hero } from './sections/Hero';
@@ -15,7 +16,7 @@ import { Regulatory } from './sections/Regulatory';
 
 export function AboutPage() {
   return (
-    <PageShell page="about" review main={{ id: 'main', className: 'abp' }}>
+    <PageShell page="about" main={{ id: 'main', className: 'abp' }}>
       <JsonLd data={structuredData} />
       <Hero />
       <Story />
@@ -27,6 +28,7 @@ export function AboutPage() {
       <Faqs />
       <Regulatory />
       <AboutTabsBehavior />
+      <FaqAccordionBehavior />
     </PageShell>
   );
 }

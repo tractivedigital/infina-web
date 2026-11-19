@@ -1,6 +1,8 @@
 import '@/styles/pages/lap.css';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { PageShell } from '@/components/layout/PageShell';
+import { BannerCarousel } from '@/components/banners/BannerCarousel';
+import { FaqAccordionBehavior } from '@/components/behaviors/faq';
 import { CalculatorBehavior } from '@/components/behaviors/calculators';
 import { DocumentTabsBehavior } from '@/components/behaviors/document-tabs';
 import { structuredData } from './structured-data';
@@ -23,12 +25,12 @@ export function LapPage() {
   return (
     <PageShell
       page="lap"
-      review
       main={{ id: 'top', className: 'home' }}
       stickyCta={{ href: '#heroform', label: 'Check Eligibility' }}
     >
       <JsonLd data={structuredData} />
       <Hero />
+      <BannerCarousel page="lap" />
       <Estimate />
       <What />
       <Property />
@@ -44,6 +46,7 @@ export function LapPage() {
       <Next />
       <CalculatorBehavior />
       <DocumentTabsBehavior />
+      <FaqAccordionBehavior />
     </PageShell>
   );
 }

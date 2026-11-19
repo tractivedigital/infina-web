@@ -11,7 +11,7 @@ import { FooterCta } from './sections/FooterCta';
 
 export function ChannelPartnerPage() {
   return (
-    <PageShell page="channel-partner" review main={{ className: 'home cpg' }}>
+    <PageShell page="channel-partner" main={{ className: 'home cpg' }}>
       <JsonLd data={structuredData} />
       <Hero />
       <Why />

@@ -11,7 +11,7 @@ export function Faqs() {
           <div className="fq-l">
             <div className="fq-grp">
               <p className="fq-gl">Basics</p>
-              <details className="fq-d" open>
+              <details className="fq-d">
                 <summary>
                   <h3>What is a loan against securities?</h3>
                   <span className="fq-ch" aria-hidden="true" />
@@ -21,7 +21,7 @@ export function Faqs() {
                   pledged as security and stay in your name, so you do not have to sell them.
                 </p>
               </details>
-              <details className="fq-d" open>
+              <details className="fq-d">
                 <summary>
                   <h3>What can I use the money for?</h3>
                   <span className="fq-ch" aria-hidden="true" />
@@ -31,7 +31,7 @@ export function Faqs() {
                   term cash gap.
                 </p>
               </details>
-              <details className="fq-d" open>
+              <details className="fq-d">
                 <summary>
                   <h3>Which securities can I pledge?</h3>
                   <span className="fq-ch" aria-hidden="true" />
@@ -56,10 +56,7 @@ export function Faqs() {
               </details>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    Can I pledge securities held by a family member?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>Can I pledge securities held by a family member?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>
@@ -69,10 +66,7 @@ export function Faqs() {
               </details>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    What is the minimum age to take a loan against securities?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>What is the minimum age to take a loan against securities?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>
@@ -96,10 +90,7 @@ export function Faqs() {
               </details>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    What is the minimum and maximum loan amount?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>What is the minimum and maximum loan amount?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>
@@ -109,10 +100,7 @@ export function Faqs() {
               </details>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    What is the loan to value (LTV) ratio for different securities?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>What is the loan to value (LTV) ratio for different securities?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>
@@ -123,10 +111,7 @@ export function Faqs() {
               </details>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    What is the minimum and maximum tenure?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>What is the minimum and maximum tenure?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>
@@ -136,10 +121,7 @@ export function Faqs() {
               </details>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    How do I pay the monthly interest?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>How do I pay the monthly interest?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>
@@ -171,10 +153,7 @@ export function Faqs() {
               </details>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    Is there an annual or renewal charge?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>Is there an annual or renewal charge?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>
@@ -218,10 +197,7 @@ export function Faqs() {
               </details>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    Is a personal guarantor required?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>Is a personal guarantor required?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>
@@ -231,10 +207,7 @@ export function Faqs() {
               </details>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    Can I add or swap securities during the loan?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>Can I add or swap securities during the loan?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>
@@ -244,10 +217,7 @@ export function Faqs() {
               </details>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    Do I still get dividends and bonuses on pledged securities?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>Do I still get dividends and bonuses on pledged securities?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>
@@ -257,10 +227,7 @@ export function Faqs() {
               </details>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    Are my securities revalued, and what is a margin call?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>Are my securities revalued, and what is a margin call?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>

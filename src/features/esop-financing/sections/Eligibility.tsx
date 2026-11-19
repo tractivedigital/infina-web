@@ -150,10 +150,7 @@ export function Eligibility() {
                   >
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
-                  <span>
-                    Form 16 for the relevant year
-                    <span className="cf">To confirm</span>
-                  </span>
+                  <span>Form 16 for the relevant year</span>
                 </li>
                 <li>
                   <svg

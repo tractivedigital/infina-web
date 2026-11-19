@@ -7563,3 +7563,17 @@ div:where([data-page='contact']).review .cf {
     border-top: 1.5px solid var(--border);
   }
 }
+
+/* The map illustration links to Google Maps (no third-party embed is loaded). */
+:where([data-page='contact']) .in-map-link {
+  position: absolute;
+  inset: 0;
+  display: block;
+  cursor: pointer;
+}
+
+:where([data-page='contact']) .in-map-link:focus-visible {
+  outline: 3px solid var(--focus, #0b57d0);
+  outline-offset: -3px;
+  border-radius: 20px;
+}

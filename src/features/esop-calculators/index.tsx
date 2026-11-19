@@ -1,6 +1,7 @@
 import '@/styles/pages/esop-calc.css';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { PageShell } from '@/components/layout/PageShell';
+import { FaqAccordionBehavior } from '@/components/behaviors/faq';
 import { EsopCalculatorBehavior } from '@/components/behaviors/esop-calculator';
 import { structuredData } from './structured-data';
 import { Hero } from './sections/Hero';
@@ -19,7 +20,6 @@ export function EsopCalcPage() {
   return (
     <PageShell
       page="esop-calc"
-      review
       main={{ id: 'top', className: 'home' }}
       stickyCta={{ href: '#calculator', label: 'Use the calculator' }}
     >
@@ -36,6 +36,7 @@ export function EsopCalcPage() {
       <Faqs />
       <Next />
       <EsopCalculatorBehavior />
+      <FaqAccordionBehavior />
     </PageShell>
   );
 }

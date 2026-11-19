@@ -61,10 +61,7 @@ export function Why() {
               </svg>
             </span>
             <h3>Flexible tenure</h3>
-            <p>
-              Choose a tenure from 36 to 180 months.
-              <span className="cf">To confirm</span>
-            </p>
+            <p>Choose a tenure from 36 to 180 months.</p>
           </article>
           <article className="wy-c">
             <span className="wy-t">
@@ -77,10 +74,7 @@ export function Why() {
               </svg>
             </span>
             <h3>Simple process, fast disbursal</h3>
-            <p>
-              Easy documentation and quick loan approval.
-              <span className="cf">To confirm</span>
-            </p>
+            <p>Easy documentation and quick loan approval.</p>
           </article>
           <article className="wy-c">
             <span className="wy-t">

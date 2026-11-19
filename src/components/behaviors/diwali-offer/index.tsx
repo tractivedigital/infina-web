@@ -92,20 +92,63 @@ export function DiwaliOfferBehavior() {
       pin?.classList.remove('hide');
     }
 
-    // Lead form (the original transmits nothing yet: it validates, tracks and shows the thank-you state).
+    // Lead form: validates, sends the lead to /api/leads, then shows the thank-you state.
     const form = document.getElementById('leadForm') as HTMLFormElement | null;
+    const errorText = 'Please fill in all fields correctly.';
     form?.addEventListener(
       'submit',
-      (e) => {
+      async (e) => {
         e.preventDefault();
         const err = document.getElementById('fErr');
+        const button = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+        const showError = (message: string) => {
+          if (!err) return;
+          err.textContent = message;
+          err.hidden = false;
+        };
         if (!form.checkValidity()) {
-          if (err) err.hidden = false;
+          showError(errorText);
           form.reportValidity();
           return;
         }
         if (err) err.hidden = true;
-        // TODO: send the lead to the Infina endpoint here (same placeholder as the source page).
+
+        const data = new FormData(form);
+        const field = (name: string) => String(data.get(name) ?? '').trim();
+        const details: Record<string, string> = { portfolio: field('portfolio'), asset: field('asset') };
+        UTM_KEYS.forEach((k) => {
+          const v = qs.get(k);
+          if (v) details[k] = v;
+        });
+        const originalLabel = button?.textContent ?? '';
+        if (button) {
+          button.disabled = true;
+          button.textContent = 'Submitting...';
+        }
+        try {
+          const response = await fetch('/api/leads', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              name: field('name'),
+              mobile: field('mobile'),
+              email: field('email'),
+              interest: 'Loan Against Securities (Diwali offer)',
+              consent: data.get('consent') === 'on',
+              source: location.pathname,
+              website: field('website'),
+              details,
+            }),
+          });
+          if (!response.ok) throw new Error(`Lead submission failed (${response.status})`);
+        } catch {
+          showError('We could not submit your details right now. Please try again.');
+          if (button) {
+            button.disabled = false;
+            button.textContent = originalLabel;
+          }
+          return;
+        }
         push({ event: 'Lead_Form_Submit' });
         form.hidden = true;
         const ok = document.getElementById('fOk');

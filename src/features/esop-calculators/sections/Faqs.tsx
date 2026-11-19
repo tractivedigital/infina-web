@@ -13,7 +13,7 @@ export function Faqs() {
           <div className="fq-l">
             <div className="fq-grp">
               <p className="fq-gl">Using the calculator</p>
-              <details className="fq-d" open>
+              <details className="fq-d">
                 <summary>
                   <h3>What is an ESOP funding calculator?</h3>
                   <span className="fq-ch" aria-hidden="true" />
@@ -24,7 +24,7 @@ export function Faqs() {
                   contribution and the cost of the funding.
                 </p>
               </details>
-              <details className="fq-d" open>
+              <details className="fq-d">
                 <summary>
                   <h3>How does the ESOP funding calculator work?</h3>
                   <span className="fq-ch" aria-hidden="true" />
@@ -36,7 +36,7 @@ export function Faqs() {
                   and total cost of funding.
                 </p>
               </details>
-              <details className="fq-d" open>
+              <details className="fq-d">
                 <summary>
                   <h3>How is the cost of exercising ESOPs calculated?</h3>
                   <span className="fq-ch" aria-hidden="true" />

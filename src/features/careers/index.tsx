@@ -7,7 +7,7 @@ import { Content } from './sections/Content';
 
 export function CareersPage() {
   return (
-    <PageShell page="careers" review main={{ id: 'top', className: 'home' }}>
+    <PageShell page="careers" main={{ id: 'top', className: 'home' }}>
       <JsonLd data={structuredData} />
       <Intro />
       <Content />

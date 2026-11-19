@@ -6,9 +6,17 @@ export interface LeadInput {
   interest: string;
   consent: boolean;
   source?: string;
+  /** Campaign forms collect an email address too. */
+  email?: string;
+  /** Extra campaign fields (portfolio value, asset type, UTM parameters…). */
+  details?: Record<string, string>;
+  /** Hidden spam-trap field: must stay empty. */
+  website?: string;
 }
 
 export type LeadErrors = Partial<Record<'name' | 'mobile' | 'consent', string>>;
+
+export const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 /** Indian mobile numbers: ten digits starting 6-9. */
 export const MOBILE_PATTERN = /^[6-9][0-9]{9}$/;

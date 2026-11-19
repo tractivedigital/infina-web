@@ -11,7 +11,7 @@ export function Faqs() {
           <div className="fq-l">
             <div className="fq-grp">
               <p className="fq-gl">Basics</p>
-              <details className="fq-d" open>
+              <details className="fq-d">
                 <summary>
                   <h3>What is corporate real estate financing?</h3>
                   <span className="fq-ch" aria-hidden="true" />
@@ -22,7 +22,7 @@ export function Faqs() {
                   finance and takeover of existing debt.
                 </p>
               </details>
-              <details className="fq-d" open>
+              <details className="fq-d">
                 <summary>
                   <h3>What are the real estate finance solutions provided to developers by Infina?</h3>
                   <span className="fq-ch" aria-hidden="true" />
@@ -32,7 +32,7 @@ export function Faqs() {
                   finance, structured finance and takeover of existing debt.
                 </p>
               </details>
-              <details className="fq-d" open>
+              <details className="fq-d">
                 <summary>
                   <h3>What is the difference between construction finance and last mile finance?</h3>
                   <span className="fq-ch" aria-hidden="true" />
@@ -119,10 +119,7 @@ export function Faqs() {
               <p className="fq-gl">Cost and process</p>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    What fees and charges apply?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>What fees and charges apply?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>
@@ -134,10 +131,7 @@ export function Faqs() {
               </details>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    What interest rate will I pay?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>What interest rate will I pay?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>
@@ -147,10 +141,7 @@ export function Faqs() {
               </details>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    What is the repayment tenure?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>What is the repayment tenure?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>
@@ -160,10 +151,7 @@ export function Faqs() {
               </details>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    What documents are required?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>What documents are required?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>

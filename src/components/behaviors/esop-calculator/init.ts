@@ -1,5 +1,6 @@
 import { formatRupees, parseNumber } from '@/lib/calculators/format';
 import { esopBreakdown, type EsopBreakdown } from '@/lib/calculators/esop-breakdown';
+import { buildXlsx, downloadBytes, type Cell } from '@/lib/xlsx-lite';
 
 const $ = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
 const round2 = (n: number) => Math.round(n * 100) / 100;
@@ -18,9 +19,8 @@ function setAnimated(el: HTMLElement, next: number) {
   requestAnimationFrame(step);
 }
 
-async function exportToExcel(r: EsopBreakdown) {
-  const XLSX = await import('xlsx');
-  const rows: (string | number)[][] = [
+function exportToExcel(r: EsopBreakdown) {
+  const rows: Cell[][] = [
     ['Infina ESOP Funding Calculator'],
     [],
     ['Inputs'],
@@ -43,11 +43,11 @@ async function exportToExcel(r: EsopBreakdown) {
     ['Documentation Charges (flat, incl. GST)', round2(r.documentation)],
     ['Estimated Cost of Funding', round2(r.netCost)],
   ];
-  const ws = XLSX.utils.aoa_to_sheet(rows);
-  ws['!cols'] = [{ wch: 56 }, { wch: 16 }];
-  const wb = XLSX.utils.book_new();
-  XLSX.utils.book_append_sheet(wb, ws, 'ESOP Calculation');
-  XLSX.writeFile(wb, 'ESOP-Funding-Calculation.xlsx');
+  downloadBytes(
+    'ESOP-Funding-Calculation.xlsx',
+    buildXlsx('ESOP Calculation', rows, [56, 16]),
+    'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+  );
 }
 
 /** Wires the standalone ESOP funding calculator. Returns a cleanup function. */

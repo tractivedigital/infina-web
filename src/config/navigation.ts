@@ -1,68 +1,53 @@
-export type NavIcon = 'securities' | 'esop' | 'property' | 'realestate' | 'calculator';
-
 export interface NavItem {
   title: string;
-  href: string;
-  description?: string;
-  icon?: NavIcon;
+  /** Omit while the destination is unknown: the footer then shows the label as plain text. */
+  href?: string;
 }
 
-export const productLinks: NavItem[] = [
+export type LinkItem = NavItem & { href: string };
+
+export const productLinks: LinkItem[] = [
   {
     title: 'Loan Against Securities',
     href: '/loan-against-securities',
-    icon: 'securities',
-    description: 'Get liquidity from your stocks and mutual funds without selling them.',
   },
   {
     title: 'ESOP Financing',
     href: '/esop-financing',
-    icon: 'esop',
-    description: 'Access funds from your ESOPs with flexible repayment options.',
   },
   {
     title: 'Loan Against Property',
     href: '/loan-against-property',
-    icon: 'property',
-    description: 'Avail funding by leveraging your residential or commercial property.',
   },
   {
     title: 'Corporate Real Estate',
     href: '/corporate-real-estate',
-    icon: 'realestate',
-    description: 'Structured financing solutions for real estate developers and businesses.',
   },
 ];
 
-export const calculatorLinks: NavItem[] = [
+export const calculatorLinks: LinkItem[] = [
   {
     title: 'Loan Against Securities Calculator',
     href: '/las-calculators',
-    icon: 'calculator',
-    description: 'Monthly interest and eligibility against shares and mutual funds.',
   },
   {
     title: 'ESOP Funding Calculator',
     href: '/esop-calculators',
-    icon: 'calculator',
-    description: 'Cost to exercise ESOPs, with tax, funding and fees.',
   },
   {
     title: 'Loan Against Property Calculator',
     href: '/lap-calculators',
-    icon: 'calculator',
-    description: 'EMI and eligibility for a loan against property.',
   },
 ];
 
-export const companyLinks: NavItem[] = [
+export const companyLinks: LinkItem[] = [
   { title: 'About Us', href: '/about' },
   { title: 'Careers', href: '/careers' },
   { title: 'Channel Partner / DSA', href: '/channel-partner' },
   { title: 'Blogs', href: '/blogs' },
 ];
 
-export const topLevelLinks: NavItem[] = [
+export const topLevelLinks: LinkItem[] = [
   { title: 'Investor Relations', href: '/investor-relations' },
   { title: 'Contact Us', href: '/contact' },
 ];
@@ -93,7 +78,7 @@ export const footerColumns: { title: string; links: NavItem[] }[] = [
     links: [
       { title: 'Financial Reporting', href: '/investor-relations#financial-reporting' },
       { title: 'Policies', href: '/investor-relations#policies' },
-      { title: 'IFPL List of approved securities', href: '#' },
+      { title: 'IFPL List of approved securities', href: '/docs/approved-securities-list-august-2026.pdf' },
     ],
   },
   {
@@ -107,15 +92,13 @@ export const footerColumns: { title: string; links: NavItem[] }[] = [
   },
   {
     title: 'Insurance Services',
-    links: [
-      { title: 'HDFC Life', href: '#' },
-      { title: 'ICICI Lombard', href: '#' },
-    ],
+    links: [{ title: 'HDFC Life' }, { title: 'ICICI Lombard' }],
   },
 ];
 
-export const socialLinks = [
-  { label: 'LinkedIn', href: '#' },
-  { label: 'Instagram', href: '#' },
-  { label: 'X', href: '#' },
-] as const;
+/** Social profiles. An entry is shown in the footer only when it has a URL. */
+export const socialLinks: { label: 'LinkedIn' | 'Instagram' | 'X'; href?: string }[] = [
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/company/infina-finance-pvt--ltd-/' },
+  { label: 'Instagram' },
+  { label: 'X' },
+];

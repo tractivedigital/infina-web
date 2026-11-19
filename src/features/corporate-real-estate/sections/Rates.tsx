@@ -40,10 +40,7 @@ export function Rates() {
                     Interest rate
                     <small>Confirmed in your sanction letter.</small>
                   </th>
-                  <td>
-                    Set for your project
-                    <span className="cf">To confirm</span>
-                  </td>
+                  <td>Set for your project</td>
                 </tr>
                 <tr>
                   <th scope="row">Due diligence cost</th>
@@ -76,7 +73,6 @@ export function Rates() {
         <p className="rt-meta">
           Charges as listed in Infina&apos;s list of charges for real estate financing, last reviewed 17 January 2025.
           Applicable taxes are charged extra.
-          <span className="cf">To confirm</span>
         </p>
       </div>
     </section>

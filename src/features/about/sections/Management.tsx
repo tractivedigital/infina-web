@@ -1,3 +1,4 @@
+import { LinkedInLink } from '@/components/about/LinkedInLink';
 import Image from 'next/image';
 
 export function Management() {
@@ -26,17 +27,7 @@ export function Management() {
               Chartered Accountant, with the company since August 2021. Oversees finance, accounts, tax, treasury,
               compliance, IT, HR, and admin. Previously at Kotak Mahindra Bank and Deloitte Haskins & Sells LLP.
             </p>
-            <a className="inf-btn inf-btn--text li-link" href="#" target="_blank" rel="noopener noreferrer">
-              LinkedIn Profile
-              <span className="sr-only"> of Keyur Gandhi, opens in a new tab</span>{' '}
-              <svg className="ab-ic ic-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <g className="ic-line">
-                  <path d="M8 12H20.25" />
-                  <path d="M14.75 6.5L20.25 12L14.75 17.5" />
-                </g>
-                <circle className="ic-seal" cx="4.0" cy="12.0" r="1.75" />
-              </svg>
-            </a>
+            <LinkedInLink name="Keyur Gandhi" />
           </article>
           <article className="inf-person">
             <Image
@@ -53,17 +44,7 @@ export function Management() {
               Chartered Accountant and Company Secretary with over 23 years in BFSI. Previously at Mango Financial
               Advisors and Kotak Wealth Management.
             </p>
-            <a className="inf-btn inf-btn--text li-link" href="#" target="_blank" rel="noopener noreferrer">
-              LinkedIn Profile
-              <span className="sr-only"> of Parth Bumiya, opens in a new tab</span>{' '}
-              <svg className="ab-ic ic-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <g className="ic-line">
-                  <path d="M8 12H20.25" />
-                  <path d="M14.75 6.5L20.25 12L14.75 17.5" />
-                </g>
-                <circle className="ic-seal" cx="4.0" cy="12.0" r="1.75" />
-              </svg>
-            </a>
+            <LinkedInLink name="Parth Bumiya" />
           </article>
         </div>
       </div>

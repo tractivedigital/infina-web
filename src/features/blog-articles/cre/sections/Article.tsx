@@ -341,7 +341,7 @@ export function Article() {
               </p>
               <section className="ar-fq" id="faqs" aria-labelledby="faq-h">
                 <h2 id="faq-h">FAQs</h2>
-                <details className="fq-d" open>
+                <details className="fq-d">
                   <summary>
                     <h3>A. What Is Corporate Real Estate Finance?</h3>
                     <span className="fq-ch" aria-hidden="true" />
@@ -351,7 +351,7 @@ export function Article() {
                     construction, working capital, and refinancing needs.
                   </p>
                 </details>
-                <details className="fq-d" open>
+                <details className="fq-d">
                   <summary>
                     <h3>B. What Types of Projects Can Be Financed?</h3>
                     <span className="fq-ch" aria-hidden="true" />

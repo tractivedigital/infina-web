@@ -23,10 +23,7 @@ export function Safety() {
             </p>
           </article>
           <article className="pp-c">
-            <h3>
-              Stay safe from fraud
-              <span className="cf">To confirm</span>
-            </h3>
+            <h3>Stay safe from fraud</h3>
             <p>
               Share OTPs, documents and payments only through Infina&apos;s official channels. If you are unsure whether
               a call or message is from Infina, write to customerservice@infina.in.

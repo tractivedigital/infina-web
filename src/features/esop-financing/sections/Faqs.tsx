@@ -11,7 +11,7 @@ export function Faqs() {
           <div className="fq-l">
             <div className="fq-grp">
               <p className="fq-gl">Basics</p>
-              <details className="fq-d" open>
+              <details className="fq-d">
                 <summary>
                   <h3>What is ESOP financing?</h3>
                   <span className="fq-ch" aria-hidden="true" />
@@ -22,7 +22,7 @@ export function Faqs() {
                   agree.
                 </p>
               </details>
-              <details className="fq-d" open>
+              <details className="fq-d">
                 <summary>
                   <h3>Who is eligible for ESOP financing?</h3>
                   <span className="fq-ch" aria-hidden="true" />
@@ -32,7 +32,7 @@ export function Faqs() {
                   and have a satisfactory credit history.
                 </p>
               </details>
-              <details className="fq-d" open>
+              <details className="fq-d">
                 <summary>
                   <h3>Can NRIs apply for ESOP financing?</h3>
                   <span className="fq-ch" aria-hidden="true" />
@@ -51,10 +51,7 @@ export function Faqs() {
               </details>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    What does ESOP financing cover?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>What does ESOP financing cover?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>
@@ -67,10 +64,7 @@ export function Faqs() {
               <p className="fq-gl">Amount, rate and charges</p>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    How much can I borrow?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>How much can I borrow?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>
@@ -81,10 +75,7 @@ export function Faqs() {
               </details>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    Do I have to pay anything myself?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>Do I have to pay anything myself?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>
@@ -94,10 +85,7 @@ export function Faqs() {
               </details>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    What interest rate will I pay?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>What interest rate will I pay?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>
@@ -108,10 +96,7 @@ export function Faqs() {
               </details>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    What is the repayment tenure?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>What is the repayment tenure?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>
@@ -121,10 +106,7 @@ export function Faqs() {
               </details>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    What fees and charges apply?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>What fees and charges apply?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>
@@ -139,10 +121,7 @@ export function Faqs() {
               <p className="fq-gl">Process and risk</p>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    What documents are required?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>What documents are required?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>

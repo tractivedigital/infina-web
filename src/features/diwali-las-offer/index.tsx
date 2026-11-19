@@ -16,7 +16,7 @@ import { Pin } from './sections/Pin';
 
 export function DiwaliLasPage() {
   return (
-    <PageShell page="diwali-las" review afterHeader={<Sprite />} main={{ id: 'top', className: 'home cpg' }}>
+    <PageShell page="diwali-las" afterHeader={<Sprite />} main={{ id: 'top', className: 'home cpg' }}>
       <JsonLd data={structuredData} />
       <OhBand />
       <DwWrap />

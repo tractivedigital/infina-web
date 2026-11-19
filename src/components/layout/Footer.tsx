@@ -2,11 +2,25 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
-import { footerColumns } from '@/config/navigation';
+import { Fragment, useState, type ReactNode } from 'react';
+import { footerColumns, socialLinks } from '@/config/navigation';
 import { siteConfig } from '@/config/site';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { ChevronDownIcon, InstagramIcon, LinkedInIcon, WarningIcon, XIcon } from '@/components/icons';
+
+/** Internal route -> Link; document or external URL -> plain anchor (new tab); no URL yet -> plain text. */
+function FooterLink({ href, children }: { href?: string; children: ReactNode }) {
+  if (!href) return <span>{children}</span>;
+  if (/\.pdf$/i.test(href) || /^https?:/.test(href))
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer">
+        {children}
+      </a>
+    );
+  return <Link href={href}>{children}</Link>;
+}
+
+const SOCIAL_ICONS = { LinkedIn: LinkedInIcon, Instagram: InstagramIcon, X: XIcon } as const;
 
 /** Site footer. Link columns become accordions below 960px. */
 export function Footer() {
@@ -49,7 +63,7 @@ export function Footer() {
                 <ul>
                   {col.links.map((l) => (
                     <li key={l.title}>
-                      {l.href.startsWith('/') ? <Link href={l.href}>{l.title}</Link> : <a href={l.href}>{l.title}</a>}
+                      <FooterLink href={l.href}>{l.title}</FooterLink>
                     </li>
                   ))}
                 </ul>
@@ -85,16 +99,26 @@ export function Footer() {
             <Link href="/privacy-policy">Privacy Policy</Link>
           </p>
           <div className="follow">
-            <span>Follow us on</span>{' '}
-            <a className="soc" href="#" aria-label="Infina on LinkedIn">
-              <LinkedInIcon />
-            </a>{' '}
-            <a className="soc" href="#" aria-label="Infina on Instagram">
-              <InstagramIcon />
-            </a>{' '}
-            <a className="soc" href="#" aria-label="Infina on X">
-              <XIcon />
-            </a>
+            <span>Follow us on</span>
+            {socialLinks
+              .filter((l) => l.href)
+              .map((l) => {
+                const Icon = SOCIAL_ICONS[l.label];
+                return (
+                  <Fragment key={l.label}>
+                    {' '}
+                    <a
+                      className="soc"
+                      href={l.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Infina on ${l.label}`}
+                    >
+                      <Icon />
+                    </a>
+                  </Fragment>
+                );
+              })}
           </div>
         </div>
       </div>

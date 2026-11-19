@@ -1588,7 +1588,7 @@ export function Hero() {
           <div className="hero-scrim" aria-hidden="true" />
           <div className="hv-wrap">
             <div className="hv-copy">
-              <h1 id="h1">Instant Loan Against Securities</h1>
+              <h1 id="h1">Infina&apos;s NBFC Lending Services</h1>
               <p className="sub">Unlock liquidity from your portfolio without selling a single unit.</p>
               <ul className="hv-pts">
                 <li>

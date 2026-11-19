@@ -65,10 +65,7 @@ export function Decide() {
                 >
                   <path d="M5 12.5l4.5 4.5L19 7.5" />
                 </svg>
-                <span>
-                  The type of security you pledge, which sets how much you can borrow
-                  <span className="cf">To confirm</span>
-                </span>
+                <span>The type of security you pledge, which sets how much you can borrow</span>
               </li>
             </ul>
           </div>

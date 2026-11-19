@@ -127,7 +127,6 @@ export function Rates() {
         <p className="rt-meta">
           Charges as published in Infina&apos;s fees and charges matrix, last reviewed 5 September 2026. Applicable
           taxes are charged extra.
-          <span className="cf">To confirm</span>
         </p>
         <a className="rt-dl" href="/docs/lap-charges.pdf" rel="noopener">
           Download the full fees and charges matrix (PDF)

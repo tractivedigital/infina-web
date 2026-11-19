@@ -8,7 +8,7 @@ import { Content } from './sections/Content';
 
 export function PrivacyPolicyPage() {
   return (
-    <PageShell page="privacy-policy" review main={{ id: 'top', className: 'home' }}>
+    <PageShell page="privacy-policy" main={{ id: 'top', className: 'home' }}>
       <JsonLd data={structuredData} />
       <Intro />
       <Content />

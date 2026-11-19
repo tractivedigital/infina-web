@@ -2,16 +2,24 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useCallback, useEffect, useRef, useState, type KeyboardEvent } from 'react';
-import { calculatorLinks, companyLinks, productLinks, topLevelLinks, type NavItem } from '@/config/navigation';
-import { ArrowRightIcon, ChevronDownIcon, CloseIcon, MenuIcon, NavMenuIcon } from '@/components/icons';
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  type KeyboardEvent,
+  type MouseEvent as ReactMouseEvent,
+} from 'react';
+import { calculatorLinks, companyLinks, productLinks, topLevelLinks, type LinkItem } from '@/config/navigation';
+import { siteConfig } from '@/config/site';
+import { ArrowRightIcon, ChevronDownIcon, CloseIcon, MenuIcon } from '@/components/icons';
 
 type MenuId = 'products' | 'calculators' | 'company';
 
-const MENUS: { id: MenuId; label: string; wide: boolean; items: NavItem[] }[] = [
-  { id: 'products', label: 'Products', wide: true, items: productLinks },
-  { id: 'calculators', label: 'Calculators', wide: true, items: calculatorLinks },
-  { id: 'company', label: 'Company', wide: false, items: companyLinks },
+const MENUS: { id: MenuId; label: string; items: LinkItem[] }[] = [
+  { id: 'products', label: 'Products', items: productLinks },
+  { id: 'calculators', label: 'Calculators', items: calculatorLinks },
+  { id: 'company', label: 'Company', items: companyLinks },
 ];
 
 const panelId = (id: MenuId) => (id === 'calculators' ? 'p-calc' : `p-${id}`);
@@ -26,6 +34,17 @@ export function Header() {
   const itemRefs = useRef<Partial<Record<MenuId, HTMLDivElement | null>>>({});
 
   const closeDrawer = useCallback(() => setDrawerOpen(false), []);
+
+  /** "Check Eligibility": jump to this page's eligibility form; pages without one open the home page form. */
+  const checkEligibility = useCallback((e: ReactMouseEvent<HTMLAnchorElement>) => {
+    setDrawerOpen(false);
+    const form = document.getElementById('heroform');
+    if (!form) return;
+    e.preventDefault();
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    form.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+    form.querySelector<HTMLElement>('input, select')?.focus({ preventScroll: true });
+  }, []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -136,24 +155,13 @@ export function Header() {
                 >
                   {menu.label} <ChevronDownIcon className="chev" />
                 </button>
-                <div className={`panel${menu.wide ? ' wide' : ''}`} id={panelId(menu.id)} role="menu">
-                  {menu.items.map((item) =>
-                    menu.wide ? (
-                      <Link key={item.title} role="menuitem" className="mi" href={item.href}>
-                        <span className="disc">{item.icon && <NavMenuIcon name={item.icon} />}</span>
-                        <span className="mt">
-                          <b>{item.title}</b>
-                          <small>{item.description}</small>
-                        </span>
-                        <ArrowRightIcon className="go" />
-                      </Link>
-                    ) : (
-                      <Link key={item.title} role="menuitem" href={item.href}>
-                        {item.title}
-                        <ArrowRightIcon />
-                      </Link>
-                    ),
-                  )}
+                <div className="panel" id={panelId(menu.id)} role="menu">
+                  {menu.items.map((item) => (
+                    <Link key={item.title} role="menuitem" href={item.href}>
+                      {item.title}
+                      <ArrowRightIcon />
+                    </Link>
+                  ))}
                 </div>
               </div>
             );
@@ -165,12 +173,12 @@ export function Header() {
           ))}
         </nav>
         <div className="actions">
-          <a className="login" href="#">
+          <a className="login" href={siteConfig.loginUrl}>
             Login
           </a>
-          <a className="btn" href="#">
+          <Link className="btn" href="/#heroform" onClick={checkEligibility}>
             Check Eligibility <ArrowRightIcon />
-          </a>
+          </Link>
         </div>
         <button
           ref={menuButton}
@@ -207,12 +215,12 @@ export function Header() {
           </Link>
         ))}
         <div className="foot">
-          <a className="login" href="#">
+          <a className="login" href={siteConfig.loginUrl}>
             Login
           </a>
-          <a className="btn" href="#">
+          <Link className="btn" href="/#heroform" onClick={checkEligibility}>
             Check Eligibility <ArrowRightIcon />
-          </a>
+          </Link>
         </div>
       </div>
     </header>

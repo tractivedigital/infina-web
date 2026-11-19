@@ -51,7 +51,6 @@ export function Why() {
             <p>
               Longer gestation project loans, so your capital aligns with the project without immediate financial
               pressure.
-              <span className="cf">To confirm</span>
             </p>
           </article>
           <article className="wy-c">
@@ -121,10 +120,7 @@ export function Why() {
               </svg>
             </span>
             <h3>Adaptable repayment terms</h3>
-            <p>
-              Repayment terms that adapt to your project.
-              <span className="cf">To confirm</span>
-            </p>
+            <p>Repayment terms that adapt to your project.</p>
           </article>
         </div>
       </div>

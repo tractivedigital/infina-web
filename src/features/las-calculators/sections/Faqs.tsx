@@ -13,7 +13,7 @@ export function Faqs() {
           <div className="fq-l">
             <div className="fq-grp">
               <p className="fq-gl">Using the calculator</p>
-              <details className="fq-d" open>
+              <details className="fq-d">
                 <summary>
                   <h3>What is a loan against securities calculator?</h3>
                   <span className="fq-ch" aria-hidden="true" />
@@ -24,7 +24,7 @@ export function Faqs() {
                   monthly interest, or enter the value of your holdings to see your eligible loan amount.
                 </p>
               </details>
-              <details className="fq-d" open>
+              <details className="fq-d">
                 <summary>
                   <h3>How is interest calculated on a loan against securities?</h3>
                   <span className="fq-ch" aria-hidden="true" />
@@ -35,7 +35,7 @@ export function Faqs() {
                   monthly interest is ₹21,875 and total interest is ₹2,62,500.
                 </p>
               </details>
-              <details className="fq-d" open>
+              <details className="fq-d">
                 <summary>
                   <h3>Is there an EMI on a loan against securities?</h3>
                   <span className="fq-ch" aria-hidden="true" />
@@ -112,10 +112,7 @@ export function Faqs() {
               </details>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    What is the minimum and maximum loan amount?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>What is the minimum and maximum loan amount?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>

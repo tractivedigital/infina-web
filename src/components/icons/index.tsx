@@ -1,5 +1,4 @@
 import type { SVGProps } from 'react';
-import type { NavIcon } from '@/config/navigation';
 
 const base: SVGProps<SVGSVGElement> = {
   viewBox: '0 0 24 24',
@@ -79,47 +78,4 @@ export function XIcon(props: SVGProps<SVGSVGElement>) {
       <path d="M5 4l14 16M19 4 5 20" />
     </svg>
   );
-}
-
-/** Navigation menu icons keyed by `NavIcon`. */
-export function NavMenuIcon({ name }: { name: NavIcon }) {
-  switch (name) {
-    case 'securities':
-      return (
-        <svg {...base} aria-hidden="true">
-          <path d="M4 20V11M10 20V5M16 20v-7M3 20h18" />
-          <circle cx="20" cy="6" r="1.5" fill="currentColor" stroke="none" />
-        </svg>
-      );
-    case 'esop':
-      return (
-        <svg {...base} aria-hidden="true">
-          <rect x="4" y="4" width="16" height="12" rx="2" />
-          <path d="M8 9h8M8 12h5M9 20l3-3 3 3" />
-          <circle cx="17" cy="12" r="1.5" fill="currentColor" stroke="none" />
-        </svg>
-      );
-    case 'property':
-      return (
-        <svg {...base} aria-hidden="true">
-          <path d="M3 11l9-7 9 7M5 10v10h14V10M10 20v-5h4v5" />
-          <circle cx="12" cy="11" r="1.5" fill="currentColor" stroke="none" />
-        </svg>
-      );
-    case 'realestate':
-      return (
-        <svg {...base} aria-hidden="true">
-          <path d="M4 20V9h8v11M12 20V4h8v16M3 20h18M7 13h2M15 8h2M15 12h2" />
-          <circle cx="7" cy="16" r="1.5" fill="currentColor" stroke="none" />
-        </svg>
-      );
-    default:
-      return (
-        <svg {...base} aria-hidden="true">
-          <path d="M4 9l8-4 8 4-8 4-8-4z" />
-          <path d="M4 14l8 4 8-4" />
-          <circle cx="20" cy="20" r="1.4" fill="currentColor" stroke="none" />
-        </svg>
-      );
-  }
 }

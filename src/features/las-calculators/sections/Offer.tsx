@@ -76,8 +76,7 @@ export function Offer() {
           </article>
         </div>
         <p className="rt-meta">
-          Maximum loan to value shown. Other approved securities, including bonds, are assessed case by case.
-          <span className="cf">To confirm</span> See the{' '}
+          Maximum loan to value shown. Other approved securities, including bonds, are assessed case by case. See the{' '}
           <a href="/docs/approved-securities-list-august-2026.pdf" target="_blank" rel="noopener">
             list of approved shares
           </a>

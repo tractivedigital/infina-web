@@ -19,10 +19,7 @@ export function Why() {
               </svg>
             </span>
             <h3>Funds in 24 hours</h3>
-            <p>
-              Get your loan disbursed within 24 hours.
-              <span className="cf">To confirm</span>
-            </p>
+            <p>Get your loan disbursed within 24 hours.</p>
           </article>
           <article className="wy-c">
             <span className="wy-t">
@@ -61,10 +58,7 @@ export function Why() {
               </svg>
             </span>
             <h3>Minimal documentation</h3>
-            <p>
-              Simple paperwork for loans up to ₹2.5 crore.
-              <span className="cf">To confirm</span>
-            </p>
+            <p>Simple paperwork for loans up to ₹2.5 crore.</p>
           </article>
           <article className="wy-c">
             <span className="wy-t">
@@ -93,10 +87,7 @@ export function Why() {
               </svg>
             </span>
             <h3>Borrow against your portfolio</h3>
-            <p>
-              Up to 85% of the value of your portfolio, depending on the securities.
-              <span className="cf">To confirm</span>
-            </p>
+            <p>Up to 85% of the value of your portfolio, depending on the securities.</p>
           </article>
           <article className="wy-c">
             <span className="wy-t">

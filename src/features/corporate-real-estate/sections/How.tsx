@@ -40,10 +40,7 @@ export function How() {
               </svg>
             </span>
             <h3>Funding sanctioned</h3>
-            <p>
-              Your terms are set out in the sanction letter and the funds are released as agreed.
-              <span className="cf">To confirm</span>
-            </p>
+            <p>Your terms are set out in the sanction letter and the funds are released as agreed.</p>
           </li>
         </ol>
         <div style={{ marginTop: '48px' }}>

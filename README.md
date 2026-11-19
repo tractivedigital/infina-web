@@ -49,11 +49,13 @@ src/
   components/
     layout/            Header, Footer, PageShell, StickyCta
     forms/             HeroLeadForm
+    banners/           BannerCarousel (auto-advancing banners on home and the four product pages)
     sections/          Sections identical on several pages (Trust, Safety)
     behaviors/         Client-side progressive enhancement for server-rendered markup
     seo/  icons/
-  lib/                 calculators (pure, framework-free), validation, lead submission
-  config/              site constants, navigation
+  lib/                 calculators (pure, framework-free), validation, lead submission, xlsx-lite
+  lib/server/          api-guard (origin, size, rate limit) and delivery (form webhook)
+  config/              site constants, navigation, banners, leadership-links
   hooks/  styles/
 public/images/         Images extracted from the original pages
 public/docs/           PDFs (privacy policy, charges, approved securities, terms) hosted locally
@@ -69,14 +71,35 @@ public/docs/           PDFs (privacy policy, charges, approved securities, terms
   `styles/pages/<key>.css`, generated from the original page. Every rule is scoped with
   `:where([data-page="<key>"])` (set by `PageShell`), which adds no specificity, so cascade order and specificity
   match the original documents exactly and pages do not affect each other during client-side navigation.
-- **Leads.** `HeroLeadForm` validates client-side (`lib/validation`) and posts to `/api/leads`, which validates
-  again. The route does not yet forward leads anywhere. Add the CRM call where the `TODO` is.
+- **Forms and leads.** Three forms exist: the "Check your eligibility" form (`HeroLeadForm`, home and product
+  pages), the Diwali offer form and the channel partner application. All post JSON to `/api/leads` or
+  `/api/send-email`. Both routes go through `lib/server/api-guard` (same-origin check, 8 KB body cap, per-IP rate
+  limit, hidden spam-trap field) and are validated again on the server. Valid submissions are forwarded by
+  `lib/server/delivery`: set `FORM_WEBHOOK_URL` (and optionally `FORM_WEBHOOK_SECRET`, an HMAC signature) to the CRM
+  or workflow endpoint. **Until it is set, submissions are only written to the server log.**
+- **Content is now maintained in code.** The pages were bootstrapped from the original static HTML, and the
+  generated files have since been edited by hand (no "To confirm" badges, FAQ accordions, banners, navigation).
+  Do not re-run the one-time converter over them.
+- **FAQs.** Every FAQ is a native `<details>` list that starts closed; `components/behaviors/faq` closes the other
+  answers when one opens. Product, calculator, home and about pages share the same structure and styles.
+- **Banners.** `config/banners.ts` holds the four slides per page; `components/banners` renders them. The carousel
+  advances every 6 s, pauses on hover, focus, hidden tab and a Pause button, supports swipe, and does not auto-play
+  when the visitor prefers reduced motion. Artwork is inline SVG, so it adds no requests.
+- **Security headers** are set in `next.config.ts` (CSP that only allows this origin, HSTS, `X-Frame-Options`,
+  `nosniff`, referrer and permissions policies). Only `/channel-partner` may be framed, and only by infina.co.in.
 
 ## Known follow-ups
 
-- Remaining external links: the loan application portal (`digilas.infina.co.in`), social sharing links, the Google Maps embed on `/contact`, and one investor document still hosted on `api.infina.co.in` (the host was unreachable when the PDFs were copied; re-download it into `public/docs/investor-relations/` and update the link). Everything else (images, fonts, PDFs, ESOP calculator) is served from this project.
-- Some links are still `#` placeholders, as in the source (Login, Check Eligibility, social profiles, IFPL list of approved securities, HDFC Life, ICICI Lombard).
-- `POST /api/send-email` (channel partner applications) validates and acknowledges only; connect SMTP or the CRM where its `TODO` is. The Diwali offer form, like the source page, transmits nothing yet.
+- **Set `FORM_WEBHOOK_URL`** in the hosting environment so form submissions reach Infina (see above).
+- **Placeholder destinations still unknown:** Instagram and X profile URLs (the footer hides them until added in
+  `config/navigation.ts`), HDFC Life and ICICI Lombard links (shown as plain text), and the LinkedIn profile of each
+  leader (`config/leadership-links.ts`; the "LinkedIn Profile" link appears once a URL is filled in).
+- One investor document is still linked on `api.infina.co.in` (the host was unreachable when the PDFs were copied);
+  download it into `public/docs/investor-relations/` and update the link on `/investor-relations`.
+- Remaining external links are outbound navigation only: the loan application portal (`digilas.infina.co.in`),
+  social sharing links, Google Maps and regulator websites. No third-party scripts, fonts, images or embeds load.
+- `npm audit` still reports `next` (moderate) and the `postcss` copy bundled inside it (build time only). The fix is
+  the Next.js 16 major upgrade, which should be planned and tested separately.
 - The home hero artwork is a captured DOM snapshot (`features/home/sections/Hero.tsx`) and could become an SVG asset.
 - Add unit tests for `lib/calculators` and an e2e smoke test per route.
 

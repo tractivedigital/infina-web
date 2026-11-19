@@ -11,7 +11,7 @@ export function Faqs() {
           <div className="fq-l">
             <div className="fq-grp">
               <p className="fq-gl">Basics</p>
-              <details className="fq-d" open>
+              <details className="fq-d">
                 <summary>
                   <h3>What is a loan against property?</h3>
                   <span className="fq-ch" aria-hidden="true" />
@@ -21,14 +21,14 @@ export function Faqs() {
                   keep owning the property and repay the loan over the tenure.
                 </p>
               </details>
-              <details className="fq-d" open>
+              <details className="fq-d">
                 <summary>
                   <h3>What can I use the money for?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>Business growth, debt consolidation or personal needs.</p>
               </details>
-              <details className="fq-d" open>
+              <details className="fq-d">
                 <summary>
                   <h3>Which properties can I mortgage?</h3>
                   <span className="fq-ch" aria-hidden="true" />
@@ -41,10 +41,7 @@ export function Faqs() {
               </details>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    Can I mortgage land or a plot?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>Can I mortgage land or a plot?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>
@@ -64,10 +61,7 @@ export function Faqs() {
               </details>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    Can I apply with a co-applicant?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>Can I apply with a co-applicant?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>
@@ -80,10 +74,7 @@ export function Faqs() {
               <p className="fq-gl">Amount, rate and charges</p>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    How much can I borrow?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>How much can I borrow?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>
@@ -93,10 +84,7 @@ export function Faqs() {
               </details>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    What is the loan to value (LTV) ratio?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>What is the loan to value (LTV) ratio?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>
@@ -139,10 +127,7 @@ export function Faqs() {
               </details>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    What is the tenure of a loan against property?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>What is the tenure of a loan against property?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>You can choose a tenure from 36 to 180 months.</p>
@@ -175,10 +160,7 @@ export function Faqs() {
               </details>
               <details className="fq-d">
                 <summary>
-                  <h3>
-                    How long does approval and disbursal take?
-                    <span className="cf">To confirm</span>
-                  </h3>
+                  <h3>How long does approval and disbursal take?</h3>
                   <span className="fq-ch" aria-hidden="true" />
                 </summary>
                 <p>

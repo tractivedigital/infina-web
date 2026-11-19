@@ -38,38 +38,40 @@ export function Content() {
             </div>
           </div>
           <div className="in-map">
-            <div className="in-map-ph" aria-hidden="true">
-              <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
-                <rect width={400} height={300} fill="#EEF3F9" />
-                <path
-                  d="M-10 210 C90 150 170 190 260 120 S380 60 420 40"
-                  stroke="#C9D6E6"
-                  strokeWidth="26"
-                  fill="none"
-                />
-                <path
-                  d="M60 -10 L120 310 M230 -10 L290 310 M-10 90 L410 130"
-                  stroke="#DCE5F0"
-                  strokeWidth="10"
-                  fill="none"
-                />
-                <rect x="250" y="190" width={70} height={46} rx="6" fill="#DEEBF6" />
-                <rect x="60" y="40" width={64} height={40} rx="6" fill="#DEEBF6" />
-              </svg>
-              <div className="in-pin">
-                <svg width="40" height="52" viewBox="0 0 40 52">
-                  <path d="M20 0C9 0 0 9 0 20c0 15 20 32 20 32s20-17 20-32C40 9 31 0 20 0z" fill="#C8121A" />
-                  <circle cx="20" cy="20" r="7.5" fill="#fff" />
+            <a
+              className="in-map-link"
+              href="https://www.google.com/maps/search/?api=1&query=Infina+Finance+Private+Limited+Dani+Corporate+Park+Kalina+Mumbai"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open the Infina Finance registered office in Google Maps (opens in a new tab)"
+            >
+              <div className="in-map-ph" aria-hidden="true">
+                <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
+                  <rect width={400} height={300} fill="#EEF3F9" />
+                  <path
+                    d="M-10 210 C90 150 170 190 260 120 S380 60 420 40"
+                    stroke="#C9D6E6"
+                    strokeWidth="26"
+                    fill="none"
+                  />
+                  <path
+                    d="M60 -10 L120 310 M230 -10 L290 310 M-10 90 L410 130"
+                    stroke="#DCE5F0"
+                    strokeWidth="10"
+                    fill="none"
+                  />
+                  <rect x="250" y="190" width={70} height={46} rx="6" fill="#DEEBF6" />
+                  <rect x="60" y="40" width={64} height={40} rx="6" fill="#DEEBF6" />
                 </svg>
-                <span>Infina Finance, Kalina, Mumbai</span>
+                <div className="in-pin">
+                  <svg width="40" height="52" viewBox="0 0 40 52">
+                    <path d="M20 0C9 0 0 9 0 20c0 15 20 32 20 32s20-17 20-32C40 9 31 0 20 0z" fill="#C8121A" />
+                    <circle cx="20" cy="20" r="7.5" fill="#fff" />
+                  </svg>
+                  <span>Infina Finance, Kalina, Mumbai</span>
+                </div>
               </div>
-            </div>
-            <iframe
-              title="Map of the Infina Finance registered office in Kalina, Mumbai"
-              src="https://maps.google.com/maps?q=Infina+Finance+Private+Limited+Dani+Corporate+Park+Kalina+Mumbai&z=15&output=embed"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
+            </a>
           </div>
         </div>
         <h2 className="h2" style={{ marginTop: '48px', fontSize: '28px', lineHeight: '36px' }}>

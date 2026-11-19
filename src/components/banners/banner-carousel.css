@@ -1,0 +1,242 @@
+/* Banner carousel. Prefixed `bnr-` so it never collides with page styles. */
+.bnr-wrap {
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.bnr {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  color: #fff;
+  background: #052657;
+  isolation: isolate;
+}
+
+.bnr-viewport {
+  overflow: hidden;
+  touch-action: pan-y;
+}
+
+.bnr-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: transform;
+}
+
+.bnr-slide {
+  position: relative;
+  flex: 0 0 100%;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  align-items: center;
+  gap: 24px;
+  min-height: 300px;
+  padding: 40px 56px 72px;
+  background: var(--bnr-bg);
+}
+
+.bnr-slide[data-tone='navy'] {
+  --bnr-bg: linear-gradient(120deg, #031a3d 0%, #052657 55%, #0b3d86 100%);
+}
+.bnr-slide[data-tone='blue'] {
+  --bnr-bg: linear-gradient(120deg, #0a3a80 0%, #124f9f 60%, #2a6fc0 100%);
+}
+.bnr-slide[data-tone='ink'] {
+  --bnr-bg: linear-gradient(120deg, #001f4d 0%, #003368 60%, #0c4a8f 100%);
+}
+.bnr-slide[data-tone='red'] {
+  --bnr-bg: linear-gradient(120deg, #5c0a10 0%, #9b0f17 55%, #c8121a 100%);
+}
+
+.bnr-eyebrow {
+  margin: 0;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.bnr-title {
+  margin: 8px 0 12px;
+  font-size: clamp(26px, 3vw, 38px);
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.bnr-text {
+  margin: 0 0 24px;
+  max-width: 48ch;
+  font-size: 17px;
+  line-height: 26px;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.bnr-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 24px;
+  border-radius: 999px;
+  background: #fff;
+  color: #052657;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.bnr-cta svg {
+  width: 18px;
+  height: 18px;
+}
+.bnr-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+.bnr-cta:focus-visible,
+.bnr-btn:focus-visible,
+.bnr-dot:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+.bnr-art {
+  justify-self: end;
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.bnr-ctrl {
+  position: absolute;
+  left: 56px;
+  right: 56px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.bnr-dots {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.bnr-dot {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.bnr-dot::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.45);
+  transition:
+    width 0.25s,
+    background 0.25s;
+}
+.bnr-dot[aria-current='true']::before {
+  width: 26px;
+  background: #fff;
+}
+
+.bnr-arrows {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.bnr-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.bnr-btn:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+.bnr-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Phones: stacked copy, smaller art, compact controls. */
+@media (max-width: 767px) {
+  .bnr-wrap {
+    margin-top: 16px;
+  }
+  .bnr {
+    border-radius: 20px;
+  }
+  .bnr-slide {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+    min-height: 0;
+    padding: 28px 20px 76px;
+  }
+  .bnr-art {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 96px;
+    max-width: none;
+    opacity: 0.35;
+    pointer-events: none;
+  }
+  .bnr-title {
+    font-size: 24px;
+    margin-right: 56px;
+  }
+  .bnr-text {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+  .bnr-ctrl {
+    left: 20px;
+    right: 20px;
+    bottom: 16px;
+    gap: 8px;
+  }
+  .bnr-btn {
+    width: 44px;
+    height: 44px;
+  }
+  .bnr-cta {
+    min-height: 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bnr-track,
+  .bnr-dot::before,
+  .bnr-cta {
+    transition: none;
+  }
+}

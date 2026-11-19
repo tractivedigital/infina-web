@@ -3,6 +3,14 @@
 import { useEffect } from 'react';
 import { SERVICES } from '@/features/home/services-data';
 
+/** Product page for each service tile, in the same order as SERVICES. */
+const SERVICE_ROUTES = [
+  '/loan-against-securities',
+  '/esop-financing',
+  '/loan-against-property',
+  '/corporate-real-estate',
+];
+
 /** Home page: services picker (tabs + detail panel) and the hero artwork scaler. */
 export function HomeBehavior() {
   useEffect(() => {
@@ -23,7 +31,7 @@ export function HomeBehavior() {
       if (panel) {
         panel.innerHTML =
           `<span class="ob-tile">${s.iconSvg}<i class="dot"></i></span><h3>${s.title}</h3><p>${s.description}</p>` +
-          '<a class="btn out-w" href="#">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>';
+          `<a class="btn out-w" href="${SERVICE_ROUTES[i]}">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>`;
       }
       if (focus) tabs[i].focus();
     };

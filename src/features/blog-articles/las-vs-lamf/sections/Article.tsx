@@ -409,7 +409,7 @@ export function Article() {
               </p>
               <section className="ar-fq" id="faqs" aria-labelledby="faq-h">
                 <h2 id="faq-h">FAQs</h2>
-                <details className="fq-d" open>
+                <details className="fq-d">
                   <summary>
                     <h3>Which is better: Loan Against Shares (LAS) or Loan Against Mutual Funds (LAMF)?</h3>
                     <span className="fq-ch" aria-hidden="true" />
@@ -419,7 +419,7 @@ export function Article() {
                     stable, while loans against shares may provide better flexibility for active investors.
                   </p>
                 </details>
-                <details className="fq-d" open>
+                <details className="fq-d">
                   <summary>
                     <h3>Can I take a loan against shares and a loan against mutual funds at the same time?</h3>
                     <span className="fq-ch" aria-hidden="true" />

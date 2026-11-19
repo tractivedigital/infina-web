@@ -1,6 +1,7 @@
 import '@/styles/pages/las-calc.css';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { PageShell } from '@/components/layout/PageShell';
+import { FaqAccordionBehavior } from '@/components/behaviors/faq';
 import { CalculatorBehavior } from '@/components/behaviors/calculators';
 import { structuredData } from './structured-data';
 import { Hero } from './sections/Hero';
@@ -20,7 +21,6 @@ export function LasCalcPage() {
   return (
     <PageShell
       page="las-calc"
-      review
       main={{ id: 'top', className: 'home' }}
       stickyCta={{ href: '#calculator', label: 'Use the calculator' }}
     >
@@ -38,6 +38,7 @@ export function LasCalcPage() {
       <Faqs />
       <Next />
       <CalculatorBehavior variant="las-calc" />
+      <FaqAccordionBehavior />
     </PageShell>
   );
 }

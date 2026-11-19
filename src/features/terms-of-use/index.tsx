@@ -8,7 +8,7 @@ import { Content } from './sections/Content';
 
 export function TermsOfUsePage() {
   return (
-    <PageShell page="terms-of-use" review main={{ id: 'top', className: 'home' }}>
+    <PageShell page="terms-of-use" main={{ id: 'top', className: 'home' }}>
       <JsonLd data={structuredData} />
       <Intro />
       <Content />

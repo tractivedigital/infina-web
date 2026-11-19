@@ -46,7 +46,7 @@ export function Next() {
                 <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
             </Link>{' '}
-            <Link href="/loan-against-property#lap-eligibility">
+            <Link href="/loan-against-property#eligibility">
               <span>
                 Loan Against Property calculator
                 <small>Estimate the loan you can raise against property.</small>

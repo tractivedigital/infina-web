@@ -11,6 +11,14 @@ export function Apply() {
         </div>
         <div className="apply-card">
           <form id="leadForm" noValidate>
+            <input
+              type="text"
+              name="website"
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0 }}
+            />
             <div className="f-grid">
               <label className="f">
                 <span>Full name *</span>

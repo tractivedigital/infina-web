@@ -38,10 +38,7 @@ export function How() {
               </svg>
             </span>
             <h3>Options exercised</h3>
-            <p>
-              The funds are applied to the cost of exercising your options.
-              <span className="cf">To confirm</span>
-            </p>
+            <p>The funds are applied to the cost of exercising your options.</p>
           </li>
         </ol>
         <div style={{ marginTop: '48px' }}>

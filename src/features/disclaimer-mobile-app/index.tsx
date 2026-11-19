@@ -7,7 +7,7 @@ import { Content } from './sections/Content';
 
 export function DisclaimerPage() {
   return (
-    <PageShell page="disclaimer" review main={{ id: 'top', className: 'home' }}>
+    <PageShell page="disclaimer" main={{ id: 'top', className: 'home' }}>
       <JsonLd data={structuredData} />
       <Intro />
       <Content />

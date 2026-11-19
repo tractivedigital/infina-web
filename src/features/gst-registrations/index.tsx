@@ -7,7 +7,7 @@ import { Content } from './sections/Content';
 
 export function GstPage() {
   return (
-    <PageShell page="gst" review main={{ id: 'top', className: 'home' }}>
+    <PageShell page="gst" main={{ id: 'top', className: 'home' }}>
       <JsonLd data={structuredData} />
       <Intro />
       <Content />

@@ -39,6 +39,7 @@ export function HeroLeadForm({ interest, consent, finePrint, doneHeading = 'p' }
       interest: String(data.get(interest.name) ?? ''),
       consent: data.get('consent') === 'on',
       source: pathname,
+      website: String(data.get('website') ?? ''),
     };
     const found = validateLead(lead);
     setErrors(found);
@@ -74,6 +75,14 @@ export function HeroLeadForm({ interest, consent, finePrint, doneHeading = 'p' }
 
   return (
     <form className="hv-bar" id="heroform" noValidate aria-label="Check your eligibility" onSubmit={onSubmit}>
+      <input
+        type="text"
+        name="website"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0 }}
+      />
       <p className="hv-bt">Check your eligibility</p>
       <div className="hv-f">
         <div className="ld-fl">

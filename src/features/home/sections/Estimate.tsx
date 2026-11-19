@@ -526,7 +526,7 @@ export function Estimate() {
                     <path d="M5 12h14M13 6l6 6-6 6" />
                   </svg>
                 </a>
-                <Link className="cx-lnk" href="/loan-against-property#lap-eligibility">
+                <Link className="cx-lnk" href="/loan-against-property#eligibility">
                   Open the full calculator
                 </Link>
               </div>

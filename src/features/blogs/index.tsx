@@ -11,7 +11,7 @@ import { Next } from './sections/Next';
 
 export function BlogsPage() {
   return (
-    <PageShell page="blogs" review main={{ id: 'top', className: 'home' }}>
+    <PageShell page="blogs" main={{ id: 'top', className: 'home' }}>
       <JsonLd data={structuredData} />
       <Hero />
       <Articles />

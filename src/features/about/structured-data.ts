@@ -218,7 +218,7 @@ export const structuredData = [
         name: 'Who owns Infina Finance?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Infina is majority owned by the Kotak family. Kotak Mahindra Bank continues to hold 19% through its subsidiary.To confirm',
+          text: 'Infina is majority owned by the Kotak family. Kotak Mahindra Bank continues to hold 19% through its subsidiary.',
         },
       },
       {

@@ -1,6 +1,8 @@
 import '@/styles/pages/esop.css';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { PageShell } from '@/components/layout/PageShell';
+import { BannerCarousel } from '@/components/banners/BannerCarousel';
+import { FaqAccordionBehavior } from '@/components/behaviors/faq';
 import { CalculatorBehavior } from '@/components/behaviors/calculators';
 import { DocumentTabsBehavior } from '@/components/behaviors/document-tabs';
 import { structuredData } from './structured-data';
@@ -23,12 +25,12 @@ export function EsopPage() {
   return (
     <PageShell
       page="esop"
-      review
       main={{ id: 'top', className: 'home' }}
       stickyCta={{ href: '#heroform', label: 'Check Eligibility' }}
     >
       <JsonLd data={structuredData} />
       <Hero />
+      <BannerCarousel page="esop" />
       <Estimate />
       <What />
       <Offer />
@@ -44,6 +46,7 @@ export function EsopPage() {
       <Next />
       <CalculatorBehavior />
       <DocumentTabsBehavior />
+      <FaqAccordionBehavior />
     </PageShell>
   );
 }

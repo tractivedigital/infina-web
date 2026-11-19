@@ -8,7 +8,7 @@ import { Content } from './sections/Content';
 
 export function CookiePolicyPage() {
   return (
-    <PageShell page="cookie-policy" review main={{ id: 'top', className: 'home' }}>
+    <PageShell page="cookie-policy" main={{ id: 'top', className: 'home' }}>
       <JsonLd data={structuredData} />
       <Intro />
       <Content />

@@ -1,6 +1,7 @@
 import { CopyLinkButton } from '@/components/blog/CopyLinkButton';
 import Image from 'next/image';
 import Link from 'next/link';
+import { withBase } from '@/lib/base-path';
 
 export function Article() {
   return (
@@ -31,7 +32,7 @@ export function Article() {
           </p>
           <figure className="ar-hero">
             <Image
-              src="/images/blog-lap-how/blog-lap-how-hero.webp"
+              src={withBase('/images/blog-lap-how/blog-lap-how-hero.webp')}
               alt="Illustration of a property used as collateral for a loan"
               width={960}
               height={540}

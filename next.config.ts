@@ -1,6 +1,7 @@
 import type { NextConfig } from 'next';
 
 const isProd = process.env.NODE_ENV === 'production';
+const noIndex = process.env.NEXT_PUBLIC_NOINDEX === '1';
 
 /**
  * Content Security Policy. Everything is served from this origin, so nothing third-party is allowed to load.
@@ -24,6 +25,7 @@ const contentSecurityPolicy = (frameAncestors: string) =>
   ].join('; ');
 
 const baseSecurityHeaders = [
+  ...(noIndex ? [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }] : []),
   { key: 'X-Content-Type-Options', value: 'nosniff' },
   { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
   { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(), payment=(), interest-cohort=()' },
@@ -34,6 +36,8 @@ const baseSecurityHeaders = [
 const nextConfig: NextConfig = {
   // Self-contained server bundle (.next/standalone) for Azure App Service / containers.
   output: 'standalone',
+  // Sub-path deployment (UAT: /infina-new). Leave NEXT_PUBLIC_BASE_PATH empty in production.
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
   reactStrictMode: true,
   poweredByHeader: false,
   images: { formats: ['image/avif', 'image/webp'] },

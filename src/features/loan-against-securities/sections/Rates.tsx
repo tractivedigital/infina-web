@@ -1,3 +1,4 @@
+import { withBase } from '@/lib/base-path';
 export function Rates() {
   return (
     <section className="band" id="rates">
@@ -77,7 +78,7 @@ export function Rates() {
           </article>
         </div>
         <p className="rt-meta">Charges as published in Infina&apos;s list of charges, last reviewed 17 January 2025.</p>
-        <a className="rt-dl" href="/docs/list-of-charges-las-esop-unsecured.pdf" rel="noopener">
+        <a className="rt-dl" href={withBase('/docs/list-of-charges-las-esop-unsecured.pdf')} rel="noopener">
           Download the full list of charges (PDF)
         </a>
       </div>

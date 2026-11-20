@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { withBase } from '@/lib/base-path';
 
 export function Estimate() {
   return (
@@ -364,7 +365,7 @@ export function Estimate() {
                     <path d="M5 12h14M13 6l6 6-6 6" />
                   </svg>
                 </a>
-                <a className="cx-lnk" href="/esop-calculators">
+                <a className="cx-lnk" href={withBase('/esop-calculators')}>
                   Open the full calculator
                 </a>
               </div>

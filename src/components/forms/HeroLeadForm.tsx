@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { usePathname } from 'next/navigation';
 import { ArrowRightIcon } from '@/components/icons';
 import { siteConfig } from '@/config/site';
+import { withBase } from '@/lib/base-path';
 import { submitLead } from '@/lib/leads';
 import { validateLead, type LeadErrors } from '@/lib/validation';
 
@@ -130,7 +131,7 @@ export function HeroLeadForm({ interest, consent, finePrint, doneHeading = 'p' }
             {consent === 'privacy' ? (
               <>
                 I agree to Infina contacting me about this enquiry and have read the{' '}
-                <a href={siteConfig.privacyPolicyUrl} target="_blank" rel="noopener">
+                <a href={withBase(siteConfig.privacyPolicyUrl)} target="_blank" rel="noopener">
                   Privacy Policy
                 </a>
                 .

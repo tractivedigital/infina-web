@@ -1,6 +1,7 @@
 import { HeroCopyCarousel } from '@/components/hero/HeroCopyCarousel';
 import { HeroLeadForm } from '@/components/forms/HeroLeadForm';
 import Image from 'next/image';
+import { withBase } from '@/lib/base-path';
 
 export function Hero() {
   return (
@@ -8,7 +9,14 @@ export function Hero() {
       <div className="hv3">
         <section className="hero on-navy hv v3" id="hero" aria-labelledby="h1">
           <div className="hero-bg" aria-hidden="true">
-            <Image priority className="hero-photo" src="/images/cre/cre-hero.webp" alt="" width={1200} height={735} />
+            <Image
+              priority
+              className="hero-photo"
+              src={withBase('/images/cre/cre-hero.webp')}
+              alt=""
+              width={1200}
+              height={735}
+            />
           </div>
           <div className="hero-scrim" aria-hidden="true" />
           <div className="hv-wrap">

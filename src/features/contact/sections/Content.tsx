@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { withBase } from '@/lib/base-path';
 
 export function Content() {
   return (
@@ -137,7 +138,13 @@ export function Content() {
           </div>
         </div>
         <div className="in-cta" style={{ marginTop: '40px' }}>
-          <Image className="in-cta-img" src="/images/las-calc/las-calc-intro.webp" alt="" width={720} height={409} />
+          <Image
+            className="in-cta-img"
+            src={withBase('/images/las-calc/las-calc-intro.webp')}
+            alt=""
+            width={720}
+            height={409}
+          />
           <div className="in-cta-c">
             <h2>Ready to borrow against your investments?</h2>
             <p>Check your eligibility online in minutes.</p>

@@ -1,5 +1,6 @@
 import { LinkedInLink } from '@/components/about/LinkedInLink';
 import Image from 'next/image';
+import { withBase } from '@/lib/base-path';
 
 export function Leadership() {
   return (
@@ -31,7 +32,7 @@ export function Leadership() {
               <Image
                 unoptimized
                 className="inf-photo"
-                src="/images/about/about-person-1.jpg"
+                src={withBase('/images/about/about-person-1.jpg')}
                 alt=""
                 width={128}
                 height={128}
@@ -54,7 +55,7 @@ export function Leadership() {
               <Image
                 unoptimized
                 className="inf-photo"
-                src="/images/about/about-person-2.jpg"
+                src={withBase('/images/about/about-person-2.jpg')}
                 alt=""
                 width={128}
                 height={128}
@@ -77,7 +78,7 @@ export function Leadership() {
               <Image
                 unoptimized
                 className="inf-photo"
-                src="/images/about/about-person-3.jpg"
+                src={withBase('/images/about/about-person-3.jpg')}
                 alt=""
                 width={128}
                 height={128}
@@ -100,7 +101,7 @@ export function Leadership() {
               <Image
                 unoptimized
                 className="inf-photo"
-                src="/images/about/about-person-4.jpg"
+                src={withBase('/images/about/about-person-4.jpg')}
                 alt=""
                 width={128}
                 height={128}
@@ -123,7 +124,7 @@ export function Leadership() {
               <Image
                 unoptimized
                 className="inf-photo"
-                src="/images/about/about-person-5.jpg"
+                src={withBase('/images/about/about-person-5.jpg')}
                 alt=""
                 width={128}
                 height={128}
@@ -146,7 +147,7 @@ export function Leadership() {
               <Image
                 unoptimized
                 className="inf-photo"
-                src="/images/about/about-person-6.jpg"
+                src={withBase('/images/about/about-person-6.jpg')}
                 alt=""
                 width={128}
                 height={128}
@@ -169,7 +170,7 @@ export function Leadership() {
               <Image
                 unoptimized
                 className="inf-photo"
-                src="/images/about/about-person-7.jpg"
+                src={withBase('/images/about/about-person-7.jpg')}
                 alt=""
                 width={128}
                 height={128}
@@ -192,7 +193,7 @@ export function Leadership() {
               <Image
                 unoptimized
                 className="inf-photo"
-                src="/images/about/about-person-8.jpg"
+                src={withBase('/images/about/about-person-8.jpg')}
                 alt=""
                 width={128}
                 height={128}
@@ -215,7 +216,7 @@ export function Leadership() {
               <Image
                 unoptimized
                 className="inf-photo"
-                src="/images/about/about-person-9.jpg"
+                src={withBase('/images/about/about-person-9.jpg')}
                 alt=""
                 width={128}
                 height={128}
@@ -233,7 +234,7 @@ export function Leadership() {
               <Image
                 unoptimized
                 className="inf-photo"
-                src="/images/about/about-person-10.jpg"
+                src={withBase('/images/about/about-person-10.jpg')}
                 alt="Dipak Gupta, Independent Director and Chairperson"
                 width={420}
                 height={420}
@@ -252,7 +253,7 @@ export function Leadership() {
               <Image
                 unoptimized
                 className="inf-photo"
-                src="/images/about/about-person-11.jpg"
+                src={withBase('/images/about/about-person-11.jpg')}
                 alt="Suresh Kotak, Non-Executive Director"
                 width={420}
                 height={420}
@@ -272,7 +273,7 @@ export function Leadership() {
               <Image
                 unoptimized
                 className="inf-photo"
-                src="/images/about/about-person-12.jpg"
+                src={withBase('/images/about/about-person-12.jpg')}
                 alt="Sumanlal Shah, Non-Executive Director"
                 width={420}
                 height={420}
@@ -291,7 +292,7 @@ export function Leadership() {
               <Image
                 unoptimized
                 className="inf-photo"
-                src="/images/about/about-person-13.jpg"
+                src={withBase('/images/about/about-person-13.jpg')}
                 alt="S. Ramesh, Non-Executive Director"
                 width={420}
                 height={420}
@@ -310,7 +311,7 @@ export function Leadership() {
               <Image
                 unoptimized
                 className="inf-photo"
-                src="/images/about/about-person-14.jpg"
+                src={withBase('/images/about/about-person-14.jpg')}
                 alt="Rajesh Doshi, Non-Executive Director"
                 width={420}
                 height={420}
@@ -329,7 +330,7 @@ export function Leadership() {
               <Image
                 unoptimized
                 className="inf-photo"
-                src="/images/about/about-person-15.jpg"
+                src={withBase('/images/about/about-person-15.jpg')}
                 alt="Narayan SA, Non-Executive Director"
                 width={420}
                 height={420}
@@ -348,7 +349,7 @@ export function Leadership() {
               <Image
                 unoptimized
                 className="inf-photo"
-                src="/images/about/about-person-16.jpg"
+                src={withBase('/images/about/about-person-16.jpg')}
                 alt="Dr. Janki Mistry, Independent Director"
                 width={420}
                 height={420}
@@ -367,7 +368,7 @@ export function Leadership() {
               <Image
                 unoptimized
                 className="inf-photo"
-                src="/images/about/about-person-17.jpg"
+                src={withBase('/images/about/about-person-17.jpg')}
                 alt="Srikar Baljekar, Independent Director"
                 width={420}
                 height={420}
@@ -386,7 +387,7 @@ export function Leadership() {
               <Image
                 unoptimized
                 className="inf-photo"
-                src="/images/about/about-person-18.jpg"
+                src={withBase('/images/about/about-person-18.jpg')}
                 alt="Sudhakar Shanbhag, Whole-time Director and CEO"
                 width={420}
                 height={420}

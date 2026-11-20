@@ -1,5 +1,6 @@
 'use client';
 
+import { withBase } from '@/lib/base-path';
 import { useEffect } from 'react';
 
 const SUCCESS_TITLE = 'Application submitted successfully!';
@@ -46,7 +47,7 @@ export function PartnerFormBehavior() {
           website: (form.elements.namedItem('website') as HTMLInputElement | null)?.value ?? '',
         };
         try {
-          const response = await fetch('/api/send-email', {
+          const response = await fetch(withBase('/api/send-email'), {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload),

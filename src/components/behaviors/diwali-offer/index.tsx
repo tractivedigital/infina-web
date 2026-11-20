@@ -1,5 +1,6 @@
 'use client';
 
+import { withBase } from '@/lib/base-path';
 import { useEffect } from 'react';
 
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'click_id', 'publisher_id'];
@@ -126,7 +127,7 @@ export function DiwaliOfferBehavior() {
           button.textContent = 'Submitting...';
         }
         try {
-          const response = await fetch('/api/leads', {
+          const response = await fetch(withBase('/api/leads'), {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

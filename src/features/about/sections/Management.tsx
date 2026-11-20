@@ -1,5 +1,6 @@
 import { LinkedInLink } from '@/components/about/LinkedInLink';
 import Image from 'next/image';
+import { withBase } from '@/lib/base-path';
 
 export function Management() {
   return (
@@ -16,7 +17,7 @@ export function Management() {
             <Image
               unoptimized
               className="inf-photo"
-              src="/images/about/about-person-19.jpg"
+              src={withBase('/images/about/about-person-19.jpg')}
               alt="Keyur Gandhi, Chief Financial Officer"
               width={420}
               height={420}
@@ -33,7 +34,7 @@ export function Management() {
             <Image
               unoptimized
               className="inf-photo"
-              src="/images/about/about-person-20.jpg"
+              src={withBase('/images/about/about-person-20.jpg')}
               alt="Parth Bumiya, Business Head, LAS, LAP and CRE"
               width={420}
               height={420}

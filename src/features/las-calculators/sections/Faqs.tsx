@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { withBase } from '@/lib/base-path';
 
 export function Faqs() {
   return (
@@ -127,7 +128,7 @@ export function Faqs() {
                 </summary>
                 <p>
                   Infina accepts approved securities only. Check the current{' '}
-                  <a href="/docs/approved-securities-list-august-2026.pdf" target="_blank" rel="noopener">
+                  <a href={withBase('/docs/approved-securities-list-august-2026.pdf')} target="_blank" rel="noopener">
                     list of approved shares
                   </a>{' '}
                   before you apply, because a share that is not on the list cannot be pledged.
@@ -155,7 +156,7 @@ export function Faqs() {
                 <p>
                   No. The calculator shows interest only. Processing fees, document charges and other charges are listed
                   in Infina&apos;s{' '}
-                  <a href="/docs/list-of-charges-las-esop-unsecured.pdf" target="_blank" rel="noopener">
+                  <a href={withBase('/docs/list-of-charges-las-esop-unsecured.pdf')} target="_blank" rel="noopener">
                     list of charges
                   </a>{' '}
                   and confirmed in your sanction letter.

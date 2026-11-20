@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? siteConfig.url),
   applicationName: siteConfig.name,
   description: siteConfig.description,
+  ...(process.env.NEXT_PUBLIC_NOINDEX === '1' ? { robots: { index: false, follow: false } } : {}),
 };
 
 export const viewport: Viewport = { width: 'device-width', initialScale: 1 };

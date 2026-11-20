@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { withBase } from '@/lib/base-path';
 
 export function Content() {
   return (
@@ -219,8 +220,8 @@ export function Content() {
               practices. We will notify you of significant changes, where required, and will update the &quot;Last
               Updated&quot; date at the top of this Policy. Changes to this Policy shall be effective when they are
               posted on the Website. The latest version of this Policy will always be available on our Website link -
-              infina.co.in The latest version of <a href="/terms-of-use">Terms of Use</a> The latest version of{' '}
-              <a href="/privacy-policy">Privacy Policy</a>
+              infina.co.in The latest version of <a href={withBase('/terms-of-use')}>Terms of Use</a> The latest version
+              of <a href={withBase('/privacy-policy')}>Privacy Policy</a>
             </p>
           </div>
         </div>

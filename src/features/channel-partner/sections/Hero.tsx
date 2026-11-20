@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { withBase } from '@/lib/base-path';
 
 export function Hero() {
   return (
@@ -15,7 +16,7 @@ export function Hero() {
           <p className="hx-tagline">Your network. Our lending. One partnership that pays on every disbursal.</p>
           <Image
             className="hx-photo"
-            src="/images/channel-partner/channel-partner-hero.jpg"
+            src={withBase('/images/channel-partner/channel-partner-hero.jpg')}
             alt="Channel partners reviewing a case together"
             width={900}
             height={945}
@@ -127,7 +128,7 @@ export function Hero() {
               />
               <label htmlFor="consent" style={{ fontWeight: '400', fontSize: '13px', lineHeight: '1.5' }}>
                 I have read and agree to the{' '}
-                <a href="/privacy-policy" rel="noopener">
+                <a href={withBase('/privacy-policy')} rel="noopener">
                   Privacy Policy
                 </a>
                 .

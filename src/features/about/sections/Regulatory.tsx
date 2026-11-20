@@ -1,3 +1,4 @@
+import { withBase } from '@/lib/base-path';
 export function Regulatory() {
   return (
     <section className="ab-wrap reg-band" aria-label="Regulatory information">
@@ -25,7 +26,7 @@ export function Regulatory() {
             </svg>
             Grievance Redressal
           </a>
-          <a className="inf-link" href="/docs/privacy-policy.pdf">
+          <a className="inf-link" href={withBase('/docs/privacy-policy.pdf')}>
             <svg className="ab-ic ic-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
               <g className="ic-line">
                 <path d="M8 12H20.25" />
@@ -35,7 +36,7 @@ export function Regulatory() {
             </svg>
             Privacy Policy
           </a>
-          <a className="inf-link" href="/docs/terms-of-use-21-july-2026.pdf">
+          <a className="inf-link" href={withBase('/docs/terms-of-use-21-july-2026.pdf')}>
             <svg className="ab-ic ic-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
               <g className="ic-line">
                 <path d="M8 12H20.25" />

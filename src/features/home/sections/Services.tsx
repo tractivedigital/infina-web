@@ -1,3 +1,4 @@
+import { withBase } from '@/lib/base-path';
 export function Services() {
   return (
     <section className="sec" id="services">
@@ -151,10 +152,22 @@ export function Services() {
           </div>
           <div className="ob-panel on-navy" role="tabpanel" id="bp" aria-live="polite">
             <div className="ob-bgs" aria-hidden="true">
-              <div className="ob-bg on" style={{ backgroundImage: 'url(/images/home/home-service-bg-1.jpg)' }} />
-              <div className="ob-bg" style={{ backgroundImage: 'url(/images/home/home-service-bg-2.jpg)' }} />
-              <div className="ob-bg" style={{ backgroundImage: 'url(/images/home/home-service-bg-3.jpg)' }} />
-              <div className="ob-bg" style={{ backgroundImage: 'url(/images/home/home-service-bg-4.jpg)' }} />
+              <div
+                className="ob-bg on"
+                style={{ backgroundImage: `url(${withBase('/images/home/home-service-bg-1.jpg')})` }}
+              />
+              <div
+                className="ob-bg"
+                style={{ backgroundImage: `url(${withBase('/images/home/home-service-bg-2.jpg')})` }}
+              />
+              <div
+                className="ob-bg"
+                style={{ backgroundImage: `url(${withBase('/images/home/home-service-bg-3.jpg')})` }}
+              />
+              <div
+                className="ob-bg"
+                style={{ backgroundImage: `url(${withBase('/images/home/home-service-bg-4.jpg')})` }}
+              />
             </div>
             <div className="ob-fg" id="obfg" />
           </div>

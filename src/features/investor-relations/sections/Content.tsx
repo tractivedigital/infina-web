@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { withBase } from '@/lib/base-path';
 
 export function Content() {
   return (
@@ -70,7 +71,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/bse-intimation-results-q1-fy-27-june-2026-signed.pdf"
+                href={withBase('/docs/investor-relations/bse-intimation-results-q1-fy-27-june-2026-signed.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -95,7 +96,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/bse-intimation-results-q2-fy-27-september-2026.pdf"
+                href={withBase('/docs/investor-relations/bse-intimation-results-q2-fy-27-september-2026.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -118,7 +119,12 @@ export function Content() {
               </a>
             </li>
             <li>
-              <a className="ir-r" href="/docs/investor-relations/lrmf-jun-26.pdf" target="_blank" rel="noopener">
+              <a
+                className="ir-r"
+                href={withBase('/docs/investor-relations/lrmf-jun-26.pdf')}
+                target="_blank"
+                rel="noopener"
+              >
                 <span>Disclosure on Liquidity Risk Management Framework June 2026.</span>
                 <span className="ir-d" aria-hidden="true">
                   <svg
@@ -138,7 +144,12 @@ export function Content() {
               </a>
             </li>
             <li>
-              <a className="ir-r" href="/docs/investor-relations/lrmf-sep-26.pdf" target="_blank" rel="noopener">
+              <a
+                className="ir-r"
+                href={withBase('/docs/investor-relations/lrmf-sep-26.pdf')}
+                target="_blank"
+                rel="noopener"
+              >
                 <span>Disclosure on Liquidity Risk Management Framework September 2026</span>
                 <span className="ir-d" aria-hidden="true">
                   <svg
@@ -162,7 +173,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/quarterly-result-ended-june-2025.pdf"
+                href={withBase('/docs/investor-relations/quarterly-result-ended-june-2025.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -187,7 +198,9 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/bse-intimation-quarter-and-half-year-end-financial-results-sept-25.pdf"
+                href={withBase(
+                  '/docs/investor-relations/bse-intimation-quarter-and-half-year-end-financial-results-sept-25.pdf',
+                )}
                 target="_blank"
                 rel="noopener"
               >
@@ -212,7 +225,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/bse-intimation-quarter-end-results-dec-25.pdf"
+                href={withBase('/docs/investor-relations/bse-intimation-quarter-end-results-dec-25.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -237,7 +250,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/bse-intimation-year-end-results-march-2026.pdf"
+                href={withBase('/docs/investor-relations/bse-intimation-year-end-results-march-2026.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -262,7 +275,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/quarter-ended-june-30-2025.pdf"
+                href={withBase('/docs/investor-relations/quarter-ended-june-30-2025.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -287,7 +300,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/quarter-ended-september-30-2025.pdf"
+                href={withBase('/docs/investor-relations/quarter-ended-september-30-2025.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -312,7 +325,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/quarter-ended-december-31-2025.pdf"
+                href={withBase('/docs/investor-relations/quarter-ended-december-31-2025.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -337,7 +350,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/quarter-ended-march-31-2026.pdf"
+                href={withBase('/docs/investor-relations/quarter-ended-march-31-2026.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -364,7 +377,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/1-exchange-financial-jun-24-1721649162531.pdf"
+                href={withBase('/docs/investor-relations/1-exchange-financial-jun-24-1721649162531.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -389,7 +402,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/2-exchange-reporting-sept-24-1742370909959.pdf"
+                href={withBase('/docs/investor-relations/2-exchange-reporting-sept-24-1742370909959.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -414,7 +427,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/3-exchange-reporting-dec-24-signed-scan-1742371205865.pdf"
+                href={withBase('/docs/investor-relations/3-exchange-reporting-dec-24-signed-scan-1742371205865.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -439,7 +452,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/march-2025-financials-infina.pdf"
+                href={withBase('/docs/investor-relations/march-2025-financials-infina.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -464,7 +477,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/quarter-ended-june-30-2024-1722238557520-1.pdf"
+                href={withBase('/docs/investor-relations/quarter-ended-june-30-2024-1722238557520-1.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -489,7 +502,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/2-quarter-ended-september-30-2024-1742373310902.pdf"
+                href={withBase('/docs/investor-relations/2-quarter-ended-september-30-2024-1742373310902.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -514,7 +527,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/3-quarter-ended-december-31-2024-1742795155948.pdf"
+                href={withBase('/docs/investor-relations/3-quarter-ended-december-31-2024-1742795155948.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -539,7 +552,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/quarter-ended-march-31-2025.pdf"
+                href={withBase('/docs/investor-relations/quarter-ended-march-31-2025.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -566,7 +579,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/1-financial-results-quarter-ended-june-1678101683007.pdf"
+                href={withBase('/docs/investor-relations/1-financial-results-quarter-ended-june-1678101683007.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -591,7 +604,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/2-exchange-reporting-sept-23-1699450847927.pdf"
+                href={withBase('/docs/investor-relations/2-exchange-reporting-sept-23-1699450847927.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -616,7 +629,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/3-exchange-reporting-scan-dec-23-1707809128125.pdf"
+                href={withBase('/docs/investor-relations/3-exchange-reporting-scan-dec-23-1707809128125.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -661,7 +674,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/1-quarter-ended-june-30-2023-1694757431874.pdf"
+                href={withBase('/docs/investor-relations/1-quarter-ended-june-30-2023-1694757431874.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -686,7 +699,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/2-quarter-ended-september-30-2023-1700743371104.pdf"
+                href={withBase('/docs/investor-relations/2-quarter-ended-september-30-2023-1700743371104.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -711,7 +724,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/3-quarter-ended-dec-31-2023-1708082743702.pdf"
+                href={withBase('/docs/investor-relations/3-quarter-ended-dec-31-2023-1708082743702.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -758,7 +771,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/1-financial-results-quarter-ended-june-1678101683007.pdf"
+                href={withBase('/docs/investor-relations/1-financial-results-quarter-ended-june-1678101683007.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -808,7 +821,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/3-financial-results-quarter-ended-december-1678101626467.pdf"
+                href={withBase('/docs/investor-relations/3-financial-results-quarter-ended-december-1678101626467.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -833,7 +846,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/4-20230526185407512-1685359566252.pdf"
+                href={withBase('/docs/investor-relations/4-20230526185407512-1685359566252.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -878,7 +891,9 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/2-financial-results-quarter-ended-september-1678101663080.pdf"
+                href={withBase(
+                  '/docs/investor-relations/2-financial-results-quarter-ended-september-1678101663080.pdf',
+                )}
                 target="_blank"
                 rel="noopener"
               >
@@ -903,7 +918,9 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/3-liquidity-statement-quarter-ended-december-1677767290911.pdf"
+                href={withBase(
+                  '/docs/investor-relations/3-liquidity-statement-quarter-ended-december-1677767290911.pdf',
+                )}
                 target="_blank"
                 rel="noopener"
               >
@@ -928,7 +945,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/4-quarter-ended-march-31-2023-1689080151671.pdf"
+                href={withBase('/docs/investor-relations/4-quarter-ended-march-31-2023-1689080151671.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -955,7 +972,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/1-financial-results-half-ended-september-1678101797883.pdf"
+                href={withBase('/docs/investor-relations/1-financial-results-half-ended-september-1678101797883.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -980,7 +997,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/2-financial-results-quarter-ended-december-1678101744916.pdf"
+                href={withBase('/docs/investor-relations/2-financial-results-quarter-ended-december-1678101744916.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -1005,7 +1022,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/3-financial-results-quarter-ended-march-1678101715029.pdf"
+                href={withBase('/docs/investor-relations/3-financial-results-quarter-ended-march-1678101715029.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -1030,7 +1047,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/1-liquidity-statement-quarter-ended-june-1677767077118.pdf"
+                href={withBase('/docs/investor-relations/1-liquidity-statement-quarter-ended-june-1677767077118.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -1055,7 +1072,9 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/2-liquidity-statement-quarter-ended-september-1677767111501.pdf"
+                href={withBase(
+                  '/docs/investor-relations/2-liquidity-statement-quarter-ended-september-1677767111501.pdf',
+                )}
                 target="_blank"
                 rel="noopener"
               >
@@ -1080,7 +1099,9 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/3-liquidity-statement-quarter-ended-december-1677767143275.pdf"
+                href={withBase(
+                  '/docs/investor-relations/3-liquidity-statement-quarter-ended-december-1677767143275.pdf',
+                )}
                 target="_blank"
                 rel="noopener"
               >
@@ -1105,7 +1126,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/4-liquidity-statement-quarter-ended-march-1677767184364.pdf"
+                href={withBase('/docs/investor-relations/4-liquidity-statement-quarter-ended-march-1677767184364.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -1132,7 +1153,9 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/1-financial-results-half-year-ended-september-1678101824971.pdf"
+                href={withBase(
+                  '/docs/investor-relations/1-financial-results-half-year-ended-september-1678101824971.pdf',
+                )}
                 target="_blank"
                 rel="noopener"
               >
@@ -1157,7 +1180,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/2-financial-results-half-year-ended-march-1678101899824.pdf"
+                href={withBase('/docs/investor-relations/2-financial-results-half-year-ended-march-1678101899824.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -1182,7 +1205,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/1-liquidity-statement-quarter-ended-june-1677766944040.pdf"
+                href={withBase('/docs/investor-relations/1-liquidity-statement-quarter-ended-june-1677766944040.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -1207,7 +1230,9 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/2-liquidity-statement-quarter-ended-september-1677766976983.pdf"
+                href={withBase(
+                  '/docs/investor-relations/2-liquidity-statement-quarter-ended-september-1677766976983.pdf',
+                )}
                 target="_blank"
                 rel="noopener"
               >
@@ -1232,7 +1257,9 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/3-liquidity-statement-quarter-ended-december-1677767012028.pdf"
+                href={withBase(
+                  '/docs/investor-relations/3-liquidity-statement-quarter-ended-december-1677767012028.pdf',
+                )}
                 target="_blank"
                 rel="noopener"
               >
@@ -1257,7 +1284,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/4-liquidity-statement-quarter-ended-march-1677767045108.pdf"
+                href={withBase('/docs/investor-relations/4-liquidity-statement-quarter-ended-march-1677767045108.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -1284,7 +1311,9 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/1-liquidity-statement-quarter-ended-december-1677766802820.pdf"
+                href={withBase(
+                  '/docs/investor-relations/1-liquidity-statement-quarter-ended-december-1677766802820.pdf',
+                )}
                 target="_blank"
                 rel="noopener"
               >
@@ -1309,7 +1338,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/2-liquidity-statement-quarter-ended-march-1677766911739.pdf"
+                href={withBase('/docs/investor-relations/2-liquidity-statement-quarter-ended-march-1677766911739.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -1338,7 +1367,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/penal-charges-policy-30-12-2025.pdf"
+                href={withBase('/docs/investor-relations/penal-charges-policy-30-12-2025.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -1363,7 +1392,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/infina-policy-on-interest-rates-reviewed-on-30-12-2025.pdf"
+                href={withBase('/docs/investor-relations/infina-policy-on-interest-rates-reviewed-on-30-12-2025.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -1388,7 +1417,9 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/statutory-auditors-appointment-policy-extract-of-audit-policy-25th-august-2025.pdf"
+                href={withBase(
+                  '/docs/investor-relations/statutory-auditors-appointment-policy-extract-of-audit-policy-25th-august-2025.pdf',
+                )}
                 target="_blank"
                 rel="noopener"
               >
@@ -1413,7 +1444,9 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/prudential-framework-for-resolution-of-stressed-assets-resolutions.pdf"
+                href={withBase(
+                  '/docs/investor-relations/prudential-framework-for-resolution-of-stressed-assets-resolutions.pdf',
+                )}
                 target="_blank"
                 rel="noopener"
               >
@@ -1438,7 +1471,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/infina-compensation-policy-may-2026.pdf"
+                href={withBase('/docs/investor-relations/infina-compensation-policy-may-2026.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -1463,7 +1496,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/infina-whistle-blower-policy-reviewed-on-17-10-2025.pdf"
+                href={withBase('/docs/investor-relations/infina-whistle-blower-policy-reviewed-on-17-10-2025.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -1488,7 +1521,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/corporate-social-responsibility-policy.pdf"
+                href={withBase('/docs/investor-relations/corporate-social-responsibility-policy.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -1513,7 +1546,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/infina-policy-on-related-party-transactions-30-12-2025.pdf"
+                href={withBase('/docs/investor-relations/infina-policy-on-related-party-transactions-30-12-2025.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -1538,7 +1571,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/posh-policy-working.pdf"
+                href={withBase('/docs/investor-relations/posh-policy-working.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -1563,7 +1596,9 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/internal-guidelines-on-c-g-from-16th-june-26-to-24th-aug-2026-clean-mode-1.pdf"
+                href={withBase(
+                  '/docs/investor-relations/internal-guidelines-on-c-g-from-16th-june-26-to-24th-aug-2026-clean-mode-1.pdf',
+                )}
                 target="_blank"
                 rel="noopener"
               >
@@ -1588,7 +1623,9 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/lap-fees-charges-matrix-last-reviewed-on-30th-december-2025.pdf"
+                href={withBase(
+                  '/docs/investor-relations/lap-fees-charges-matrix-last-reviewed-on-30th-december-2025.pdf',
+                )}
                 target="_blank"
                 rel="noopener"
               >
@@ -1613,7 +1650,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/charges-fees-for-las-cre-30-12-25.pdf"
+                href={withBase('/docs/investor-relations/charges-fees-for-las-cre-30-12-25.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -1638,7 +1675,9 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/infina-policy-on-covid-related-rescheduling-of-dues-reviewed-on-17-10-2025.pdf"
+                href={withBase(
+                  '/docs/investor-relations/infina-policy-on-covid-related-rescheduling-of-dues-reviewed-on-17-10-2025.pdf',
+                )}
                 target="_blank"
                 rel="noopener"
               >
@@ -1663,7 +1702,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/policy-on-retention-of-documents-and-records-30-12-25.pdf"
+                href={withBase('/docs/investor-relations/policy-on-retention-of-documents-and-records-30-12-25.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -1706,7 +1745,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/signed-agm-notice-fy-26.pdf"
+                href={withBase('/docs/investor-relations/signed-agm-notice-fy-26.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -1731,7 +1770,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/notice-of-29th-agm-fy-2024-25-s.pdf"
+                href={withBase('/docs/investor-relations/notice-of-29th-agm-fy-2024-25-s.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -1756,7 +1795,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/1-notice-of-28th-agm-1726062729667.pdf"
+                href={withBase('/docs/investor-relations/1-notice-of-28th-agm-1726062729667.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -1779,7 +1818,12 @@ export function Content() {
               </a>
             </li>
             <li>
-              <a className="ir-r" href="/docs/investor-relations/2-1-1720253496323.pdf" target="_blank" rel="noopener">
+              <a
+                className="ir-r"
+                href={withBase('/docs/investor-relations/2-1-1720253496323.pdf')}
+                target="_blank"
+                rel="noopener"
+              >
                 <span>AGM Notice FY 2022-2023</span>
                 <span className="ir-d" aria-hidden="true">
                   <svg
@@ -1801,7 +1845,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/3-agm-notice-fy-2021-22-1678100712695.pdf"
+                href={withBase('/docs/investor-relations/3-agm-notice-fy-2021-22-1678100712695.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -1826,7 +1870,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/4-agm-notice-fy-2020-21-1677780471767.pdf"
+                href={withBase('/docs/investor-relations/4-agm-notice-fy-2020-21-1677780471767.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -1851,7 +1895,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/5-agm-notice-fy-2019-20-1677780440561.pdf"
+                href={withBase('/docs/investor-relations/5-agm-notice-fy-2019-20-1677780440561.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -1876,7 +1920,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/6-agm-notice-fy-2018-19-1677780407749.pdf"
+                href={withBase('/docs/investor-relations/6-agm-notice-fy-2018-19-1677780407749.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -1901,7 +1945,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/7-agm-notice-fy-2017-18-1677780374513.pdf"
+                href={withBase('/docs/investor-relations/7-agm-notice-fy-2017-18-1677780374513.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -1926,7 +1970,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/8-agm-notice-fy-2016-17-1677780343556.pdf"
+                href={withBase('/docs/investor-relations/8-agm-notice-fy-2016-17-1677780343556.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -1951,7 +1995,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/9-agm-notice-fy-2015-16-1677780318443.pdf"
+                href={withBase('/docs/investor-relations/9-agm-notice-fy-2015-16-1677780318443.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -1976,7 +2020,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/10-agm-notice-fy-2014-15-1677780130414.pdf"
+                href={withBase('/docs/investor-relations/10-agm-notice-fy-2014-15-1677780130414.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -2003,7 +2047,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/annual-return-fy-2025-2026.pdf"
+                href={withBase('/docs/investor-relations/annual-return-fy-2025-2026.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -2026,7 +2070,12 @@ export function Content() {
               </a>
             </li>
             <li>
-              <a className="ir-r" href="/docs/investor-relations/mgt-7-fy-2024-25.pdf" target="_blank" rel="noopener">
+              <a
+                className="ir-r"
+                href={withBase('/docs/investor-relations/mgt-7-fy-2024-25.pdf')}
+                target="_blank"
+                rel="noopener"
+              >
                 <span>Annual Return FY 2024-2025</span>
                 <span className="ir-d" aria-hidden="true">
                   <svg
@@ -2048,7 +2097,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/1-annaul-return-2024-1730786048663.pdf"
+                href={withBase('/docs/investor-relations/1-annaul-return-2024-1730786048663.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -2073,7 +2122,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/2-annual-return-fy-2022-23-1694168964865.pdf"
+                href={withBase('/docs/investor-relations/2-annual-return-fy-2022-23-1694168964865.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -2118,7 +2167,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/4-annual-return-fy-2020-21-1678101271729.pdf"
+                href={withBase('/docs/investor-relations/4-annual-return-fy-2020-21-1678101271729.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -2143,7 +2192,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/5-annual-return-fy-2019-20-1677778976964.pdf"
+                href={withBase('/docs/investor-relations/5-annual-return-fy-2019-20-1677778976964.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -2168,7 +2217,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/6-annual-retrun-fy-2018-19-1677778894435.pdf"
+                href={withBase('/docs/investor-relations/6-annual-retrun-fy-2018-19-1677778894435.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -2195,7 +2244,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/infina-csr-projects-fy-2026-27-for-website-upload.pdf"
+                href={withBase('/docs/investor-relations/infina-csr-projects-fy-2026-27-for-website-upload.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -2220,7 +2269,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/infina-csr-projects-fy-2025-26-final.pdf"
+                href={withBase('/docs/investor-relations/infina-csr-projects-fy-2025-26-final.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -2245,7 +2294,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/infina-csr-projects-fy-2024-25-final-for-website.pdf"
+                href={withBase('/docs/investor-relations/infina-csr-projects-fy-2024-25-final-for-website.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -2270,7 +2319,9 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/2-infina-csr-projects-fy-2023-24-final-for-website-1712918388971.pdf"
+                href={withBase(
+                  '/docs/investor-relations/2-infina-csr-projects-fy-2023-24-final-for-website-1712918388971.pdf',
+                )}
                 target="_blank"
                 rel="noopener"
               >
@@ -2295,7 +2346,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/3-infina-csr-projects-fy-2022-23-1680063190896.pdf"
+                href={withBase('/docs/investor-relations/3-infina-csr-projects-fy-2022-23-1680063190896.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -2320,7 +2371,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/4-csr-projects-fy-2021-22-1677784407638.pdf"
+                href={withBase('/docs/investor-relations/4-csr-projects-fy-2021-22-1677784407638.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -2345,7 +2396,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/5-csr-projects-fy-2020-21-1677784383960.pdf"
+                href={withBase('/docs/investor-relations/5-csr-projects-fy-2020-21-1677784383960.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -2370,7 +2421,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/csr-committee-composition.pdf"
+                href={withBase('/docs/investor-relations/csr-committee-composition.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -2397,7 +2448,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/grievance-redressal-matrix.pdf"
+                href={withBase('/docs/investor-relations/grievance-redressal-matrix.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -2422,7 +2473,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/latest-ombudsman-list-2025.pdf"
+                href={withBase('/docs/investor-relations/latest-ombudsman-list-2025.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -2447,7 +2498,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/3-deed-of-covenants-1677784249054.pdf"
+                href={withBase('/docs/investor-relations/3-deed-of-covenants-1677784249054.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -2472,7 +2523,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/cp-rating-website-disclosure.pdf"
+                href={withBase('/docs/investor-relations/cp-rating-website-disclosure.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -2497,7 +2548,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/resignation-of-mr-jaimin-bhatt.pdf"
+                href={withBase('/docs/investor-relations/resignation-of-mr-jaimin-bhatt.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -2522,7 +2573,9 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/literature-for-website-on-asset-classification-for-customer-awareness.pdf"
+                href={withBase(
+                  '/docs/investor-relations/literature-for-website-on-asset-classification-for-customer-awareness.pdf',
+                )}
                 target="_blank"
                 rel="noopener"
               >
@@ -2547,7 +2600,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/post-intimation-cco-final.pdf"
+                href={withBase('/docs/investor-relations/post-intimation-cco-final.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -2572,7 +2625,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/roles-and-responsibilities-of-independent-directors.pdf"
+                href={withBase('/docs/investor-relations/roles-and-responsibilities-of-independent-directors.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -2597,7 +2650,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/release-of-original-property-documents.pdf"
+                href={withBase('/docs/investor-relations/release-of-original-property-documents.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -2622,7 +2675,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/01st-egm-notice-fy-2026-2027.pdf"
+                href={withBase('/docs/investor-relations/01st-egm-notice-fy-2026-2027.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -2647,7 +2700,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/intimation-21032026-change-in-sh-pattern.pdf"
+                href={withBase('/docs/investor-relations/intimation-21032026-change-in-sh-pattern.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -2672,7 +2725,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/bse-intimation-completion-of-sale-stake.pdf"
+                href={withBase('/docs/investor-relations/bse-intimation-completion-of-sale-stake.pdf')}
                 target="_blank"
                 rel="noopener"
               >
@@ -2697,7 +2750,9 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/intimation-to-se-16th-april-2026-appt-of-mr-dipak-gupta-as-id.pdf"
+                href={withBase(
+                  '/docs/investor-relations/intimation-to-se-16th-april-2026-appt-of-mr-dipak-gupta-as-id.pdf',
+                )}
                 target="_blank"
                 rel="noopener"
               >
@@ -2722,7 +2777,9 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/notice-of-2nd-egm-fy-2026-2027-scheduled-for-15th-june-2026-1.pdf"
+                href={withBase(
+                  '/docs/investor-relations/notice-of-2nd-egm-fy-2026-2027-scheduled-for-15th-june-2026-1.pdf',
+                )}
                 target="_blank"
                 rel="noopener"
               >
@@ -2747,7 +2804,9 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/intimation-to-se-16th-june-2026-redesignation-of-mr-dipak-gupta-as-non-id.pdf"
+                href={withBase(
+                  '/docs/investor-relations/intimation-to-se-16th-june-2026-redesignation-of-mr-dipak-gupta-as-non-id.pdf',
+                )}
                 target="_blank"
                 rel="noopener"
               >
@@ -2772,7 +2831,7 @@ export function Content() {
             <li>
               <a
                 className="ir-r"
-                href="/docs/investor-relations/3rd-egm-notice-fy-2026-2027.pdf"
+                href={withBase('/docs/investor-relations/3rd-egm-notice-fy-2026-2027.pdf')}
                 target="_blank"
                 rel="noopener"
               >

@@ -1,3 +1,4 @@
+import { withBase } from '@/lib/base-path';
 export function Apply() {
   return (
     <section className="apply" id="apply" aria-labelledby="ap">
@@ -66,7 +67,7 @@ export function Apply() {
               <input type="checkbox" name="consent" required />
               <span>
                 I agree to be contacted by Infina Finance Pvt. Ltd. about this offer.{' '}
-                <a href="/privacy-policy">Privacy Policy</a>
+                <a href={withBase('/privacy-policy')}>Privacy Policy</a>
               </span>
             </label>{' '}
             <button type="submit" className="dw-btn apply-btn">

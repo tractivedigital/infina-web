@@ -7,13 +7,14 @@ import { footerColumns, socialLinks } from '@/config/navigation';
 import { siteConfig } from '@/config/site';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { ChevronDownIcon, InstagramIcon, LinkedInIcon, WarningIcon, XIcon } from '@/components/icons';
+import { withBase } from '@/lib/base-path';
 
 /** Internal route -> Link; document or external URL -> plain anchor (new tab); no URL yet -> plain text. */
 function FooterLink({ href, children }: { href?: string; children: ReactNode }) {
   if (!href) return <span>{children}</span>;
   if (/\.pdf$/i.test(href) || /^https?:/.test(href))
     return (
-      <a href={href} target="_blank" rel="noopener noreferrer">
+      <a href={withBase(href)} target="_blank" rel="noopener noreferrer">
         {children}
       </a>
     );
@@ -41,7 +42,7 @@ export function Footer() {
         <div className="ft-top">
           <div className="brand">
             <Link className="ft-logo" href="/" aria-label="Infina home">
-              <Image src="/images/brand/logo.svg" alt="Infina" width={112} height={40} />
+              <Image src={withBase('/images/brand/logo.svg')} alt="Infina" width={112} height={40} />
             </Link>
             <address>{siteConfig.address}</address>
           </div>

@@ -1,10 +1,11 @@
+import { withBase } from '@/lib/base-path';
 export function About() {
   return (
     <section className="sec tight-top" id="about">
       <div className="wrapx">
         <div className="ab">
           <div className="ab-img" role="img" aria-label="Stacks of coins on a financial document">
-            <i style={{ backgroundImage: 'url(/images/home/home-img-1.jpg)' }} />
+            <i style={{ backgroundImage: `url(${withBase('/images/home/home-img-1.jpg')})` }} />
           </div>
           <div className="ab-tx">
             <h2 className="h2">

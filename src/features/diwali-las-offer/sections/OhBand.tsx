@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { withBase } from '@/lib/base-path';
 
 export function OhBand() {
   return (
@@ -6,7 +7,7 @@ export function OhBand() {
       <div className="oh" id="oh">
         <div className="oh-img" id="himg">
           <Image
-            src="/images/diwali-las/diwali-las-hero.webp"
+            src={withBase('/images/diwali-las/diwali-las-hero.webp')}
             width={900}
             height={1117}
             alt="A smiling man in an orange kurta holds a tablet showing a rising portfolio chart, with Diwali lights and marigold garlands behind him"

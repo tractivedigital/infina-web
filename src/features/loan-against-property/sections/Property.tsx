@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { withBase } from '@/lib/base-path';
 
 export function Property() {
   return (
@@ -15,21 +16,21 @@ export function Property() {
         <div className="pp">
           <article className="pp-c">
             <span className="pp-i">
-              <Image src="/images/lap/lap-property-1.png" alt="" width={56} height={56} />
+              <Image src={withBase('/images/lap/lap-property-1.png')} alt="" width={56} height={56} />
             </span>
             <h3>Residential property</h3>
             <p>Villas, studio apartments, flats and duplexes.</p>
           </article>
           <article className="pp-c">
             <span className="pp-i">
-              <Image src="/images/lap/lap-property-2.png" alt="" width={56} height={56} />
+              <Image src={withBase('/images/lap/lap-property-2.png')} alt="" width={56} height={56} />
             </span>
             <h3>Commercial property</h3>
             <p>Offices, shops, warehouses and other commercial premises.</p>
           </article>
           <article className="pp-c">
             <span className="pp-i">
-              <Image src="/images/lap/lap-property-3.png" alt="" width={56} height={56} />
+              <Image src={withBase('/images/lap/lap-property-3.png')} alt="" width={56} height={56} />
             </span>
             <h3>Industrial property</h3>
             <p>Factories and manufacturing units.</p>

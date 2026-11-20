@@ -1,3 +1,4 @@
+import { withBase } from '@/lib/base-path';
 export function Rates() {
   return (
     <section className="band" id="rates">
@@ -128,7 +129,7 @@ export function Rates() {
           Charges as published in Infina&apos;s fees and charges matrix, last reviewed 5 September 2026. Applicable
           taxes are charged extra.
         </p>
-        <a className="rt-dl" href="/docs/lap-charges.pdf" rel="noopener">
+        <a className="rt-dl" href={withBase('/docs/lap-charges.pdf')} rel="noopener">
           Download the full fees and charges matrix (PDF)
         </a>
       </div>

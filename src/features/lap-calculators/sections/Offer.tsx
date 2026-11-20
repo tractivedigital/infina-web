@@ -1,3 +1,4 @@
+import { withBase } from '@/lib/base-path';
 export function Offer() {
   return (
     <section className="band" id="offer">
@@ -77,7 +78,7 @@ export function Offer() {
         </div>
         <p className="rt-meta">
           Loans start from ₹20 lakh, with tenures from 36 to 180 months. See the{' '}
-          <a href="/docs/lap-charges.pdf" target="_blank" rel="noopener">
+          <a href={withBase('/docs/lap-charges.pdf')} target="_blank" rel="noopener">
             list of charges
           </a>
           .

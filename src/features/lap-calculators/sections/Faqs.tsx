@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { withBase } from '@/lib/base-path';
 
 export function Faqs() {
   return (
@@ -141,7 +142,7 @@ export function Faqs() {
                 <p>
                   No. The calculator shows EMI and interest only. Infina&apos;s fees and charges matrix lists a
                   processing fee of up to 3%, legal and tech fees per property and stamp duty at actuals. The full{' '}
-                  <a href="/docs/lap-charges.pdf" target="_blank" rel="noopener">
+                  <a href={withBase('/docs/lap-charges.pdf')} target="_blank" rel="noopener">
                     list of charges
                   </a>{' '}
                   is available as a PDF.

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { withBase } from '@/lib/base-path';
 
 export function Pledge() {
   return (
@@ -22,14 +23,14 @@ export function Pledge() {
           aria-label="What you can pledge"
         >
           <article className="pa-c" role="group" aria-roledescription="slide" aria-label="1 of 4">
-            <Image src="/images/las/las-pledge-1.webp" alt="" width={720} height={450} />
+            <Image src={withBase('/images/las/las-pledge-1.webp')} alt="" width={720} height={450} />
             <div className="pa-b">
               <h3>Listed Shares</h3>
               <p>Loans against equity shares listed on the stock exchanges, from Infina&apos;s approved list.</p>
             </div>
           </article>
           <article className="pa-c" role="group" aria-roledescription="slide" aria-label="2 of 4">
-            <Image src="/images/las/las-pledge-2.webp" alt="" width={720} height={450} />
+            <Image src={withBase('/images/las/las-pledge-2.webp')} alt="" width={720} height={450} />
             <div className="pa-b">
               <h3>Mutual Funds</h3>
               <p>
@@ -39,14 +40,14 @@ export function Pledge() {
             </div>
           </article>
           <article className="pa-c" role="group" aria-roledescription="slide" aria-label="3 of 4">
-            <Image src="/images/las/las-pledge-3.webp" alt="" width={720} height={450} />
+            <Image src={withBase('/images/las/las-pledge-3.webp')} alt="" width={720} height={450} />
             <div className="pa-b">
               <h3>Fixed Income Securities</h3>
               <p>Get access to loans against PSU and Private Sector Bonds and Government Securities.</p>
             </div>
           </article>
           <article className="pa-c" role="group" aria-roledescription="slide" aria-label="4 of 4">
-            <Image src="/images/las/las-pledge-4.webp" alt="" width={720} height={450} />
+            <Image src={withBase('/images/las/las-pledge-4.webp')} alt="" width={720} height={450} />
             <div className="pa-b">
               <h3>Other Securities</h3>
               <p>
@@ -94,7 +95,7 @@ export function Pledge() {
         </div>
         <p className="pl-note">
           See the{' '}
-          <a href="/docs/approved-securities-list-august-2026.pdf" rel="noopener">
+          <a href={withBase('/docs/approved-securities-list-august-2026.pdf')} rel="noopener">
             list of approved securities (PDF, August 2026)
           </a>
           .

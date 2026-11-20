@@ -6,6 +6,7 @@ import { useCallback, useEffect, useRef, useState, type KeyboardEvent } from 're
 import { calculatorLinks, companyLinks, productLinks, topLevelLinks, type LinkItem } from '@/config/navigation';
 import { siteConfig } from '@/config/site';
 import { ArrowRightIcon, ChevronDownIcon, CloseIcon, MenuIcon } from '@/components/icons';
+import { withBase } from '@/lib/base-path';
 
 type MenuId = 'products' | 'calculators' | 'company';
 
@@ -115,7 +116,7 @@ export function Header() {
       <div className="scrim" />
       <div className="bar">
         <Link className="logo" href="/" aria-label="Infina home">
-          <Image src="/images/brand/logo.svg" alt="Infina" width={106} height={38} priority />
+          <Image src={withBase('/images/brand/logo.svg')} alt="Infina" width={106} height={38} priority />
         </Link>
         <nav className="nav" aria-label="Main">
           {MENUS.map((menu) => {

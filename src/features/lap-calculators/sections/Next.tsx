@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { withBase } from '@/lib/base-path';
 
 export function Next() {
   return (
@@ -63,7 +64,7 @@ export function Next() {
                 <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
             </Link>{' '}
-            <a href="/esop-calculators">
+            <a href={withBase('/esop-calculators')}>
               <span>
                 ESOP funding calculator
                 <small>Work out funding to exercise your stock options.</small>

@@ -1,3 +1,4 @@
+import { withBase } from '@/lib/base-path';
 export function Who() {
   return (
     <section className="band" id="who">
@@ -16,7 +17,7 @@ export function Who() {
             <i
               className="wg-bg"
               aria-hidden="true"
-              style={{ backgroundImage: 'url(/images/home/home-card-bg-1.jpg)' }}
+              style={{ backgroundImage: `url(${withBase('/images/home/home-card-bg-1.jpg')})` }}
             />
             <span className="wg-t">
               <svg viewBox="0 0 512 512" aria-hidden="true">
@@ -37,7 +38,7 @@ export function Who() {
             <i
               className="wg-bg"
               aria-hidden="true"
-              style={{ backgroundImage: 'url(/images/home/home-card-bg-2.jpg)' }}
+              style={{ backgroundImage: `url(${withBase('/images/home/home-card-bg-2.jpg')})` }}
             />
             <span className="wg-t">
               <svg viewBox="0 0 512 512" aria-hidden="true">
@@ -55,7 +56,7 @@ export function Who() {
             <i
               className="wg-bg"
               aria-hidden="true"
-              style={{ backgroundImage: 'url(/images/home/home-card-bg-3.jpg)' }}
+              style={{ backgroundImage: `url(${withBase('/images/home/home-card-bg-3.jpg')})` }}
             />
             <span className="wg-t">
               <svg viewBox="0 0 512 512" aria-hidden="true">
@@ -77,7 +78,7 @@ export function Who() {
             <i
               className="wg-bg"
               aria-hidden="true"
-              style={{ backgroundImage: 'url(/images/home/home-card-bg-4.jpg)' }}
+              style={{ backgroundImage: `url(${withBase('/images/home/home-card-bg-4.jpg')})` }}
             />
             <span className="wg-t">
               <svg viewBox="0 0 512 512" aria-hidden="true">
@@ -96,7 +97,7 @@ export function Who() {
             <i
               className="wg-bg"
               aria-hidden="true"
-              style={{ backgroundImage: 'url(/images/home/home-card-bg-5.jpg)' }}
+              style={{ backgroundImage: `url(${withBase('/images/home/home-card-bg-5.jpg')})` }}
             />
             <span className="wg-t">
               <svg viewBox="0 0 512 512" aria-hidden="true">

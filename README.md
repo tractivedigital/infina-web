@@ -12,7 +12,9 @@ npm run build && npm run start
 npm run lint && npm run typecheck
 ```
 
-Copy `.env.example` to `.env.local` to override `NEXT_PUBLIC_SITE_URL`.
+Copy `.env.example` to `.env.local` to override `NEXT_PUBLIC_SITE_URL` and set the mail variables.
+
+UAT on the AWS server under `/infina-new`: see [deploy/README.md](deploy/README.md) (`NEXT_PUBLIC_BASE_PATH`, pm2, nginx).
 
 ## Routes
 
@@ -75,7 +77,7 @@ public/docs/           PDFs (privacy policy, charges, approved securities, terms
   pages), the Diwali offer form and the channel partner application. All post JSON to `/api/leads` or
   `/api/send-email`. Both routes go through `lib/server/api-guard` (same-origin check, 8 KB body cap, per-IP rate
   limit, hidden spam-trap field) and are validated again on the server. Valid submissions are forwarded by
-  `lib/server/delivery`: set `FORM_WEBHOOK_URL` (and optionally `FORM_WEBHOOK_SECRET`, an HMAC signature) to the CRM
+  `lib/server/delivery`, which e-mails every submission to `connect@infina.in` through Gmail SMTP (`SMTP_USER`, `SMTP_APP_PASSWORD`, `MAIL_TO`) and can also post to a CRM: set `FORM_WEBHOOK_URL` (and optionally `FORM_WEBHOOK_SECRET`, an HMAC signature) to the CRM
   or workflow endpoint. **Until it is set, submissions are only written to the server log.**
 - **Content is now maintained in code.** The pages were bootstrapped from the original static HTML, and the
   generated files have since been edited by hand (no "To confirm" badges, FAQ accordions, hero slides, navigation).

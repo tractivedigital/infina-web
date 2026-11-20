@@ -1,3 +1,4 @@
+import { withBase } from '@/lib/base-path';
 export function Content() {
   return (
     <section className="sec" style={{ paddingTop: '8px', background: 'transparent' }}>
@@ -147,7 +148,8 @@ export function Content() {
             <h2 id="4-grievances">4) Grievances</h2>
             <p>
               For discrepancies and grievances pertaining to processing of Information, you can refer to our{' '}
-              <a href="/contact">Grievance Redressal Mechanism</a>. The same is available and displayed on our website.
+              <a href={withBase('/contact')}>Grievance Redressal Mechanism</a>. The same is available and displayed on
+              our website.
             </p>
             <h2 id="5-cookie-policy">5) Cookie Policy</h2>
             <p>

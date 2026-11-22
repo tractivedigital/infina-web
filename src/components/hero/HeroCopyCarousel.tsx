@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react';
 import { heroSlides, type HeroPage } from '@/config/hero-slides';
 import './hero-carousel.css';
+import './hero-fold.css';
 
 const INTERVAL_MS = 6000;
 

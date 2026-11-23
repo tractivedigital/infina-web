@@ -12,7 +12,7 @@ mkdir -p /etc/nginx/snippets
 install -m 644 "$SNIPPET_SRC" "$SNIPPET_DST"
 
 # Find the config file(s) that serve chatbot.infina.co.in over HTTPS (listen 443).
-mapfile -t FILES < <(grep -rl "server_name[^;]*chatbot.infina.co.in" /etc/nginx/sites-enabled /etc/nginx/conf.d 2>/dev/null || true)
+mapfile -t FILES < <(grep -Rl "server_name[^;]*chatbot.infina.co.in" /etc/nginx/sites-enabled /etc/nginx/conf.d 2>/dev/null || true)
 if [ "${#FILES[@]}" -ne 1 ]; then
   echo "Could not pick a single nginx file for chatbot.infina.co.in (found ${#FILES[@]}: ${FILES[*]:-none})." >&2
   echo "Add this line by hand inside the HTTPS server block, above 'location / {', then run: nginx -t && systemctl reload nginx" >&2

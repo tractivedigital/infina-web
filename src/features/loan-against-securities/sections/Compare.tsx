@@ -1,56 +1,5 @@
 export function Compare() {
   return (
-    <section className="sec" id="compare">
-      <div className="wrapx">
-        <div className="sec-head">
-          <h2 className="h2">
-            Loan against securities compared with <em>other options</em>
-          </h2>
-          <p className="body">
-            How borrowing against your portfolio differs from a personal loan and from selling your investments.
-          </p>
-        </div>
-        <div className="cmp">
-          <table className="cmp-t">
-            <thead>
-              <tr>
-                <th scope="col">
-                  <span className="sr">Feature</span>
-                </th>
-                <th scope="col">Loan against securities</th>
-                <th scope="col">Personal loan</th>
-                <th scope="col">Selling investments</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">What you give</th>
-                <td data-label="Loan against securities">Securities pledged as security</td>
-                <td data-label="Personal loan">Nothing</td>
-                <td data-label="Selling investments">Your investments</td>
-              </tr>
-              <tr>
-                <th scope="row">Your investments</th>
-                <td data-label="Loan against securities">Stay in your name</td>
-                <td data-label="Personal loan">Not affected</td>
-                <td data-label="Selling investments">Sold, so you lose future growth</td>
-              </tr>
-              <tr>
-                <th scope="row">Use of funds</th>
-                <td data-label="Loan against securities">Business or personal needs</td>
-                <td data-label="Personal loan">Personal needs</td>
-                <td data-label="Selling investments">Any need</td>
-              </tr>
-              <tr>
-                <th scope="row">Main risk</th>
-                <td data-label="Loan against securities">A fall in value can trigger a margin call</td>
-                <td data-label="Personal loan">Repayment from your income</td>
-                <td data-label="Selling investments">Missing future gains</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
+    <section className="section solid" id="compare" style={{ paddingTop: "0" }}><div className="wrap"><div className="section-head"><h2>Loan against securities compared with other options</h2><p>How borrowing against your portfolio differs from a personal loan and from selling your investments. Hover a row to compare it across all three.</p></div><div className="cmp" id="cmp"><div className="cmp-labels" aria-hidden="true"><span></span><span data-row="0">What you give</span><span data-row="1">Your investments</span><span data-row="2">Use of funds</span><span data-row="3">Main risk</span></div><section className="cmp-col hero-col" aria-label="Loan against securities"><header><small>Infina</small><h3>Loan against securities</h3></header><div className="cell" data-row="0"><b>What you give</b>Securities pledged as security</div><div className="cell" data-row="1"><b>Your investments</b>Stay in your name</div><div className="cell" data-row="2"><b>Use of funds</b>Business or personal needs</div><div className="cell" data-row="3"><b>Main risk</b>A fall in value can trigger a margin call</div></section><section className="cmp-col" aria-label="Personal loan"><header><small>Unsecured</small><h3>Personal loan</h3></header><div className="cell" data-row="0"><b>What you give</b>Nothing</div><div className="cell" data-row="1"><b>Your investments</b>Not affected</div><div className="cell" data-row="2"><b>Use of funds</b>Personal needs</div><div className="cell" data-row="3"><b>Main risk</b>Repayment from your income</div></section><section className="cmp-col" aria-label="Selling investments"><header><small>No loan</small><h3>Selling investments</h3></header><div className="cell" data-row="0"><b>What you give</b>Your investments</div><div className="cell" data-row="1"><b>Your investments</b>Sold, so you lose future growth</div><div className="cell" data-row="2"><b>Use of funds</b>Any need</div><div className="cell" data-row="3"><b>Main risk</b>Missing future gains</div></section></div></div></section>
   );
 }

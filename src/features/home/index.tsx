@@ -1,31 +1,40 @@
-import '@/styles/pages/home.css';
-import { PageShell } from '@/components/layout/PageShell';
-import { FaqAccordionBehavior } from '@/components/behaviors/faq';
-import { CalculatorBehavior } from '@/components/behaviors/calculators';
-import { HomeBehavior } from '@/components/behaviors/home';
+import '@/styles/v2/home.css';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { V2Page } from '@/components/v2/V2Page';
+import { structuredData } from './structured-data';
+import { SiteNav } from './sections/SiteNav';
 import { Hero } from './sections/Hero';
-import { Services } from './sections/Services';
-import { Estimate } from './sections/Estimate';
-import { How } from './sections/How';
-import { Why } from './sections/Why';
-import { Who } from './sections/Who';
-import { About } from './sections/About';
-import { Faqs } from './sections/Faqs';
+import { Products } from './sections/Products';
+import { WhoWeServe } from './sections/WhoWeServe';
+import { Calculator } from './sections/Calculator';
+import { Process } from './sections/Process';
+import { SmarterPartner } from './sections/SmarterPartner';
+import { Compare } from './sections/Compare';
+import { Potential } from './sections/Potential';
+import { HeritageBand } from './sections/HeritageBand';
+import { Faq } from './sections/Faq';
+import { FinalCta } from './sections/FinalCta';
+import { SiteFooter } from './sections/SiteFooter';
 
 export function HomePage() {
   return (
-    <PageShell page="home" main={{ id: 'top', className: 'home' }}>
-      <Hero />
-      <Services />
-      <Estimate />
-      <How />
-      <Why />
-      <Who />
-      <About />
-      <Faqs />
-      <CalculatorBehavior />
-      <HomeBehavior />
-      <FaqAccordionBehavior />
-    </PageShell>
+    <V2Page page="home">
+      <JsonLd data={structuredData} />
+      <SiteNav />
+      <main>
+        <Hero />
+        <Products />
+        <WhoWeServe />
+        <Calculator />
+        <Process />
+        <SmarterPartner />
+        <Compare />
+        <Potential />
+        <HeritageBand />
+        <Faq />
+        <FinalCta />
+      </main>
+      <SiteFooter />
+    </V2Page>
   );
 }

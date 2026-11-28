@@ -1,56 +1,5 @@
 export function Compare() {
   return (
-    <section className="sec" id="compare">
-      <div className="wrapx">
-        <div className="sec-head">
-          <h2 className="h2">
-            ESOP financing compared with <em>other ways to exercise</em>
-          </h2>
-          <p className="body">
-            How financing your exercise differs from paying from savings and from a cashless exercise.
-          </p>
-        </div>
-        <div className="cmp">
-          <table className="cmp-t">
-            <thead>
-              <tr>
-                <th scope="col">
-                  <span className="sr">Feature</span>
-                </th>
-                <th scope="col">ESOP financing</th>
-                <th scope="col">Paying from savings</th>
-                <th scope="col">Cashless exercise</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Cash you need upfront</th>
-                <td data-label="ESOP financing">Your contribution after the funding</td>
-                <td data-label="Paying from savings">The full exercise cost and tax</td>
-                <td data-label="Cashless exercise">None, but shares are sold</td>
-              </tr>
-              <tr>
-                <th scope="row">Shares you keep</th>
-                <td data-label="ESOP financing">All the shares you exercise</td>
-                <td data-label="Paying from savings">All the shares you exercise</td>
-                <td data-label="Cashless exercise">Fewer, as some are sold to cover the cost</td>
-              </tr>
-              <tr>
-                <th scope="row">Cost</th>
-                <td data-label="ESOP financing">Interest and charges</td>
-                <td data-label="Paying from savings">No financing cost</td>
-                <td data-label="Cashless exercise">The value of the shares sold</td>
-              </tr>
-              <tr>
-                <th scope="row">Main risk</th>
-                <td data-label="ESOP financing">Repayment, with shares pledged</td>
-                <td data-label="Paying from savings">A large cash outflow</td>
-                <td data-label="Cashless exercise">Giving up future gains</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
+    <section className="section solid" id="compare" style={{ paddingTop: "0" }}><div className="wrap"><div className="section-head"><h2>ESOP financing compared with other ways to exercise</h2><p>How financing your exercise differs from paying from savings and from a cashless exercise. Hover a row to compare it across all three.</p></div><div className="cmp" id="cmp"><div className="cmp-labels" aria-hidden="true"><span></span><span data-row="0">Cash you need upfront</span><span data-row="1">Shares you keep</span><span data-row="2">Cost</span><span data-row="3">Main risk</span></div><section className="cmp-col hero-col" aria-label="ESOP financing"><header><small>Infina</small><h3>ESOP financing</h3></header><div className="cell" data-row="0"><b>Cash you need upfront</b>Your contribution after the funding</div><div className="cell" data-row="1"><b>Shares you keep</b>All the shares you exercise</div><div className="cell" data-row="2"><b>Cost</b>Interest and charges</div><div className="cell" data-row="3"><b>Main risk</b>Repayment, with shares pledged</div></section><section className="cmp-col" aria-label="Paying from savings"><header><small>Your own money</small><h3>Paying from savings</h3></header><div className="cell" data-row="0"><b>Cash you need upfront</b>The full exercise cost and tax</div><div className="cell" data-row="1"><b>Shares you keep</b>All the shares you exercise</div><div className="cell" data-row="2"><b>Cost</b>No financing cost</div><div className="cell" data-row="3"><b>Main risk</b>A large cash outflow</div></section><section className="cmp-col" aria-label="Cashless exercise"><header><small>Sell to cover</small><h3>Cashless exercise</h3></header><div className="cell" data-row="0"><b>Cash you need upfront</b>None, but shares are sold</div><div className="cell" data-row="1"><b>Shares you keep</b>Fewer, as some are sold to cover the cost</div><div className="cell" data-row="2"><b>Cost</b>The value of the shares sold</div><div className="cell" data-row="3"><b>Main risk</b>Giving up future gains</div></section></div></div></section>
   );
 }

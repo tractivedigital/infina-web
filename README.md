@@ -50,14 +50,14 @@ src/
   features/<page>/     index.tsx (page composition), metadata.ts, structured-data.ts, sections/*.tsx
   components/
     layout/            Header, Footer, PageShell, StickyCta
-    forms/             HeroLeadForm
-    hero/              HeroCopyCarousel (text slides inside the main hero banner)
+    v2/                Redesigned pages (home and the four product pages): V2Page frame, V2Behavior, sandbox,
+                       scripts/<page>.ts (interaction scripts) and sections/ shared by several pages
     sections/          Sections identical on several pages (Trust, Safety)
     behaviors/         Client-side progressive enhancement for server-rendered markup
     seo/  icons/
   lib/                 calculators (pure, framework-free), validation, lead submission, xlsx-lite
   lib/server/          api-guard (origin, size, rate limit) and delivery (form webhook)
-  config/              site constants, navigation, hero-slides, leadership-links
+  config/              site constants, navigation, leadership-links
   hooks/  styles/
 public/images/         Images extracted from the original pages
 public/docs/           PDFs (privacy policy, charges, approved securities, terms) hosted locally
@@ -73,8 +73,8 @@ public/docs/           PDFs (privacy policy, charges, approved securities, terms
   `styles/pages/<key>.css`, generated from the original page. Every rule is scoped with
   `:where([data-page="<key>"])` (set by `PageShell`), which adds no specificity, so cascade order and specificity
   match the original documents exactly and pages do not affect each other during client-side navigation.
-- **Forms and leads.** Three forms exist: the "Check your eligibility" form (`HeroLeadForm`, home and product
-  pages), the Diwali offer form and the channel partner application. All post JSON to `/api/leads` or
+- **Forms and leads.** Three forms exist: the "Check your eligibility" forms (the lead form in each redesigned page, and the home estimator's call-back step; see `components/v2/V2Behavior.tsx`
+  ), the Diwali offer form and the channel partner application. All post JSON to `/api/leads` or
   `/api/send-email`. Both routes go through `lib/server/api-guard` (same-origin check, 8 KB body cap, per-IP rate
   limit, hidden spam-trap field) and are validated again on the server. Valid submissions are forwarded by
   `lib/server/delivery`, which e-mails every submission to `connect@infina.in` through Gmail SMTP (`SMTP_USER`, `SMTP_APP_PASSWORD`, `MAIL_TO`) and can also post to a CRM: set `FORM_WEBHOOK_URL` (and optionally `FORM_WEBHOOK_SECRET`, an HMAC signature) to the CRM
@@ -84,10 +84,16 @@ public/docs/           PDFs (privacy policy, charges, approved securities, terms
   Do not re-run the one-time converter over them.
 - **FAQs.** Every FAQ is a native `<details>` list that starts closed; `components/behaviors/faq` closes the other
   answers when one opens. Product, calculator, home and about pages share the same structure and styles.
-- **Hero slides.** The main hero banner on home and the four product pages is a slide show: slide 1 is the page's
-  original hero copy and three more slides follow (`config/hero-slides.ts`, `components/hero`). Only the text column
-  changes; the background and the eligibility form stay. It advances every 6 s, pauses on hover, focus and in a hidden tab
-  (no pause button), and the hero height never changes between slides.
+- **Redesigned pages (home, LAS, ESOP, LAP, CRE).** Built from the design prototypes in `source-html/new`. Each page is
+  server-rendered sections (`features/<page>/sections`, a few shared in `components/v2/sections`) plus one stylesheet
+  `styles/v2/<page>.css` scoped to the page wrapper. Interactions (scroll animations, calculators, the 3D background,
+  the lead form) come from `components/v2/scripts/<page>.ts`, ported from the prototype and run by
+  `components/v2/sandbox.ts`, which scopes `document` to the page and removes every listener, frame and observer when the
+  visitor leaves. The 3D library (`three`, r128) and each page script are lazy chunks loaded after hydration; the font
+  (Plus Jakarta Sans) is self-hosted by `next/font`. First-screen content shows within 2.5 s even if scripts are slow
+  (CSS safety animation), and below-the-fold content shows without JavaScript. Draft placeholders from the prototypes
+  ("[Confirm]") were filled from the previous site or removed; the previous site's answers are in `faq-data.ts`.
+  The other pages (about, blogs, calculators, careers and so on) keep the previous design for now.
 - **Security headers** are set in `next.config.ts` (CSP that only allows this origin, HSTS, `X-Frame-Options`,
   `nosniff`, referrer and permissions policies). Only `/channel-partner` may be framed, and only by infina.co.in.
 

@@ -1,71 +1,7 @@
-import { HeroCopyCarousel } from '@/components/hero/HeroCopyCarousel';
-import { HeroLeadForm } from '@/components/forms/HeroLeadForm';
-import Image from 'next/image';
-import { withBase } from '@/lib/base-path';
+import Link from 'next/link';
 
 export function Hero() {
   return (
-    <div className="wrapx">
-      <div className="hv3">
-        <section className="hero on-navy hv v3" id="hero" aria-labelledby="h1">
-          <div className="hero-bg" aria-hidden="true">
-            <Image
-              priority
-              className="hero-photo"
-              src={withBase('/images/las/las-hero.webp')}
-              alt=""
-              width={960}
-              height={1056}
-            />
-          </div>
-          <div className="hero-scrim" aria-hidden="true" />
-          <div className="hv-wrap">
-            <HeroCopyCarousel page="las">
-              <h1 id="h1">Loan against Stocks and Mutual funds</h1>
-              <p className="hv-tag">Get Your Loan Instantly!</p>
-              <p className="sub">Avail loans without selling or liquidating your investments.</p>
-              <ul className="hv-pts">
-                <li>
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M5 12.5l4.5 4.5L19 7.5" />
-                  </svg>
-                  <span>At attractive interest rates</span>
-                </li>
-                <li>
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M5 12.5l4.5 4.5L19 7.5" />
-                  </svg>
-                  <span>For business or personal needs</span>
-                </li>
-              </ul>
-            </HeroCopyCarousel>
-          </div>
-        </section>
-        <HeroLeadForm
-          interest={{
-            label: 'I want to borrow against',
-            name: 'interest',
-            options: ['Shares', 'Mutual funds', 'Bonds', 'Other securities'],
-          }}
-          consent="privacy"
-        />
-      </div>
-    </div>
+    <section className="hero" id="top"><div className="wrap"><ol className="crumbs fadein" aria-label="Breadcrumb"><li><Link href="/">Home</Link></li><li><Link href="/#products">Products</Link></li><li aria-current="page">Loan Against Securities</li></ol><div className="hero-grid"><div><h1><span className="line"><span>Loan against stocks</span></span><span className="line"><span>and mutual funds.</span></span></h1><p className="lede fadein"><strong>Get your loan instantly.</strong> Avail loans without selling or liquidating your investments.</p><ul className="ticks fadein"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" aria-hidden="true"><path d="M5 12l5 5L20 7" /></svg>At attractive interest rates</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" aria-hidden="true"><path d="M5 12l5 5L20 7" /></svg>For business or personal needs</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" aria-hidden="true"><path d="M5 12l5 5L20 7" /></svg>Securities stay in your name</li></ul><div className="hero-ctas fadein"><a href="#estimate" className="btn btn-red">Estimate your loan</a>{' '}<a href="#overview" className="btn btn-ghost">How it works</a></div></div><form className="lead" id="apply-form" noValidate aria-labelledby="lead-title"><input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px", opacity: "0" }} /><h2 id="lead-title">Check your eligibility</h2><p className="sub">Takes a minute. No documents needed to start.</p><label className="fld"><span>Name</span><input type="text" id="f-name" autoComplete="name" required /></label><div className="fld"><label htmlFor="f-mob"><span>Mobile</span></label><div className="phone"><b>+91</b><input type="tel" id="f-mob" inputMode="numeric" autoComplete="tel-national" maxLength={10} required /></div></div><div className="fld"><span id="borrow-lbl">I want to borrow against</span><div className="seg" role="group" aria-labelledby="borrow-lbl"><button type="button" aria-pressed="true">Shares</button>{' '}<button type="button" aria-pressed="false">Mutual funds</button>{' '}<button type="button" aria-pressed="false">Bonds</button>{' '}<button type="button" aria-pressed="false">Other</button></div></div><label className="consent"><input type="checkbox" id="f-ok" /><span>I agree to Infina contacting me about this enquiry and have read the <Link href="/privacy-policy">Privacy Policy</Link>.</span></label>{' '}<button className="btn btn-red" type="submit">Check eligibility</button><p className="lead-msg" id="lead-msg" aria-live="polite"></p></form></div><dl className="hero-facts fadein"><div><dt>Listed equity shares</dt><dd>Up to 50% LTV</dd></div><div><dt>Equity mutual funds</dt><dd>Up to 50% LTV</dd></div><div><dt>Debt mutual funds</dt><dd>Up to 80% LTV</dd></div></dl></div></section>
   );
 }

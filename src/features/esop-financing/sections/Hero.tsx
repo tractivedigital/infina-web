@@ -1,71 +1,7 @@
-import { HeroCopyCarousel } from '@/components/hero/HeroCopyCarousel';
-import { HeroLeadForm } from '@/components/forms/HeroLeadForm';
-import Image from 'next/image';
-import { withBase } from '@/lib/base-path';
+import Link from 'next/link';
 
 export function Hero() {
   return (
-    <div className="wrapx">
-      <div className="hv3">
-        <section className="hero on-navy hv v3" id="hero" aria-labelledby="h1">
-          <div className="hero-bg" aria-hidden="true">
-            <Image
-              priority
-              className="hero-photo"
-              src={withBase('/images/esop/esop-hero.webp')}
-              alt=""
-              width={1200}
-              height={735}
-            />
-          </div>
-          <div className="hero-scrim" aria-hidden="true" />
-          <div className="hv-wrap">
-            <HeroCopyCarousel page="esop">
-              <h1 id="h1">ESOP financing</h1>
-              <p className="hv-tag">Unlock the value of your vested shares</p>
-              <p className="sub">Get immediate funds to exercise your stock options, with hassle-free financing.</p>
-              <ul className="hv-pts">
-                <li>
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M5 12.5l4.5 4.5L19 7.5" />
-                  </svg>
-                  <span>At attractive interest rates</span>
-                </li>
-                <li>
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M5 12.5l4.5 4.5L19 7.5" />
-                  </svg>
-                  <span>Leverage your vested shares</span>
-                </li>
-              </ul>
-            </HeroCopyCarousel>
-          </div>
-        </section>
-        <HeroLeadForm
-          interest={{
-            label: 'My ESOPs are from',
-            name: 'company',
-            options: ['A listed company', 'An unlisted company'],
-          }}
-          consent="privacy"
-        />
-      </div>
-    </div>
+    <section className="hero" id="top"><div className="wrap"><ol className="crumbs fadein" aria-label="Breadcrumb"><li><Link href="/">Home</Link></li><li><Link href="/#products">Products</Link></li><li aria-current="page">ESOP Financing</li></ol><div className="hero-grid"><div><h1><span className="line"><span>Exercise your options.</span></span><span className="line"><span>Keep your stake.</span></span></h1><p className="lede fadein"><strong>ESOP financing for employees of listed and unlisted companies.</strong> Fund the cost of exercising your vested options and the tax on them, when you choose.</p><ul className="ticks fadein"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" aria-hidden="true"><path d="M5 12l5 5L20 7" /></svg>Listed and unlisted ESOPs</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" aria-hidden="true"><path d="M5 12l5 5L20 7" /></svg>No wait for an IPO or a sale</li></ul><div className="hero-ctas fadein"><a href="#calculator" className="btn btn-red">Calculate your funding</a>{' '}<a href="#fund" className="btn btn-ghost">See who we fund</a></div></div><form className="lead" id="apply-form" noValidate aria-labelledby="lead-title"><input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px", opacity: "0" }} /><h2 id="lead-title">Check your eligibility</h2><p className="sub">Takes a minute. No documents needed to start.</p><label className="fld"><span>Name</span><input type="text" id="f-name" autoComplete="name" required /></label><div className="fld"><label htmlFor="f-mob"><span>Mobile</span></label><div className="phone"><b>+91</b><input type="tel" id="f-mob" inputMode="numeric" autoComplete="tel-national" maxLength={10} required /></div></div><label className="fld"><span>My ESOPs are from</span>{' '}<select id="f-co"><option>A listed company</option><option>An unlisted company</option></select></label>{' '}<label className="consent"><input type="checkbox" id="f-ok" /><span>I agree to Infina contacting me about this enquiry and have read the <Link href="/privacy-policy">Privacy Policy</Link>.</span></label>{' '}<button className="btn btn-red" type="submit">Check eligibility</button><p className="lead-msg" id="lead-msg" aria-live="polite"></p></form></div><dl className="hero-facts fadein"><div><dt>Loans start from</dt><dd>₹1 lakh</dd></div><div><dt>Interest from</dt><dd>8.50% p.a.</dd></div><div><dt>Tenure</dt><dd>Up to 365 days</dd></div></dl></div></section>
   );
 }

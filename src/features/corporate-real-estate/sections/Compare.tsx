@@ -1,56 +1,5 @@
 export function Compare() {
   return (
-    <section className="sec" id="compare">
-      <div className="wrapx">
-        <div className="sec-head">
-          <h2 className="h2">
-            Developer finance compared with <em>other ways to fund a project</em>
-          </h2>
-          <p className="body">
-            How a structured developer loan differs from relying on sales proceeds or your own equity.
-          </p>
-        </div>
-        <div className="cmp">
-          <table className="cmp-t">
-            <thead>
-              <tr>
-                <th scope="col">
-                  <span className="sr">Feature</span>
-                </th>
-                <th scope="col">Infina developer finance</th>
-                <th scope="col">Sales proceeds alone</th>
-                <th scope="col">Promoter equity</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Timing of funds</th>
-                <td data-label="Infina developer finance">Matched to the stage of the project</td>
-                <td data-label="Sales proceeds alone">Depends on bookings and collections</td>
-                <td data-label="Promoter equity">Depends on your own resources</td>
-              </tr>
-              <tr>
-                <th scope="row">Scale</th>
-                <td data-label="Infina developer finance">Sized to the project, against security and escrow</td>
-                <td data-label="Sales proceeds alone">Limited to what sales bring in</td>
-                <td data-label="Promoter equity">Limited by your balance sheet</td>
-              </tr>
-              <tr>
-                <th scope="row">Cost</th>
-                <td data-label="Infina developer finance">Interest and charges</td>
-                <td data-label="Sales proceeds alone">No interest cost</td>
-                <td data-label="Promoter equity">No interest cost, but it ties up your capital</td>
-              </tr>
-              <tr>
-                <th scope="row">Main risk</th>
-                <td data-label="Infina developer finance">Repayment from the project&apos;s cash flows</td>
-                <td data-label="Sales proceeds alone">Delays if bookings slow down</td>
-                <td data-label="Promoter equity">Less capital for your other projects</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
+    <section className="section solid" id="compare" style={{ paddingTop: "0" }}><div className="wrap"><div className="section-head"><h2>Developer finance compared with other ways to fund a project</h2><p>How a structured developer loan differs from relying on sales proceeds or your own equity. Hover a row to compare it across all three.</p></div><div className="cmp" id="cmp"><div className="cmp-labels" aria-hidden="true"><span></span><span data-row="0">Timing of funds</span><span data-row="1">Scale</span><span data-row="2">Cost</span><span data-row="3">Main risk</span></div><section className="cmp-col hero-col" aria-label="Infina developer finance"><header><small>Infina</small><h3>Developer finance</h3></header><div className="cell" data-row="0"><b>Timing of funds</b>Matched to the stage of the project</div><div className="cell" data-row="1"><b>Scale</b>Sized to the project, against security and cash flow</div><div className="cell" data-row="2"><b>Cost</b>Interest and charges</div><div className="cell" data-row="3"><b>Main risk</b>Repayment from the project’s cash flows</div></section><section className="cmp-col" aria-label="Sales proceeds alone"><header><small>No loan</small><h3>Sales proceeds alone</h3></header><div className="cell" data-row="0"><b>Timing of funds</b>Depends on bookings and collections</div><div className="cell" data-row="1"><b>Scale</b>Limited to what sales bring in</div><div className="cell" data-row="2"><b>Cost</b>No interest cost</div><div className="cell" data-row="3"><b>Main risk</b>Delays if bookings slow down</div></section><section className="cmp-col" aria-label="Promoter equity"><header><small>Your own capital</small><h3>Promoter equity</h3></header><div className="cell" data-row="0"><b>Timing of funds</b>Depends on your own resources</div><div className="cell" data-row="1"><b>Scale</b>Limited by your balance sheet</div><div className="cell" data-row="2"><b>Cost</b>No interest cost, but it ties up your capital</div><div className="cell" data-row="3"><b>Main risk</b>Less capital for your other projects</div></section></div></div></section>
   );
 }

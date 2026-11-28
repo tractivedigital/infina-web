@@ -1,0 +1,7 @@
+import Link from 'next/link';
+
+export function FinalCta() {
+  return (
+    <section className="section final" id="apply"><div className="gyro-wrap" aria-hidden="true"><div className="gyro" id="gyro"><div className="g-ring r1"></div><div className="g-ring r2"></div><div className="g-ring r3"></div></div></div><div className="wrap final-grid"><div><h2>Fund your next project.</h2><p>Share your project details and our team will get in touch. No documents needed to start.</p><a href="#apply-form" className="btn btn-red">Check eligibility</a></div><div className="xsell"><Link href="/loan-against-securities"><div><h3>Loan Against Securities</h3><p className="muted">Borrow against shares, mutual funds and bonds.</p></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></Link>{' '}<Link href="/loan-against-property"><div><h3>Loan Against Property</h3><p className="muted">Funding against residential, commercial or industrial property.</p></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></Link>{' '}<Link href="/#products"><div><h3>ESOP Financing</h3><p className="muted">Funds to exercise your employee stock options.</p></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></Link></div></div></section>
+  );
+}
